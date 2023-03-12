@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="headerWrap">
+        <div class="header pc">
+            <div class="inner">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li>Pick</li>
+                    <li>Archive</li>
+                    <li class="ac">Talks</li>
+                    <li>Stories</li>
+                    <li>About</li>
+                </ul>
+                <div class="rightBtn">
+                    <span>Connects</span>
+                    <div class="user">
+                        <span>로그인</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mo">
+            <div class="inner">
+                <div class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+            </div>
+
+            <!-- .menuBtn 클릭이벤트 시 mobileMenu요소에 .ac 토글(숨김/노출) -->
+            <div class="mobileMenu ac">
+                <div class="panel">
+                    <div class="top">
+                        <div class="backArr"></div>
+                        <div class="flexBx">
+                            <div>
+                                <!-- 로그인 상태에서 user 태그에 .login 클래쓰 붙여주세요. -->
+                                <div class="user login">
+                                    <span>닉네임</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuList">
+                        <ul>
+                            <!-- 활성화된 페이지에 .ac 클래쓰 붙여주세요 -->
+                            <li class="ac">Pick</li>
+                            <li>Archive</li>
+                            <li>Talks</li>
+                            <li>Stories</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dim"></div>
+            </div>
+
+            <!-- 모바일 메뉴 토글 -->
+            <script>
+                const body = document.querySelector('body')
+                const menuOpen = document.querySelector('.header .menuBtn')
+                const menuClose = document.querySelector('.header .backArr')
+                const target = document.querySelector('.header .mobileMenu')
+                const dim = document.querySelector('.header .dim')
+                menuOpen.addEventListener('click', function() {
+                    target.classList.add('ac')
+                    body.classList.add('modalOn')
+                })
+                menuClose.addEventListener('click', function() {
+                    target.classList.remove('ac')
+                    body.classList.remove('modalOn')
+                })
+                dim.addEventListener('click', function() {
+                    target.classList.remove('ac')
+                    body.classList.remove('modalOn')
+                })
+            </script>
+        </div>
+        <div class="headerBack"></div>
+    </div>
+</body>
+</html>

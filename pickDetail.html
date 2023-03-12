@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="headerWrap">
+        <div class="header pc">
+            <div class="inner">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li class="ac">Pick</li>
+                    <li>Archive</li>
+                    <li>Talks</li>
+                    <li>Stories</li>
+                    <li>About</li>
+                </ul>
+                <div class="rightBtn">
+                    <span>Connects</span>
+                    <div class="user">
+                        <span>로그인</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mo">
+            <div class="inner">
+                <div class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+            </div>
+
+            <!-- .menuBtn 클릭이벤트 시 mobileMenu요소에 .ac 토글(숨김/노출) -->
+            <div class="mobileMenu">
+                <div class="panel">
+                    <div class="top">
+                        <div class="backArr"></div>
+                        <div class="flexBx">
+                            
+                            <div>
+                                <div class="user">
+                                    <span>로그인해 주세요</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuList">
+                        <ul>
+                            <li>Pick</li>
+                            <li>Archive</li>
+                            <li>Talks</li>
+                            <li>Stories</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dim"></div>
+            </div>
+
+            <!-- 모바일 메뉴 토글 -->
+            <script>
+                const body = document.querySelector('body')
+                const menuOpen = document.querySelector('.header .menuBtn')
+                const menuClose = document.querySelector('.header .backArr')
+                const target = document.querySelector('.header .mobileMenu')
+                const dim = document.querySelector('.header .dim')
+                menuOpen.addEventListener('click', function() {
+                    target.classList.add('ac')
+                    body.classList.add('modalOn')
+                })
+                menuClose.addEventListener('click', function() {
+                    target.classList.remove('ac')
+                    body.classList.remove('modalOn')
+                })
+                dim.addEventListener('click', function() {
+                    target.classList.remove('ac')
+                    body.classList.remove('modalOn')
+                })
+            </script>
+        </div>
+        <div class="headerBack"></div>
+    </div>
+
+    <div class="pageDetail">
+        <div class="inner">
+            <div class="backPage">목록으로 돌아가기</div>
+
+            <div class="topCon col-2">
+                <div class="item">
+                    <div class="imgSlide">
+                        <div>
+                            <div class="imgWrap">
+                                <img src="./img/resource/pickDetail.png" alt="img">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="imgWrap">
+                                <img src="./img/resource/pickDetail.png" alt="img">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="imgWrap">
+                                <img src="./img/resource/pickDetail.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="item accodion">
+                    <h2>Women’s Woolyester Pile Bomber Jacket</h2>
+                    <ul>
+                        <li class="ac">
+                            <div class="list">브랜드</div>
+                            <div class="flexBx">
+                                <div class="left">
+                                    <div class="imgWrap">
+                                        <img src="./img/resource/brand04.png" alt="brand">
+                                    </div>
+                                    <span>
+                                        파타고니아
+                                    </span>
+                                </div>
+                                <span class="follow">+ 팔로우</span>
+                            </div>
+                            <p>
+                                ABCD는 2011년 시작된 브랜드에요. 
+                                100% 오가닉, 비건 소재만을 사용하고 공정한 작업을 통해 패션 제품의 변화를 만들고 있습니다.
+                            </p>
+                        </li>
+                        <li class="ac">
+                            <div class="list">제품 특징</div>
+                            <p>
+                                파타고니아의 특징이 잘 보이는 보머 재킷이에요.<br>
+                                전면을 스냅 단추로 여미는 항공 재킷 스타일입니다.<br>
+                                리사이클울, 리사이클폴리에스터 혼방 원단인 하이 파일 플리스
+                                소재를&nbsp;사용했다고 해요.
+                                업사이클링 소재를 활용한 친환경 소재를 사용하고, 환경에 나쁜 영향을 주지 않기 위해  수작업을 고수하고 있는 100% 수제 가방이에요
+                            </p>
+                        </li>
+                        <!-- <li class="ac">
+                            <div class="list">브랜드가 소개하는 환경임팩트</div>
+                            <p>
+                                - 업사이클링 소재를 활용한 친환경 소재 활용 <br>
+                                - 100% 수제 작업 <br>
+                                - 플라스틱 프리 패키지
+                            </p>
+                        </li> -->
+
+                        <li class="disAcc">
+                            <div class="list">키워드</div>
+                            <div class="tag">
+                                <span>리사이클 폴리에스터</span>
+                                <span>리사이클 울</span>
+                                <span>유기농 순면</span>
+                                <span>공정무역</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="materialsSlide">
+                <ul>
+                    <li class="meteItem">
+                        <h3>원자재생산</h3>
+                        <p>친환경 소재를 사용했는지?<br>
+                            각 소재는 어디에서 오는 건지?<br>
+                            염색과 물 사용 방식은 어떤지?</p>
+                    </li>
+                    <li class="meteItem">
+                        <h3>제조</h3>
+                        <p>제품은 어디서 만들어지는지?<br>
+                            작업 과정 중<br>
+                            친환경 방식이 있는지?</p>
+                    </li>
+                    <li class="meteItem">
+                        <h3>운송</h3>
+                        <p>제품을 받기까지<br>
+                            얼마나 이동하는 건지?<br>
+                            그 방법은?</p>
+                    </li>
+                    <li class="meteItem">
+                        <h3>포장</h3>
+                        <p>포장 방식도<br>
+                            친환경적인지?</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="control">
+                <h2>궁금하지 않았나요</h2>                
+                <div class="btn">더 궁금해요!</div>
+                <div class="reason"><span>Pick을 해야하는 이유</span></div>
+                <span class="pickPerson">
+                    Pick한 사람들
+                    <span>1,346</span>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="footer">
+        <div class="inner">
+            <div class="topCon">
+                <img class="footerLogo" src="./img/footerLogo.svg" alt="footerLogo">
+                <ul>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                </ul>
+            </div>
+            <div class="bodyCon">
+                <p>
+                    <span>상호명&nbsp;:&nbsp;리마인드얼스</span>  |  <span>대표자&nbsp;:&nbsp;김혜림</span>  |   <span>사업자번호&nbsp;:&nbsp;645-06-01901</span>  |  <span>주소&nbsp;:&nbsp;서울특별시&nbsp;종로구&nbsp;종로&nbsp;34&nbsp;2층&nbsp;101호</span><br>
+                    <span>통신판매업신고번호&nbsp;:&nbsp;2022-지역명-1234</span>  |  <span>입금계좌&nbsp;:&nbsp;국민은행&nbsp;123456678</span>  |  <span>문의&nbsp;:&nbsp;02-123-1234</span>  |  <span>메일&nbsp;:&nbsp;hello@emindearth.com</span><br>
+                    롱레이블은 리마인드얼스가 운영하는 친환경 제품 임팩트 분석 플랫폼입니다.
+                </p>
+                <img class="insta" src="./img/ic_instagram.svg" alt="ic_instagram">
+            </div>
+            <span class="copyright">COPYRIGHT ⓒ LONG LABEL. All Rights Reserved.</span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script>
+        $('.imgSlide').slick(
+            {
+                dots: true,
+                infinite: true,
+            }
+        );
+    </script>
+</body>
+</html>

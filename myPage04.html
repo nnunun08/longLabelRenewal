@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="headerWrap">
+        <div class="header pc">
+            <div class="inner">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li>Pick</li>
+                    <li>Archive</li>
+                    <li>Talks</li>
+                    <li>Stories</li>
+                    <li>About</li>
+                </ul>
+                <div class="rightBtn">
+                    <span>Connects</span>
+                    <div class="user ac">
+                        <span>닉네임</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mo">
+            <div class="inner">
+                <div class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+            </div>
+
+            <!-- .menuBtn 클릭이벤트 시 mobileMenu요소에 .ac 토글(숨김/노출) -->
+            <div class="mobileMenu">
+                <div class="panel">
+                    <div class="top">
+                        <div class="backArr"></div>
+                        <div class="flexBx">
+                            
+                            <div>
+                                <div class="user">
+                                    <span>로그인해 주세요</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuList">
+                        <ul>
+                            <li>Pick</li>
+                            <li>Archive</li>
+                            <li>Talks</li>
+                            <li>Stories</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dim"></div>
+            </div>
+
+            <!-- 모바일 메뉴 토글 -->
+            <script>
+                const body = document.querySelector('body')
+                const menuOpen = document.querySelector('.header .menuBtn')
+                const menuClose = document.querySelector('.header .backArr')
+                const target = document.querySelector('.header .mobileMenu')
+                const dim = document.querySelector('.header .dim')
+                menuOpen.addEventListener('click', function() {
+                    target.classList.add('ac')
+                    body.classList.add('modalOn')
+                })
+                menuClose.addEventListener('click', function() {
+                    target.classList.remove('ac')
+                    body.classList.remove('modalOn')
+                })
+                dim.addEventListener('click', function() {
+                    target.classList.remove('ac')
+                    body.classList.remove('modalOn')
+                })
+            </script>
+        </div>
+        <div class="headerBack"></div>
+    </div>
+
+
+    <div class="section-detail">
+        <div class="inner">
+            <div class="leftNav">
+                <h1>닉네임</h1>
+                <span class="modify">내 정보 수정하기</span>
+                <div class="ulWrap">
+                    <ul>
+                        <li><span>나의 Pick</span></li>
+                        <li><span>작성한 글</span></li>
+                        <li><span>반응한 글</span></li>
+                        <li class="ac"><span>팔로잉 브랜드</span></li>
+                        <li><span>주문내역</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <ul class="followBrand col-3">
+                    <li class="item">
+                        <div class="brand anchor">
+                            <img src="./img/resource/brand01.png" alt="brand">
+                        </div>
+                        <div class="cate">파타고니아</div>
+                        <div class="desc">National geographic</div>
+                        <div class="cancle">팔로우 취소</div>
+                    </li>
+                    <li class="item">
+                        <div class="brand anchor">
+                            <img src="./img/resource/brand02.png" alt="brand">
+                        </div>
+                        <div class="cate">파타고니아</div>
+                        <div class="desc">National geographic</div>
+                        <div class="cancle">팔로우 취소</div>
+                    </li>
+                    <li class="item">
+                        <div class="brand anchor">
+                            <img src="./img/resource/brand03.png" alt="brand">
+                        </div>
+                        <div class="cate">파타고니아</div>
+                        <div class="desc">National geographic</div>
+                        <div class="cancle">팔로우 취소</div>
+                    </li>
+                    <li class="item">
+                        <div class="brand anchor">
+                            <img src="./img/resource/brand01.png" alt="brand">
+                        </div>
+                        <div class="cate">파타고니아</div>
+                        <div class="desc">National geographic</div>
+                        <div class="cancle">팔로우 취소</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="inner">
+            <div class="topCon">
+                <img class="footerLogo" src="./img/footerLogo.svg" alt="footerLogo">
+                <ul>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                </ul>
+            </div>
+            <div class="bodyCon">
+                <p>
+                    <span>상호명&nbsp;:&nbsp;리마인드얼스</span>  |  <span>대표자&nbsp;:&nbsp;김혜림</span>  |   <span>사업자번호&nbsp;:&nbsp;645-06-01901</span>  |  <span>주소&nbsp;:&nbsp;서울특별시&nbsp;종로구&nbsp;종로&nbsp;34&nbsp;2층&nbsp;101호</span><br>
+                    <span>통신판매업신고번호&nbsp;:&nbsp;2022-지역명-1234</span>  |  <span>입금계좌&nbsp;:&nbsp;국민은행&nbsp;123456678</span>  |  <span>문의&nbsp;:&nbsp;02-123-1234</span>  |  <span>메일&nbsp;:&nbsp;hello@emindearth.com</span><br>
+                    롱레이블은 리마인드얼스가 운영하는 친환경 제품 임팩트 분석 플랫폼입니다.
+                </p>
+                <img class="insta" src="./img/ic_instagram.svg" alt="ic_instagram">
+            </div>
+            <span class="copyright">COPYRIGHT ⓒ LONG LABEL. All Rights Reserved.</span>
+        </div>
+    </div>
+</body>
+</html>
