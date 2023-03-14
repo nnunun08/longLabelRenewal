@@ -203,14 +203,74 @@
             </div>
 
             <div class="control">
-                <h2>궁금하지 않았나요</h2>                
-                <div class="btn">더 궁금해요!</div>
-                <div class="reason"><span>Pick을 해야하는 이유</span></div>
+                <h2>궁금하지 않았나요?<br>
+                    메이커에게 정보를 요청하는 과정에 함께해 주세요</h2>                
+                <div class="btn">더 궁금해요</div>
+                <div class="reason"><span>더 궁금해요를 클릭해야 하는 이유?</span></div>
+            </div>
+
+            <div class="chart">
                 <span class="pickPerson">
-                    Pick한 사람들
+                    함께한 사람들
                     <span>1,346</span>
                 </span>
+                <div class="ctr">
+                    <div class="tit">연령별 현황</div>
+                    <canvas id="pickBar"></canvas>
+                </div>
+                <div class="ctr">
+                    <div class="tit">성별 현황</div>
+                    <canvas id="pickDoughnut"></canvas>
+                </div>
             </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('pickBar');
+                const ctx2 = document.getElementById('pickDoughnut');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        // label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1,
+                        backgroundColor : 'rgba(255, 102, 51, 1)',
+                    }]
+                    },
+                    options: {
+                    scales: {
+                        y: {
+                        beginAtZero: true
+                        }
+                    }
+                    }
+                });
+
+                new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                    labels: ['남성', '여성'],
+                    datasets: [{
+                        data: [12, 19],
+                        borderWidth: 1,
+                        backgroundColor : [
+                            'rgba(21,21,21, 1)',
+                            'rgba(255, 102, 51, 1)',
+                        ],
+                    }]
+                    },
+                    options: {
+                    scales: {
+                        y: {
+                        beginAtZero: true
+                        }
+                    }
+                    }
+                });
+                
+            </script>
         </div>
 
     </div>
