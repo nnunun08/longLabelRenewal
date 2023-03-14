@@ -1288,22 +1288,56 @@ $headerHeight:75px;
 .mainBanner {
 	position: relative;
 	display: block;
-	height: 400px;
-	
+	height: 520px;
+	overflow:hidden;
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+	.inner {
+		position: relative;
+		height: 520px;
+		z-index: 1;
+	}
+	.tit {
+		padding-left: 48px;
+		position: absolute;
+		left: 0;
+		top:64px;
+		font-size: 35px;
+		line-height: 51px;
+		font-weight: bold;
+		color: #fff;
+	}
+	.desc {
+		padding-left: 48px;
+		position: absolute;
+		left: 0;
+		bottom:64px;
+		font-size: 29px;
+		line-height: 45px;
+		font-weight: 500;
+		color: #F4F4F4;
+	}
 	.slick-arrow {
 		display: none !important;
 	}
 	.item {
 		// padding-top: 115px;
 		// height: 480px;
-		display: flex;
-		align-items: flex-start;
+		// display: flex;
+		// align-items: flex-start;
+		position: relative;
 		overflow: hidden;
 		box-sizing: border-box;
 		img {
 			width: 100%;
 			height: 100%;
-			object-fit: contain;
+			object-fit: cover;
 		}
 	}
 	.slick-dots {
@@ -2392,6 +2426,20 @@ h4 {
 	}
 }
 
+.pickPerson {
+	font-weight: 500;
+	color: #FF6633;
+	font-size: 22px;
+	span {
+		display: block;
+		&::after {
+			content: '명';
+			// font-size: 17px;
+		}
+	}
+}
+
+
 .pageDetail {
 	margin-top: 60px;
 
@@ -2520,35 +2568,30 @@ h4 {
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: column;
-		font-size: 20px;
-		font-weight: bold;
+		font-size: 22px;
+		font-weight: 500;
 		line-height: 1.13;
-		margin-top: 45px;
 		margin-bottom: 8px;
 		color: #f63;
-		.pickPerson {
-			font-weight: 500;
-		}
-		.pickPerson span {
-			font-size: 25px;
-			font-weight: bold;
-			margin-left: 16px;
-			&::after {
-				content: '명';
-				font-size: 17px;
-			}
+		text-align: center;
+		margin-top: 50px;
+		h2 {
+			margin-bottom: 33px;
 		}
 
 		.btn {
-			font-size: 17px;
-			width: 260px;
-			height: 50px;
+			font-size: 20px;
+			font-weight: bold;
+			max-width: 352px;
+			width: 100%;
+			height: 40px;
+			margin-bottom: 10px;
 		}
 	}
 
 	.reason {
-		text-align: right;
-		font-size: 16px;
+		text-align: center;
+		font-size: 18px;
 		font-weight: 500;
 		text-decoration: underline;
 		color: #f63;
@@ -4527,3 +4570,25 @@ h4 {
 
 
 
+
+.chart {
+	display: flex;
+	padding-top: 130px;
+	gap: 28px;
+	.pickPerson {
+		width: 250px;
+	}
+	.ctr {
+		flex: 1 0 auto;
+	}
+	.tit {
+		font-size: 18px;
+		font-weight: 500;
+		margin-bottom: 50px;
+	}
+	@media screen and (max-width:768px) {
+		& {
+			flex-direction: column;
+		}
+	}
+}

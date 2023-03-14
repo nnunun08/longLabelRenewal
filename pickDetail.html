@@ -203,14 +203,129 @@
             </div>
 
             <div class="control">
-                <h2>궁금하지 않았나요</h2>                
-                <div class="btn">더 궁금해요!</div>
-                <div class="reason"><span>Pick을 해야하는 이유</span></div>
+                <h2>궁금하지 않았나요?<br>
+                    메이커에게 정보를 요청하는 과정에 함께해 주세요</h2>                
+                <div class="btn">더 궁금해요</div>
+                <!-- 더 굼금해요 btn 클릭 시 .ac 토글 -->
+                <div class="btn ac">정보 신청 완료</div>
+                <div class="reason"><span>더 궁금해요를 클릭해야 하는 이유?</span></div>
+            </div>
+
+            <div class="chart">
                 <span class="pickPerson">
-                    Pick한 사람들
+                    함께한 사람들
                     <span>1,346</span>
                 </span>
+                <div class="ctr">
+                    <div class="tit">연령별 현황</div>
+                    <canvas id="pickBar"></canvas>
+                </div>
+                <div class="ctr">
+                    <div class="tit">성별 현황</div>
+                    <canvas id="pickDoughnut"></canvas>
+                </div>
             </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+                const ctx = document.getElementById('pickBar');
+                const ctx2 = document.getElementById('pickDoughnut');
+
+                Chart.defaults.font.size = 16;
+                Chart.defaults.borderColor = 'transparent';
+                Chart.defaults.color = '#151515'
+
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                    labels: ['10대', '20대', '30대', '40대', '50대', '60대', '70대 이상'],
+                    datasets: [{
+                        // label: '# of Votes',
+                        barThickness: 22,
+                        data: [20, 19, 3, 5, 2, 3, 10],
+                        borderWidth: 1,
+                        borderColor: '#151515',
+                        backgroundColor : '#FF6633',
+                    }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                border : {color: '#151515'},
+                                suggestedMin: 0,
+                                suggestedMax: 100,
+                                ticks: {
+                                    // Include a dollar sign in the ticks
+                                    callback: function(value, index, ticks) {
+                                        return value + '%';
+                                    },
+                                    color: '#151515'
+                                }
+                            },
+                            x: {
+                                border: {color: '#151515'},
+                                ticks: {color: '#151515'}
+                            }
+                        },
+                        plugins : {
+                            legend : {
+                                display: false,
+                            },
+                            tooltip : {
+                                enabled: false,
+                            }
+                        }
+                    },
+                    
+                });
+
+                new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                    labels: ['남성', '여성'],
+                    datasets: [{
+                        // barThickness: 1,
+
+                        data: [12, 19],
+                        borderWidth: 1,
+                        backgroundColor : [
+                            '#151515',
+                            '#FF6633',
+                        ],
+                        borderColor: '#151515',
+                        cutout: '70%',
+                        radius: '100%',
+                    }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                display:false,
+                                },
+                            x: {
+                                display:false,
+                            }
+                        },
+                        plugins: {
+                            legend : {
+                                color: '#151515',
+                                position : 'bottom',
+                                rtl : true,
+                                labels : {
+                                    boxWidth : 40,
+                                    boxHeight : 18,
+                                    padding: 24
+                                }
+                            },
+                            tooltip : {
+                                // enabled: false,
+                                external: 'average'
+                            }
+                        }
+                    }
+                });
+                
+            </script>
         </div>
 
     </div>

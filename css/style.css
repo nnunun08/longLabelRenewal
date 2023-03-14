@@ -339,21 +339,54 @@ body {
 .mainBanner {
   position: relative;
   display: block;
-  height: 400px;
+  height: 520px;
+  overflow: hidden;
+}
+.mainBanner .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.mainBanner .inner {
+  position: relative;
+  height: 520px;
+  z-index: 1;
+}
+.mainBanner .tit {
+  padding-left: 48px;
+  position: absolute;
+  left: 0;
+  top: 64px;
+  font-size: 35px;
+  line-height: 51px;
+  font-weight: bold;
+  color: #fff;
+}
+.mainBanner .desc {
+  padding-left: 48px;
+  position: absolute;
+  left: 0;
+  bottom: 64px;
+  font-size: 29px;
+  line-height: 45px;
+  font-weight: 500;
+  color: #F4F4F4;
 }
 .mainBanner .slick-arrow {
   display: none !important;
 }
 .mainBanner .item {
-  display: flex;
-  align-items: flex-start;
+  position: relative;
   overflow: hidden;
   box-sizing: border-box;
 }
 .mainBanner .item img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .mainBanner .slick-dots {
   position: absolute;
@@ -1565,6 +1598,18 @@ h4 {
   text-decoration: underline;
 }
 
+.pickPerson {
+  font-weight: 500;
+  color: #FF6633;
+  font-size: 22px;
+}
+.pickPerson span {
+  display: block;
+}
+.pickPerson span::after {
+  content: "명";
+}
+
 .pageDetail {
   margin-top: 60px;
 }
@@ -2192,33 +2237,28 @@ h4 {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 500;
   line-height: 1.13;
-  margin-top: 45px;
   margin-bottom: 8px;
   color: #f63;
+  text-align: center;
+  margin-top: 50px;
 }
-.pageDetail .control .pickPerson {
-  font-weight: 500;
-}
-.pageDetail .control .pickPerson span {
-  font-size: 25px;
-  font-weight: bold;
-  margin-left: 16px;
-}
-.pageDetail .control .pickPerson span::after {
-  content: "명";
-  font-size: 17px;
+.pageDetail .control h2 {
+  margin-bottom: 33px;
 }
 .pageDetail .control .btn {
-  font-size: 17px;
-  width: 260px;
-  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  max-width: 352px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
 }
 .pageDetail .reason {
-  text-align: right;
-  font-size: 16px;
+  text-align: center;
+  font-size: 18px;
   font-weight: 500;
   text-decoration: underline;
   color: #f63;
@@ -5528,6 +5568,27 @@ h4 {
   .page404.etcError h2 {
     margin-top: 100px;
     margin-bottom: 100px;
+  }
+}
+.chart {
+  display: flex;
+  padding-top: 130px;
+  gap: 28px;
+}
+.chart .pickPerson {
+  width: 250px;
+}
+.chart .ctr {
+  flex: 1 0 auto;
+}
+.chart .tit {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 768px) {
+  .chart {
+    flex-direction: column;
   }
 }
 
