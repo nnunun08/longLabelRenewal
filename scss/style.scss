@@ -43,7 +43,17 @@ body {
 // 		overflow: unset;
 // 	}
 // }
-
+@mixin delete {
+	.delete {
+		position: absolute;
+		top: 4px;
+		right: 0;
+		width: 12px;
+		height: 12px;
+		background:url(../img/ic_quesDel.svg) center/cover no-repeat;
+		cursor: pointer;
+	}
+}
 @mixin popup {
 	.popup {
 		display: none;
@@ -450,7 +460,7 @@ body {
 	.textarea {
 		background-color: transparent;
 		width: 100%;
-		height: 250px;
+		height: 150px;
 		border: 1px solid #f63;
 		box-sizing: border-box;
 		padding: 15px;
@@ -551,7 +561,7 @@ body {
 				@include ellipsis;
 				font-size: 21px;
 				font-weight: bold;
-				padding: 15px 60px 15px 0px;
+				padding: 20px 60px 20px 0px;
 				border-top: 1px solid #151515;
 				// background: url(../img/acc_plus.svg) right top 15px/30px no-repeat;
 				min-height: 58px;
@@ -711,15 +721,29 @@ body {
 		}
 
 		.review {
+			position: relative;
 			padding-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #151515;
+			@include delete;
 			@include inputArea;
 			@include textarea;
+			.delete {
+				top: 20px;
+			}
+			&:has(.talksWrite) {
+				border-bottom: 0;
+				padding-bottom: 0;
+				.btn {
+					margin-bottom: 94px;
+				}
+			}
 			& + .review {
-				margin-top: 20px;
-				border-top: 1px solid #151515;
+				// margin-top: 20px;
+				// border-top: 1px solid #151515;
 			}
 			& + .pagination {
-				margin-top: 70px;
+				margin-top: 43px;
 			}
 			.scoreStar {
 				display: inline-block;
@@ -751,6 +775,7 @@ body {
 					width: 190px;
 					height: 30px;
 					gap: 10px;
+					margin-left: 18px;
 					margin-right: 30px;
 					.star {
 						cursor: pointer;
@@ -784,9 +809,10 @@ body {
 				margin-top: 25px;
 				dl {
 					display: flex;
-					& + dl {
-						margin-top: 20px;
-					}
+					margin-bottom: 20px;
+					// & + dl {
+					// 	margin-top: 20px;
+					// }
 				}
 				dt {
 					font-weight: bold;
@@ -798,7 +824,7 @@ body {
 				}
 			}
 			.thumbList {
-				margin-top: 20px;
+				// margin-top: 20px;
 				img {
 					width: 73px;
 					aspect-ratio: 1/1;
@@ -808,6 +834,9 @@ body {
 				}
 			}
 			.likeBx {
+				position: absolute;
+				right: 0;
+				bottom: 20px;
 				display: flex;
 				align-items: flex-end;
 				gap: 10px;
@@ -819,6 +848,12 @@ body {
 					width: 16px;
 					height: 16px;
 					background: url(../img/ic_like.svg) center no-repeat;
+				}
+			}
+			.talksWrite {
+				margin-top: 20px;
+				.flexBx {
+					margin-bottom: 25px;
 				}
 			}
 		}
@@ -857,15 +892,7 @@ body {
 				color: #151515;
 				margin-bottom: 20px;
 			}
-			.quesDel {
-				position: absolute;
-				top: 4px;
-				right: 0;
-				width: 12px;
-				height: 12px;
-				background:url(../img/ic_quesDel.svg) center/cover no-repeat;
-				cursor: pointer;
-			}
+			@include delete;
 		}
 		.recoment + .recoment {
 			margin-top: 22px;
@@ -1128,7 +1155,7 @@ body {
 			border-top: 1px solid #151515;
 		}
 		
-		.quesDel {
+		.delete {
 			position: absolute;
 			top: 24px;
 			right: 0;
@@ -1179,7 +1206,7 @@ body {
 			.name {
 				font-size: 14px;
 			}
-			.quesDel {
+			.delete {
 				display: none;
 			}
 			& + .question {
