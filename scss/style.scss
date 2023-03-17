@@ -462,6 +462,9 @@ body {
 		resize: none;
 		display: block;
 		outline: none;
+		&::placeholder {
+			color:inherit;
+		}
 	}
 }
 
@@ -533,7 +536,7 @@ body {
 				align-items: center;
 				gap: 27px;
 				padding-top: 30px;
-				margin-bottom: 45px;
+				margin-bottom: 25px;
 				h3 {
 					font-size: 22px;
 					font-weight: 600;
@@ -556,18 +559,50 @@ body {
 				line-height: 30px;
 				box-sizing: border-box;
 				// cursor: pointer;
+				&:has(.star) {
+					padding-top: 20px;
+					border-top: 0;
+					display: flex;
+					align-items: center;
+					position: relative;
+					.filter {
+						float: right;
+						display: flex;
+						align-items: center;
+						position: absolute;
+						right: 0;
+						top	:20px;
+						.sort {
+							border: 0;
+							background-color: transparent;
+							border-radius: 0;
+							color:#000;
+							font-size: 14px;
+							font-weight: 500;
+							cursor: pointer;
+						}
+						.divider {
+							height: 13px;
+							width: 0.5px;
+							background: #151515;
+							margin: 0 2px;
+						}
+					}
+				}
 				.star {
-					padding-left: 17px;
-					background: url(../img/ic_star.svg) left center no-repeat;
+					padding-left: 30px;
+					background: url(../img/ic_star.svg) left center/22px no-repeat;
 					height: 22px;
 					line-height: 22px;
-					font-size: 18px;
+					font-size: 30px;
 					font-weight: 500;
 					color: #151515;
+					font-family: 'Montserrat';
 				}
 				.count {
 					font-size: 18px;
 					font-weight: 500;
+					margin-left: 17px;
 				}
 				span {
 					margin-left: 6px;
@@ -601,7 +636,7 @@ body {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				margin-bottom: 15px;
+				// margin-bottom: 15px;
 				&.just-start {
 					justify-content: flex-start;
 					gap: 10px;
@@ -662,11 +697,13 @@ body {
 		
 		@include question;
 		.pagination {
-			margin-top: 16px;
-			margin-bottom: 15px;
+			margin-top: 30px;
+			// margin-bottom: 30px;
 			li {
-				height: 16px;
+				font-size: 16px;
+				font-weight: 500;
 				line-height: 16px;
+				height: 16px;
 				&:last-child {
 					border-bottom: initial;
 				}
@@ -786,12 +823,19 @@ body {
 			}
 		}
 		.recoment {
+			position: relative;
 			background: url(../img/bg_reply_arr.svg) left top no-repeat;
 			padding-left: 27px;
+			&::after {
+				content: '';
+				clear: both;
+				display: block;
+			}
 			.left {
 				gap: 10px !important;
 			}
 			.like {
+				float: right;
 				font-size: 12px;
 				font-weight: 500;
 				line-height: 16px;
@@ -811,14 +855,24 @@ body {
 				font-weight: 500;
 				line-height: 1.31;
 				color: #151515;
+				margin-bottom: 20px;
+			}
+			.quesDel {
+				position: absolute;
+				top: 4px;
+				right: 0;
+				width: 12px;
+				height: 12px;
+				background:url(../img/ic_quesDel.svg) center/cover no-repeat;
+				cursor: pointer;
 			}
 		}
 		.recoment + .recoment {
-			margin-top: 36px;
+			margin-top: 22px;
 		}
 		.recoment:nth-last-of-type(1) {
-			padding-bottom: 25px;
-			border-bottom: 1px solid #151515;
+			// padding-bottom: 20px;
+			// border-bottom: 1px solid #151515;
 		}
 	}
 }
@@ -1060,8 +1114,11 @@ body {
 
 @mixin question {
 	.question {
+		border-top: 1px solid #151515;
 		padding-top: 20px;
+		padding-bottom: 20px;
 		position: relative;
+		
 		& + .recomentWrap {
 			display: none
 		}
@@ -1070,15 +1127,10 @@ body {
 		& + .question {
 			border-top: 1px solid #151515;
 		}
-		&.coment + .question {
-			border-top: 0;
-		}
-		&.coment {
-			margin-bottom: 40px;
-		}
+		
 		.quesDel {
 			position: absolute;
-			top: 4px;
+			top: 24px;
 			right: 0;
 			width: 12px;
 			height: 12px;
@@ -1095,7 +1147,9 @@ body {
 		.text {
 			font-size: 16px;
 			font-weight: 500;
-			min-height: 40px;
+			// min-height: 40px;
+			margin-top: 10px;
+			margin-bottom: 20px;
 			line-height: 1.31;
 			&:after {
 				content: '';
@@ -1119,9 +1173,25 @@ body {
 		}
 		&.coment {
 			border-top: 0;
-			margin-top: 40px;
+			margin-top: 5px;
+			padding-bottom: 0;
+			margin-bottom: 40px;
 			.name {
 				font-size: 14px;
+			}
+			.quesDel {
+				display: none;
+			}
+			& + .question {
+				border-top: 0;
+			}
+			.flexBx:has(.name) {
+				margin-bottom: 15px
+			}
+			&:has(.inputText) {
+				padding-top: 0;
+				margin:0;
+				margin-top: 65px;
 			}
 		}
 		@include inputArea;
@@ -1146,8 +1216,14 @@ body {
 			display: none;
 		}
 		& + .recomentWrap {
-			display: block
+			display: block;
+			.recoment:last-child {
+				padding-bottom: 20px;
+			}
 		}
+	}
+	.tabTit + .question {
+		border-top: 0;
 	}
 }
 
