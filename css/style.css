@@ -183,7 +183,7 @@ body {
     font-weight: 600;
   }
   .popup .popupCon .bad,
-  .popup .popupCon .good {
+.popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -2306,7 +2306,7 @@ h4 {
   background: url(../img/ic_quesDel.svg) center/cover no-repeat;
   cursor: pointer;
 }
-.pageDetail .accodion .recoment + .recoment {
+.pageDetail .accodion .recoment {
   margin-top: 22px;
 }
 .pageDetail .tag {
@@ -4464,7 +4464,7 @@ h4 {
   background: url(../img/ic_quesDel.svg) center/cover no-repeat;
   cursor: pointer;
 }
-.about .accodion .recoment + .recoment {
+.about .accodion .recoment {
   margin-top: 22px;
 }
 .about .inner {
@@ -5202,7 +5202,7 @@ h4 {
     font-weight: 600;
   }
   .materialsSlide .meteItem .popup .popupCon .bad,
-  .materialsSlide .meteItem .popup .popupCon .good {
+.materialsSlide .meteItem .popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -5271,33 +5271,33 @@ h4 {
     padding: 0 30px;
   }
   .pick,
-  .mainArchive,
-  .mainStories {
+.mainArchive,
+.mainStories {
     padding: 0;
     margin: 75px 0;
   }
   .pick .mainConTit h4,
-  .mainArchive .mainConTit h4,
-  .mainStories .mainConTit h4 {
+.mainArchive .mainConTit h4,
+.mainStories .mainConTit h4 {
     display: block;
     font-size: 17px;
   }
   .pick .mainConTit p,
-  .mainArchive .mainConTit p,
-  .mainStories .mainConTit p {
+.mainArchive .mainConTit p,
+.mainStories .mainConTit p {
     display: block;
     font-size: 12px;
     margin-top: 4px;
     margin-left: 0;
   }
   .pick .mainConTit .more,
-  .mainArchive .mainConTit .more,
-  .mainStories .mainConTit .more {
+.mainArchive .mainConTit .more,
+.mainStories .mainConTit .more {
     display: none;
   }
   .pick .mainConTit,
-  .mainArchive .mainConTit,
-  .mainStories .mainConTit {
+.mainArchive .mainConTit,
+.mainStories .mainConTit {
     margin-bottom: 20px;
   }
   .pick {
@@ -5442,6 +5442,16 @@ h4 {
   .pageDetail .col-2 > .item {
     width: 100%;
   }
+  .pageDetail .backPage {
+    position: absolute;
+    left: 0;
+    top: 66px;
+    margin: 0;
+    padding: 14px !important;
+    background-size: 24px !important;
+    box-sizing: content-box;
+    z-index: 1;
+  }
   .purchase {
     margin-top: 0;
   }
@@ -5494,7 +5504,7 @@ h4 {
     height: 52px;
   }
   .talksWrite label,
-  .talksWrite .imgBx .img {
+.talksWrite .imgBx .img {
     width: 40px;
     height: 40px;
   }
@@ -5669,7 +5679,7 @@ h4 {
     align-items: flex-start;
   }
   .PageEdit .inputWrap .account.label,
-  .PageEdit .inputWrap .label {
+.PageEdit .inputWrap .label {
     flex-basis: 30px;
   }
   .PageEdit .inputWrap .rightCon {
@@ -5680,7 +5690,7 @@ h4 {
     margin-top: 16px;
   }
   .PageEdit .inputWrap .account.readonly,
-  .PageEdit .inputWrap .alignLeft {
+.PageEdit .inputWrap .alignLeft {
     flex: 1 0 38px;
     display: flex;
     padding: 0;

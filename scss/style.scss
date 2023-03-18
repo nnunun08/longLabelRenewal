@@ -895,7 +895,11 @@ body {
 			@include delete;
 		}
 		.recoment + .recoment {
+			// margin-top: 22px;
+		}
+		.recoment {
 			margin-top: 22px;
+
 		}
 		.recoment:nth-last-of-type(1) {
 			// padding-bottom: 20px;
@@ -4261,6 +4265,16 @@ h4 {
 	.pageDetail {
 		.col-2 > .item {
 			width: 100%;
+		}
+		.backPage {
+			position: absolute;
+			left: 0;
+			top: 66px;
+			margin: 0;
+			padding: 14px !important;
+			background-size: 24px !important;
+			box-sizing: content-box;
+			z-index: 1;
 		}
 	}
 
