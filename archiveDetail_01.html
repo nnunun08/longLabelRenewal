@@ -918,6 +918,7 @@
         console.log(tabCon)
         for (let i = 0; i < tab.length; i++) {
             tab[i].addEventListener('click', (e) => {
+                
                 for (let j = 0; j < tab.length; j++) {
                     tab[j].classList.remove('ac');
                     tabCon[j].classList.remove('ac');
@@ -928,10 +929,46 @@
         }
 
     </script>
+    <script type="text/javascript">
+        const slider = document.querySelector('.materialsSlide');
+        let isDown = false;
+        let startx;
+        let scrollLeft;
+
+        console.log(slider.offsetLeft)
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            // slider.classList.add('active');
+            startx = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+            console.log(scrollLeft)
+            (e).stopPropagation();
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            // slider.classList.remove('active');
+            (e).stopPropagation();
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            // slider.classList.remove('active');
+            (e).stopPropagation();
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return; // 만약 isDown 이 false 일때는 작동하지 않게끔
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startx) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+            (e).stopPropagation();
+        });
+
+    </script>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="./js/slick.min.js"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
     <script>
         $('.imgSlide').slick(
             {
