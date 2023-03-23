@@ -214,11 +214,15 @@
                 </span>
                 <div class="ctr">
                     <div class="tit">연령별 현황</div>
-                    <canvas id="pickBar"></canvas>
+                    <div class="canvasContainer">
+                        <canvas id="pickBar"></canvas>
+                    </div>
                 </div>
                 <div class="ctr">
                     <div class="tit">성별 현황</div>
-                    <canvas id="pickDoughnut"></canvas>
+                    <div class="canvasContainer">
+                        <canvas id="pickDoughnut"></canvas>
+                    </div>
                 </div>
             </div>
 
@@ -245,6 +249,7 @@
                     }]
                     },
                     options: {
+                        responsive: false,
                         scales: {
                             y: {
                                 border : {color: '#151515'},
@@ -294,6 +299,12 @@
                     }]
                     },
                     options: {
+                        responsive: false,
+                        layout: {
+                            padding: {
+                                top: 15
+                            },
+                        },
                         scales: {
                             y: {
                                 display:false,

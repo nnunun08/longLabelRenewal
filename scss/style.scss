@@ -177,6 +177,9 @@ body {
 		.meteItem.ac {
 			h3 {
 				margin-left: 25px;
+				&::after {
+					display: none;
+				}
 			}
 		}
 		.popup {
@@ -568,6 +571,13 @@ body {
 				gap: 27px;
 				padding-top: 30px;
 				margin-bottom: 25px;
+				@media screen and (max-width:768px) {
+					flex-direction: column;
+					.btn.realTopBtn {
+						max-width: unset;
+						width: 100%;
+					}
+				}
 				h3 {
 					font-size: 22px;
 					font-weight: 600;
@@ -582,7 +592,7 @@ body {
 				@include ellipsis;
 				font-size: 21px;
 				font-weight: bold;
-				padding: 20px 60px 20px 0px;
+				padding: 15px 60px 15px 0px;
 				border-top: 1px solid #151515;
 				// background: url(../img/acc_plus.svg) right top 15px/30px no-repeat;
 				min-height: 58px;
@@ -673,6 +683,9 @@ body {
 					justify-content: flex-start;
 					gap: 10px;
 				}
+				&:has(.follow) {
+					margin-bottom: 15px;
+				}
 				.left {
 					display: flex;
 					align-items: center;
@@ -758,6 +771,11 @@ body {
 				padding-bottom: 0;
 				.btn {
 					margin-bottom: 94px;
+					margin-left: auto;
+					max-width: 352px;
+					@media screen and (max-width:768px) {
+						max-width: unset;
+					}
 				}
 			}
 			& + .review {
@@ -1139,9 +1157,14 @@ body {
 	}
 	.btn {
 		width: 100%;
+		max-width: 352px;
 		box-sizing: border-box;
 		margin-top: 15px;
 		margin-bottom: 15px;
+		margin-left: auto;
+		@media screen and (max-width:768px) {
+			max-width: unset;
+		}
 	}
 }
 
@@ -4021,6 +4044,17 @@ h4 {
 			font-weight: bold;
 			line-height: 1.07;
 			color: var(--white);
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				top: 3px;
+				right: 0;
+				width: 24px;
+				height: 24px;
+				background: url(../img/ic_popClose_m.svg) center/cover no-repeat;
+				transform: rotate(90deg);
+			}
 		}
 		p {
 			font-size: 20px;
@@ -4483,6 +4517,22 @@ h4 {
 	}
 	.pageDetail .accodion li .flexBx {
 		flex-wrap: wrap;
+
+		@media screen and (max-width:768px) {
+			&:has(.textarea) {
+				flex-direction: column;
+				.inputText,
+				.textarea,
+				.btn {
+					width: 100%;
+					max-width: 100%;
+				}
+				.btn {
+					height: 36px;
+					flex: 1 0 auto;
+				}
+			}
+		}
 	}
 	.pageDetail .accodion .question .flexBx .inputText {
 		margin-right: 0;
@@ -4612,6 +4662,9 @@ h4 {
 		background: url(../img/icon_arrow_m.svg) center/cover no-repeat !important;
 		margin-left: -14px;
 		margin-top: -5px;
+		position: absolute;
+		top: 85px;
+		z-index: 10;
 	}
 }
 
@@ -4643,7 +4696,7 @@ h4 {
 	}
 	.pageDetail .topCon .item .btn {
 		position: fixed;
-		bottom: 10px;
+		bottom: 0;
 		left: 30px;
 		right: 30px;
 		width: calc(100% - 60px);
@@ -4740,18 +4793,43 @@ h4 {
 .chart {
 	display: flex;
 	padding-top: 130px;
-	gap: 28px;
+	// gap: 28px;
+	// padding-right: 36px;
 	.pickPerson {
 		width: 250px;
+		flex:25 0 auto;
 	}
 	.ctr {
-		flex: 1 0 auto;
+		// flex:1 0 auto;
+		margin-top: 40px;
 	}
 	.tit {
 		font-size: 18px;
 		font-weight: 500;
 		margin-bottom: 50px;
 	}
+
+	.ctr:has(#pickBar) {
+		flex: 53 0 auto;
+		// max-width: 530px;
+		.canvasContainer {
+			max-width:530px;
+			max-height: 300px;
+			aspect-ratio: 530/300;
+			margin: 0 auto;
+		}
+	}
+	.ctr:has(#pickDoughnut) {
+		flex: 30 0 auto;
+		// max-width: 300px;
+		.canvasContainer {
+			max-width:300px;
+			max-height: 300px;
+			aspect-ratio: 1/1;
+			margin: 0 auto;
+		}
+	}
+
 	@media screen and (max-width:768px) {
 		& {
 			flex-direction: column;

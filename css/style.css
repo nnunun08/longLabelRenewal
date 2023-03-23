@@ -149,6 +149,9 @@ body {
   .meteItem.ac h3 {
     margin-left: 25px;
   }
+  .meteItem.ac h3::after {
+    display: none;
+  }
   .popup {
     position: relative;
     margin-top: 82px;
@@ -198,7 +201,7 @@ body {
     font-weight: 600;
   }
   .popup .popupCon .bad,
-  .popup .popupCon .good {
+.popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -1723,6 +1726,15 @@ h4 {
   padding-top: 30px;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 768px) {
+  .pageDetail .accodion li .tabTit {
+    flex-direction: column;
+  }
+  .pageDetail .accodion li .tabTit .btn.realTopBtn {
+    max-width: unset;
+    width: 100%;
+  }
+}
 .pageDetail .accodion li .tabTit h3 {
   font-size: 22px;
   font-weight: 600;
@@ -1738,7 +1750,7 @@ h4 {
   white-space: nowrap;
   font-size: 21px;
   font-weight: bold;
-  padding: 20px 60px 20px 0px;
+  padding: 15px 60px 15px 0px;
   border-top: 1px solid #151515;
   min-height: 58px;
   height: 58px;
@@ -1812,6 +1824,9 @@ h4 {
 .pageDetail .accodion li .flexBx.just-start {
   justify-content: flex-start;
   gap: 10px;
+}
+.pageDetail .accodion li .flexBx:has(.follow) {
+  margin-bottom: 15px;
 }
 .pageDetail .accodion li .flexBx .left {
   display: flex;
@@ -2017,9 +2032,16 @@ h4 {
 }
 .pageDetail .accodion .question .btn {
   width: 100%;
+  max-width: 352px;
   box-sizing: border-box;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .pageDetail .accodion .question .btn {
+    max-width: unset;
+  }
 }
 .pageDetail .accodion .question .flexBx .inputText {
   flex: 1 0 auto;
@@ -2114,9 +2136,16 @@ h4 {
 }
 .pageDetail .accodion .review .btn {
   width: 100%;
+  max-width: 352px;
   box-sizing: border-box;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .pageDetail .accodion .review .btn {
+    max-width: unset;
+  }
 }
 .pageDetail .accodion .review .textarea {
   background-color: transparent;
@@ -2146,6 +2175,13 @@ h4 {
 }
 .pageDetail .accodion .review:has(.talksWrite) .btn {
   margin-bottom: 94px;
+  margin-left: auto;
+  max-width: 352px;
+}
+@media screen and (max-width: 768px) {
+  .pageDetail .accodion .review:has(.talksWrite) .btn {
+    max-width: unset;
+  }
 }
 .pageDetail .accodion .review + .pagination {
   margin-top: 43px;
@@ -3229,9 +3265,16 @@ h4 {
 }
 .talksDetail .question .btn {
   width: 100%;
+  max-width: 352px;
   box-sizing: border-box;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .talksDetail .question .btn {
+    max-width: unset;
+  }
 }
 .talksDetail .question .flexBx .inputText {
   flex: 1 0 auto;
@@ -3353,9 +3396,16 @@ h4 {
 }
 .talksDetail .reply .btn {
   width: 100%;
+  max-width: 352px;
   box-sizing: border-box;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .talksDetail .reply .btn {
+    max-width: unset;
+  }
 }
 .talksDetail .reply .btn {
   height: 36px;
@@ -3880,6 +3930,15 @@ h4 {
   padding-top: 30px;
   margin-bottom: 25px;
 }
+@media screen and (max-width: 768px) {
+  .about .accodion li .tabTit {
+    flex-direction: column;
+  }
+  .about .accodion li .tabTit .btn.realTopBtn {
+    max-width: unset;
+    width: 100%;
+  }
+}
 .about .accodion li .tabTit h3 {
   font-size: 22px;
   font-weight: 600;
@@ -3895,7 +3954,7 @@ h4 {
   white-space: nowrap;
   font-size: 21px;
   font-weight: bold;
-  padding: 20px 60px 20px 0px;
+  padding: 15px 60px 15px 0px;
   border-top: 1px solid #151515;
   min-height: 58px;
   height: 58px;
@@ -3969,6 +4028,9 @@ h4 {
 .about .accodion li .flexBx.just-start {
   justify-content: flex-start;
   gap: 10px;
+}
+.about .accodion li .flexBx:has(.follow) {
+  margin-bottom: 15px;
 }
 .about .accodion li .flexBx .left {
   display: flex;
@@ -4174,9 +4236,16 @@ h4 {
 }
 .about .accodion .question .btn {
   width: 100%;
+  max-width: 352px;
   box-sizing: border-box;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .about .accodion .question .btn {
+    max-width: unset;
+  }
 }
 .about .accodion .question .flexBx .inputText {
   flex: 1 0 auto;
@@ -4271,9 +4340,16 @@ h4 {
 }
 .about .accodion .review .btn {
   width: 100%;
+  max-width: 352px;
   box-sizing: border-box;
   margin-top: 15px;
   margin-bottom: 15px;
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .about .accodion .review .btn {
+    max-width: unset;
+  }
 }
 .about .accodion .review .textarea {
   background-color: transparent;
@@ -4303,6 +4379,13 @@ h4 {
 }
 .about .accodion .review:has(.talksWrite) .btn {
   margin-bottom: 94px;
+  margin-left: auto;
+  max-width: 352px;
+}
+@media screen and (max-width: 768px) {
+  .about .accodion .review:has(.talksWrite) .btn {
+    max-width: unset;
+  }
 }
 .about .accodion .review + .pagination {
   margin-top: 43px;
@@ -5021,6 +5104,17 @@ h4 {
   font-weight: bold;
   line-height: 1.07;
   color: var(--white);
+  position: relative;
+}
+.materialsSlide .meteItem h3::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../img/ic_popClose_m.svg) center/cover no-repeat;
+  transform: rotate(90deg);
 }
 .materialsSlide .meteItem p {
   font-size: 20px;
@@ -5182,6 +5276,9 @@ h4 {
   .materialsSlide .meteItem .meteItem.ac h3 {
     margin-left: 25px;
   }
+  .materialsSlide .meteItem .meteItem.ac h3::after {
+    display: none;
+  }
   .materialsSlide .meteItem .popup {
     position: relative;
     margin-top: 82px;
@@ -5231,7 +5328,7 @@ h4 {
     font-weight: 600;
   }
   .materialsSlide .meteItem .popup .popupCon .bad,
-  .materialsSlide .meteItem .popup .popupCon .good {
+.materialsSlide .meteItem .popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -5300,33 +5397,33 @@ h4 {
     padding: 0 30px;
   }
   .pick,
-  .mainArchive,
-  .mainStories {
+.mainArchive,
+.mainStories {
     padding: 0;
     margin: 75px 0;
   }
   .pick .mainConTit h4,
-  .mainArchive .mainConTit h4,
-  .mainStories .mainConTit h4 {
+.mainArchive .mainConTit h4,
+.mainStories .mainConTit h4 {
     display: block;
     font-size: 17px;
   }
   .pick .mainConTit p,
-  .mainArchive .mainConTit p,
-  .mainStories .mainConTit p {
+.mainArchive .mainConTit p,
+.mainStories .mainConTit p {
     display: block;
     font-size: 12px;
     margin-top: 4px;
     margin-left: 0;
   }
   .pick .mainConTit .more,
-  .mainArchive .mainConTit .more,
-  .mainStories .mainConTit .more {
+.mainArchive .mainConTit .more,
+.mainStories .mainConTit .more {
     display: none;
   }
   .pick .mainConTit,
-  .mainArchive .mainConTit,
-  .mainStories .mainConTit {
+.mainArchive .mainConTit,
+.mainStories .mainConTit {
     margin-bottom: 20px;
   }
   .pick {
@@ -5523,7 +5620,7 @@ h4 {
     height: 52px;
   }
   .talksWrite label,
-  .talksWrite .imgBx .img {
+.talksWrite .imgBx .img {
     width: 40px;
     height: 40px;
   }
@@ -5649,58 +5746,103 @@ h4 {
   .pageDetail .accodion li .flexBx {
     flex-wrap: wrap;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .pageDetail .accodion li .flexBx:has(.textarea) {
+    flex-direction: column;
+  }
+  .pageDetail .accodion li .flexBx:has(.textarea) .inputText,
+.pageDetail .accodion li .flexBx:has(.textarea) .textarea,
+.pageDetail .accodion li .flexBx:has(.textarea) .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+  .pageDetail .accodion li .flexBx:has(.textarea) .btn {
+    height: 36px;
+    flex: 1 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .accodion .question .flexBx .inputText {
     margin-right: 0;
   }
   .pageDetail .accodion .question .flexBx .inputText .textarea {
     height: 140px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .accodion .question .flexBx .btn {
     flex: 1 0 100%;
     height: 36px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .accodion .question.coment .flexBx .btn {
     margin: 10px 0;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .topCon p {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .control {
     flex-direction: column;
     gap: 20px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .reason {
     text-align: center;
   }
+}
+@media screen and (max-width: 768px) {
   .pageTab {
     padding-top: 30px;
   }
   .pageTab ul li {
     font-size: 14px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesDetail {
     margin-top: 30px;
   }
+}
+@media screen and (max-width: 768px) {
   .about {
     margin-top: 80px;
   }
+}
+@media screen and (max-width: 768px) {
   .about .contents .accodion li .item {
     width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .section-detail {
     padding-top: 50px;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .container {
     max-width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.label,
-  .PageEdit .inputWrap .label {
+.PageEdit .inputWrap .label {
     flex-basis: 30px;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .rightCon {
     flex: 0 0 30px;
     flex-direction: column;
@@ -5708,50 +5850,72 @@ h4 {
     align-items: flex-start;
     margin-top: 16px;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.readonly,
-  .PageEdit .inputWrap .alignLeft {
+.PageEdit .inputWrap .alignLeft {
     flex: 1 0 38px;
     display: flex;
     padding: 0;
     align-items: center;
     text-align: left;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap.mt-10 .label {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .radioWrap {
     height: 60px;
     display: flex;
     align-items: center;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .select {
     width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesList .item .data {
     right: auto;
     left: 12px;
     bottom: 12px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesList .item .name {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesList .item .textBx {
     padding: 12px;
     padding-bottom: 40px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail {
     margin-top: 30px;
   }
   .pageDetail .imgSlide {
     border: 0;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .control .btn {
     width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .page404 .search-bg {
     transform: scale(0.85);
     margin-top: 20px;
   }
+}
+@media screen and (max-width: 768px) {
   .materialsSlide > ul {
     gap: 30px;
     flex-direction: column;
@@ -5762,6 +5926,8 @@ h4 {
     height: auto;
     padding: 22px 25px;
   }
+}
+@media screen and (max-width: 768px) {
   .backPage {
     text-indent: -9999px;
     width: 24px;
@@ -5771,6 +5937,9 @@ h4 {
     background: url(../img/icon_arrow_m.svg) center/cover no-repeat !important;
     margin-left: -14px;
     margin-top: -5px;
+    position: absolute;
+    top: 85px;
+    z-index: 10;
   }
 }
 @media screen and (max-width: 520px) {
@@ -5800,7 +5969,7 @@ h4 {
   }
   .pageDetail .topCon .item .btn {
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     left: 30px;
     right: 30px;
     width: calc(100% - 60px);
@@ -5888,18 +6057,36 @@ h4 {
 .chart {
   display: flex;
   padding-top: 130px;
-  gap: 28px;
 }
 .chart .pickPerson {
   width: 250px;
+  flex: 25 0 auto;
 }
 .chart .ctr {
-  flex: 1 0 auto;
+  margin-top: 40px;
 }
 .chart .tit {
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 50px;
+}
+.chart .ctr:has(#pickBar) {
+  flex: 53 0 auto;
+}
+.chart .ctr:has(#pickBar) .canvasContainer {
+  max-width: 530px;
+  max-height: 300px;
+  aspect-ratio: 530/300;
+  margin: 0 auto;
+}
+.chart .ctr:has(#pickDoughnut) {
+  flex: 30 0 auto;
+}
+.chart .ctr:has(#pickDoughnut) .canvasContainer {
+  max-width: 300px;
+  max-height: 300px;
+  aspect-ratio: 1/1;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .chart {
@@ -5909,4 +6096,6 @@ h4 {
     width: 100%;
     text-align: center;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
