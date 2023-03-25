@@ -201,7 +201,7 @@ body {
     font-weight: 600;
   }
   .popup .popupCon .bad,
-.popup .popupCon .good {
+  .popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -5093,6 +5093,9 @@ h4 {
   width: 302px;
   transition: 0.2s;
 }
+.materialsSlide .meteItem:not(:has(.popup)) h3::after {
+  display: none;
+}
 .materialsSlide .meteItem:hover {
   box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, 0.16);
 }
@@ -5328,7 +5331,7 @@ h4 {
     font-weight: 600;
   }
   .materialsSlide .meteItem .popup .popupCon .bad,
-.materialsSlide .meteItem .popup .popupCon .good {
+  .materialsSlide .meteItem .popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -5397,33 +5400,33 @@ h4 {
     padding: 0 30px;
   }
   .pick,
-.mainArchive,
-.mainStories {
+  .mainArchive,
+  .mainStories {
     padding: 0;
     margin: 75px 0;
   }
   .pick .mainConTit h4,
-.mainArchive .mainConTit h4,
-.mainStories .mainConTit h4 {
+  .mainArchive .mainConTit h4,
+  .mainStories .mainConTit h4 {
     display: block;
     font-size: 17px;
   }
   .pick .mainConTit p,
-.mainArchive .mainConTit p,
-.mainStories .mainConTit p {
+  .mainArchive .mainConTit p,
+  .mainStories .mainConTit p {
     display: block;
     font-size: 12px;
     margin-top: 4px;
     margin-left: 0;
   }
   .pick .mainConTit .more,
-.mainArchive .mainConTit .more,
-.mainStories .mainConTit .more {
+  .mainArchive .mainConTit .more,
+  .mainStories .mainConTit .more {
     display: none;
   }
   .pick .mainConTit,
-.mainArchive .mainConTit,
-.mainStories .mainConTit {
+  .mainArchive .mainConTit,
+  .mainStories .mainConTit {
     margin-bottom: 20px;
   }
   .pick {
@@ -5620,7 +5623,7 @@ h4 {
     height: 52px;
   }
   .talksWrite label,
-.talksWrite .imgBx .img {
+  .talksWrite .imgBx .img {
     width: 40px;
     height: 40px;
   }
@@ -5752,8 +5755,8 @@ h4 {
     flex-direction: column;
   }
   .pageDetail .accodion li .flexBx:has(.textarea) .inputText,
-.pageDetail .accodion li .flexBx:has(.textarea) .textarea,
-.pageDetail .accodion li .flexBx:has(.textarea) .btn {
+  .pageDetail .accodion li .flexBx:has(.textarea) .textarea,
+  .pageDetail .accodion li .flexBx:has(.textarea) .btn {
     width: 100%;
     max-width: 100%;
   }
@@ -5838,7 +5841,7 @@ h4 {
 }
 @media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.label,
-.PageEdit .inputWrap .label {
+  .PageEdit .inputWrap .label {
     flex-basis: 30px;
   }
 }
@@ -5853,7 +5856,7 @@ h4 {
 }
 @media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.readonly,
-.PageEdit .inputWrap .alignLeft {
+  .PageEdit .inputWrap .alignLeft {
     flex: 1 0 38px;
     display: flex;
     padding: 0;
@@ -6096,6 +6099,4 @@ h4 {
     width: 100%;
     text-align: center;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
