@@ -368,7 +368,8 @@ body {
 .mainBanner .inner img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mainBanner .inner .pcImg {
   display: block;
@@ -418,6 +419,57 @@ body {
 }
 .mainBanner .slick-dots li + li {
   margin-left: 5px;
+}
+
+.mainSlide {
+  margin: 0 auto;
+  margin-top: 65px;
+  margin-bottom: 56px;
+  padding: 0 20px;
+  max-width: 1756px;
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.mainSlide .itemWrap {
+  display: flex;
+  gap: 20px;
+}
+.mainSlide .itemWrap .item {
+  max-width: 500px;
+  width: 25vw;
+  flex: 1 0 auto;
+  aspect-ratio: 5/6;
+  padding: 40px 54px;
+  border-radius: 48px;
+  background-color: #e5e5e5;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.mainSlide .itemWrap .item .tit {
+  font-size: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  z-index: 1;
+}
+.mainSlide .itemWrap .item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
 }
 
 h4 {
@@ -495,7 +547,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .pick .text {
   border-top: 1px solid #151515;
@@ -682,7 +735,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mainArchive .thumbImg {
   margin-bottom: 20px;
@@ -785,7 +839,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mainStories .bodyWrap {
   display: flex;
@@ -1131,6 +1186,9 @@ h4 {
   outline: 0;
   padding-left: 0;
 }
+.countSearch .inner .search::-moz-placeholder {
+  color: #9a9a9a;
+}
 .countSearch .inner .search::placeholder {
   color: #9a9a9a;
 }
@@ -1249,7 +1307,8 @@ h4 {
 .section-detail .container .article .conWrap .thumb img {
   height: 50px;
   width: 50px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .section-detail .container .article .conWrap .thumb .category {
   font-size: 11px;
@@ -1316,7 +1375,8 @@ h4 {
 .section-detail .container .followBrand .brand img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .section-detail .container .followBrand .cate {
   font-size: 16px;
@@ -1516,7 +1576,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .storyCon .imgWrap {
   aspect-ratio: 300/225;
@@ -1666,7 +1727,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .pageDetail .imgWrap {
   aspect-ratio: 540/700;
@@ -1845,7 +1907,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .pageDetail .accodion li .flexBx .left .imgWrap {
   width: 80px;
@@ -2009,6 +2072,9 @@ h4 {
   display: block;
   outline: none;
 }
+.pageDetail .accodion .question .inputText .textarea::-moz-placeholder {
+  color: inherit;
+}
 .pageDetail .accodion .question .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -2113,6 +2179,9 @@ h4 {
   display: block;
   outline: none;
 }
+.pageDetail .accodion .review .inputText .textarea::-moz-placeholder {
+  color: inherit;
+}
 .pageDetail .accodion .review .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -2162,6 +2231,9 @@ h4 {
   resize: none;
   display: block;
   outline: none;
+}
+.pageDetail .accodion .review .textarea::-moz-placeholder {
+  color: inherit;
 }
 .pageDetail .accodion .review .textarea::placeholder {
   color: inherit;
@@ -2676,6 +2748,9 @@ h4 {
   font-size: 18px;
   box-sizing: border-box;
 }
+.loginForm input::-moz-placeholder {
+  color: #656565;
+}
 .loginForm input::placeholder {
   color: #656565;
 }
@@ -2771,7 +2846,9 @@ h4 {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .loginForm .inputWrap .radioWrap [type=radio]:checked {
   border: 8px solid #f63;
@@ -2949,6 +3026,9 @@ h4 {
   padding: 0 15px;
   font-size: 18px;
   box-sizing: border-box;
+}
+.purchase .inner input::-moz-placeholder {
+  color: #656565;
 }
 .purchase .inner input::placeholder {
   color: #656565;
@@ -3242,6 +3322,9 @@ h4 {
   display: block;
   outline: none;
 }
+.talksDetail .question .inputText .textarea::-moz-placeholder {
+  color: inherit;
+}
 .talksDetail .question .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -3373,6 +3456,9 @@ h4 {
   display: block;
   outline: none;
 }
+.talksDetail .reply .inputText .textarea::-moz-placeholder {
+  color: inherit;
+}
 .talksDetail .reply .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -3437,6 +3523,9 @@ h4 {
 }
 .talksDetail .reply .inputText .textarea {
   height: 85px;
+}
+.talksDetail .reply .inputText .textarea::-moz-placeholder {
+  color: #151515;
 }
 .talksDetail .reply .inputText .textarea::placeholder {
   color: #151515;
@@ -3519,6 +3608,9 @@ h4 {
   font-size: 18px;
   box-sizing: border-box;
 }
+.talksWrite input::-moz-placeholder {
+  color: #656565;
+}
 .talksWrite input::placeholder {
   color: #656565;
 }
@@ -3537,6 +3629,9 @@ h4 {
   resize: none;
   display: block;
   outline: none;
+}
+.talksWrite .textarea::-moz-placeholder {
+  color: inherit;
 }
 .talksWrite .textarea::placeholder {
   color: inherit;
@@ -3634,7 +3729,8 @@ h4 {
 .talksWrite .imgBx .img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .talksWrite .imgBx .img .remove {
   padding: 0;
@@ -3660,7 +3756,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .storiesList .data {
   display: flex;
@@ -3778,7 +3875,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .storiesDetail .top {
   flex-wrap: nowrap;
@@ -4049,7 +4147,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about .accodion li .flexBx .left .imgWrap {
   width: 80px;
@@ -4213,6 +4312,9 @@ h4 {
   display: block;
   outline: none;
 }
+.about .accodion .question .inputText .textarea::-moz-placeholder {
+  color: inherit;
+}
 .about .accodion .question .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -4317,6 +4419,9 @@ h4 {
   display: block;
   outline: none;
 }
+.about .accodion .review .inputText .textarea::-moz-placeholder {
+  color: inherit;
+}
 .about .accodion .review .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -4366,6 +4471,9 @@ h4 {
   resize: none;
   display: block;
   outline: none;
+}
+.about .accodion .review .textarea::-moz-placeholder {
+  color: inherit;
 }
 .about .accodion .review .textarea::placeholder {
   color: inherit;
@@ -4761,6 +4869,9 @@ h4 {
   font-size: 18px;
   box-sizing: border-box;
 }
+.PageEdit input::-moz-placeholder {
+  color: #656565;
+}
 .PageEdit input::placeholder {
   color: #656565;
 }
@@ -4778,7 +4889,9 @@ h4 {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .PageEdit .radioWrap [type=radio]:checked {
   border: 8px solid #f63;
@@ -4824,7 +4937,9 @@ h4 {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .PageEdit .inputWrap .radioWrap [type=radio]:checked {
   border: 8px solid #f63;
@@ -5026,7 +5141,8 @@ h4 {
   .header.mo .mobileMenu .panel .top .profile img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .header.mo .mobileMenu .panel .top .user {
     font-size: 18px;
@@ -5772,80 +5888,52 @@ h4 {
   .pageDetail .accodion .question .flexBx .inputText .textarea {
     height: 140px;
   }
-}
-@media screen and (max-width: 768px) {
   .pageDetail .accodion .question .flexBx .btn {
     flex: 1 0 100%;
     height: 36px;
   }
-}
-@media screen and (max-width: 768px) {
   .pageDetail .accodion .question.coment .flexBx .btn {
     margin: 10px 0;
   }
-}
-@media screen and (max-width: 768px) {
   .pageDetail .topCon p {
     font-size: 16px;
   }
-}
-@media screen and (max-width: 768px) {
   .pageDetail .control {
     flex-direction: column;
     gap: 20px;
   }
-}
-@media screen and (max-width: 768px) {
   .pageDetail .reason {
     text-align: center;
   }
-}
-@media screen and (max-width: 768px) {
   .pageTab {
     padding-top: 30px;
   }
   .pageTab ul li {
     font-size: 14px;
   }
-}
-@media screen and (max-width: 768px) {
   .storiesDetail {
     margin-top: 30px;
   }
-}
-@media screen and (max-width: 768px) {
   .about {
     margin-top: 80px;
   }
-}
-@media screen and (max-width: 768px) {
   .about .contents .accodion li .item {
     width: 100%;
   }
-}
-@media screen and (max-width: 768px) {
   .section-detail {
     padding-top: 50px;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .container {
     max-width: 100%;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .inputWrap {
     flex-direction: column;
     align-items: flex-start;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.label,
   .PageEdit .inputWrap .label {
     flex-basis: 30px;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .rightCon {
     flex: 0 0 30px;
     flex-direction: column;
@@ -5853,8 +5941,6 @@ h4 {
     align-items: flex-start;
     margin-top: 16px;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.readonly,
   .PageEdit .inputWrap .alignLeft {
     flex: 1 0 38px;
@@ -5863,62 +5949,42 @@ h4 {
     align-items: center;
     text-align: left;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .inputWrap.mt-10 .label {
     display: none;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .radioWrap {
     height: 60px;
     display: flex;
     align-items: center;
   }
-}
-@media screen and (max-width: 768px) {
   .PageEdit .select {
     width: 100%;
   }
-}
-@media screen and (max-width: 768px) {
   .storiesList .item .data {
     right: auto;
     left: 12px;
     bottom: 12px;
   }
-}
-@media screen and (max-width: 768px) {
   .storiesList .item .name {
     font-size: 16px;
   }
-}
-@media screen and (max-width: 768px) {
   .storiesList .item .textBx {
     padding: 12px;
     padding-bottom: 40px;
   }
-}
-@media screen and (max-width: 768px) {
   .pageDetail {
     margin-top: 30px;
   }
   .pageDetail .imgSlide {
     border: 0;
   }
-}
-@media screen and (max-width: 768px) {
   .pageDetail .control .btn {
     width: 100%;
   }
-}
-@media screen and (max-width: 768px) {
   .page404 .search-bg {
     transform: scale(0.85);
     margin-top: 20px;
   }
-}
-@media screen and (max-width: 768px) {
   .materialsSlide > ul {
     gap: 30px;
     flex-direction: column;
@@ -5929,8 +5995,6 @@ h4 {
     height: auto;
     padding: 22px 25px;
   }
-}
-@media screen and (max-width: 768px) {
   .backPage {
     text-indent: -9999px;
     width: 24px;
@@ -5969,6 +6033,9 @@ h4 {
   }
   body {
     background-color: var(--white);
+  }
+  body:has(.mainSlide) {
+    background-color: #F4F4F4;
   }
   .pageDetail .topCon .item .btn {
     position: fixed;
@@ -6100,3 +6167,211 @@ h4 {
     text-align: center;
   }
 }
+
+.mainOverView {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.mainOverView .inner {
+  max-width: 916px;
+}
+.mainOverView .dividerLine {
+  height: 7px;
+  background-color: var(--black);
+  width: 1920px;
+  margin-bottom: 16px;
+  margin-left: 30px;
+}
+.mainOverView p {
+  margin-left: 30px;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  margin-bottom: 45px;
+}
+.mainOverView .flex {
+  display: flex;
+}
+.mainOverView .flex .item {
+  flex: 1 0 33.3%;
+  font-size: 20px;
+  text-align: center;
+  padding: 0 11.5px;
+  box-sizing: border-box;
+}
+.mainOverView .flex .item .cate {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #000;
+  margin-bottom: 12px;
+}
+.mainOverView .flex .item .count {
+  font-family: Montserrat;
+  font-size: 38px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.79;
+  letter-spacing: normal;
+  color: #000;
+}
+.mainOverView .flex .item + .item {
+  border-left: 1px solid #a5a5a5;
+}
+
+.mainMyValue {
+  margin-bottom: 150px;
+  overflow: hidden;
+}
+.mainMyValue .inner {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 357px;
+  gap: 20px;
+}
+.mainMyValue .dividerLine {
+  height: 7px;
+  background-color: var(--black);
+  width: 1920px;
+  margin-bottom: 16px;
+  margin-left: 30px;
+}
+.mainMyValue .dividerLine {
+  margin-left: 0;
+  margin-top: 20px;
+  margin-bottom: 14.5px;
+  position: relative;
+  width: 2560px;
+}
+.mainMyValue .dividerLine .h1 {
+  position: absolute;
+  left: 81.5px;
+  top: -30px;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  padding: 0 20px;
+  background-color: #f4f4f4;
+}
+.mainMyValue p {
+  font-size: 28px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.07;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.mainMyValue p span {
+  font-weight: 800;
+  color: #81b29a;
+}
+.mainMyValue .badgeWrap {
+  display: flex;
+  gap: 20px;
+}
+.mainMyValue .badgeWrap .badge {
+  padding: 12px 20px;
+  border-radius: 40px;
+  border: 1px solid var(--black);
+  background-color: #ff6633;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #f4f4f4;
+}
+
+@media screen and (max-width: 768px) {
+  .mainSlide .itemWrap .item {
+    max-width: 260px;
+    width: 70vw;
+    padding: 30px 20px;
+  }
+  .mainSlide .itemWrap .item .tit {
+    font-size: 20px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+  }
+  .mainOverView .flex .item {
+    font-size: 18px;
+    padding: 0;
+  }
+  .mainOverView .inner {
+    padding: 0 20px;
+  }
+  .mainOverView .dividerLine {
+    margin-left: 0;
+  }
+  .mainOverView p {
+    margin-left: 0;
+    font-size: 16px;
+  }
+  .mainOverView .flex .item .cate {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .mainOverView .flex .item .count {
+    font-size: 28px;
+  }
+  .mainMyValue {
+    margin-bottom: 60px;
+  }
+  .mainMyValue .badgeWrap {
+    gap: 12px;
+  }
+  .mainMyValue .dividerLine {
+    margin-bottom: 31px;
+  }
+  .mainMyValue .dividerLine .h1 {
+    left: 20px;
+    padding: 0 10px;
+    font-size: 24px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
+    top: -8px;
+  }
+  .mainMyValue .inner {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mainMyValue p {
+    font-size: 18px;
+  }
+  .mainMyValue .badgeWrap .badge {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}/*# sourceMappingURL=style.css.map */
