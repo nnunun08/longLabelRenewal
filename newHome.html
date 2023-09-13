@@ -168,7 +168,7 @@
     </div>
 
 
-    <div class="mainMyValue">
+    <div class="mainLine">
         <div class="dividerLine">
             <div class="h1">My Value</div>
         </div>
@@ -183,18 +183,18 @@
         </div>
     </div>
     
-
-    <div class="pick">
+    <div class="mainLine mainLinePick">
+        <div class="dividerLine">
+            <div class="h1">Pick</div>
+        </div>
         <div class="inner">
-            <div class="mainConTit">
-                <div>
-                    <h4>Pick</h4>
-                    <p class="desc">더 알고 싶지 않나요? 여러분의 관심을 표현해 보세요</p>
-                </div>
-                <span class="more">View more</span>
-            </div>
+            <em>더 알고 싶지 않나요? 여러분의 관심을 표현해 보세요</em>
+        </div>
+    </div>
 
-            <ul class="col-3">
+    <div class="pick newPick">
+        <div class="inner">
+            <ul class="pickSlide">
                 <!-- 신청 중인 아이템에 .apply -->
                 <li class="item apply">
                     <div class="thumbImg anchor">
@@ -211,6 +211,91 @@
                     </div>
                     <div class="btn">
                         신청중
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="thumbImg anchor">
+                        <img src="./img/resource/thumbSample.png" alt="thumbImg">
+                    </div>
+                    <div class="text">
+                        <div class="category">파타고니아</div>
+                        <div class="name">
+                            Women’s Woolyester Pile Bomber Jacket Women’s Woolyester Pile Bomber Jacket
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        273명 정보 신청중
+                    </div>
+                    <div class="btn">
+                        궁금해요
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="thumbImg anchor">
+                        <img src="./img/resource/thumbSample.png" alt="thumbImg">
+                    </div>
+                    <div class="text">
+                        <div class="category">파타고니아</div>
+                        <div class="name">
+                            Women’s Woolyester Pile Bomber Jacket Women’s Woolyester Pile Bomber Jacket
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        273명 정보 신청중
+                    </div>
+                    <div class="btn">
+                        궁금해요
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="thumbImg anchor">
+                        <img src="./img/resource/thumbSample.png" alt="thumbImg">
+                    </div>
+                    <div class="text">
+                        <div class="category">파타고니아</div>
+                        <div class="name">
+                            Women’s Woolyester Pile Bomber Jacket Women’s Woolyester Pile Bomber Jacket
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        273명 정보 신청중
+                    </div>
+                    <div class="btn">
+                        궁금해요
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="thumbImg anchor">
+                        <img src="./img/resource/thumbSample.png" alt="thumbImg">
+                    </div>
+                    <div class="text">
+                        <div class="category">파타고니아</div>
+                        <div class="name">
+                            Women’s Woolyester Pile Bomber Jacket Women’s Woolyester Pile Bomber Jacket
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        273명 정보 신청중
+                    </div>
+                    <div class="btn">
+                        궁금해요
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="thumbImg anchor">
+                        <img src="./img/resource/thumbSample.png" alt="thumbImg">
+                    </div>
+                    <div class="text">
+                        <div class="category">파타고니아</div>
+                        <div class="name">
+                            Women’s Woolyester Pile Bomber Jacket Women’s Woolyester Pile Bomber Jacket
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        273명 정보 신청중
+                    </div>
+                    <div class="btn">
+                        궁금해요
                     </div>
                 </li>
                 <li class="item">
@@ -512,6 +597,23 @@
                 autoplay: true,
                 autoplaySpeed: 2000,
                 dots: true,
+          });
+
+          $('.pickSlide').slick({
+                infinite: false,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            infinite: true,
+                            arrows: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
           });
         });
       </script>

@@ -1,6 +1,7 @@
 @import url(./reset.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
 
 
 :root {
@@ -43,6 +44,15 @@ body {
 // 		overflow: unset;
 // 	}
 // }
+@mixin cardHoverEffect {
+		transition: 0.3s cubic-bezier(0.6, 0.1, 0.2, 1);
+		cursor: pointer;
+
+		&:hover {
+			transform: translateY(-12px);
+		}
+	}
+
 @mixin dividerLine {
 		.dividerLine {
 			height: 7px;
@@ -1564,7 +1574,7 @@ $headerHeight:75px;
 
 .mainSlide {
 	margin: 0 auto;
-	margin-top: 65px;
+	margin-top: 53px;
 	margin-bottom: 56px;
 	padding: 0 20px;
 	max-width: 1756px;
@@ -1574,6 +1584,12 @@ $headerHeight:75px;
 	.itemWrap {
 		display: flex;
 		gap: 20px;
+		padding-top: 12px;
+		&::after {
+			content: '';
+			display: block;
+			padding-right: 1px;
+		}
 		.item {
 			max-width: 500px;
 			width: 25vw;
@@ -1588,6 +1604,9 @@ $headerHeight:75px;
 			position: relative;
 			z-index: 0;
 			overflow: hidden;
+			
+			@include cardHoverEffect;
+
 			.tit {
 				font-size: 32px;
 				font-weight: 600;
@@ -1772,6 +1791,84 @@ h4 {
 		}
 	}
 	@include btn;
+
+
+	&.newPick {
+		padding-top: 50px;
+		padding-bottom: 140px;
+		.inner {
+			max-width: 1756px;
+			padding: 0 10px;
+		}
+		.pickSlide {
+			padding-top: 42px;
+			overflow: hidden;
+			.slick-slide {
+				padding: 0 10px;
+			}
+			.slick-arrow {
+				cursor: pointer;
+				width: 20px;
+				height: 20px;
+				background: transparent url(../img/ic_pickSlideArr.svg) center no-repeat;
+				text-indent: -9999px;
+				border: 0;
+				padding: 0;
+				box-sizing: border-box;
+				position: absolute;
+				top: 0;
+				right: 10px;
+				&.slick-prev {
+					transform: rotate(180deg);
+					right: 40px;
+				}
+			}
+		}
+
+		.thumbImg {
+			aspect-ratio: 1/1;
+		}
+		.text {
+			padding: 16px 0;
+			.category {
+				font-size: 21px;
+				font-weight: 500;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				text-align: left;
+				color: var(--black);
+			}
+			.name {
+				font-size: 24px;
+				font-weight: bold;
+				font-stretch: normal;
+				font-style: normal;
+				line-height: 0.92;
+				letter-spacing: normal;
+				text-align: left;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 1;
+				-webkit-box-orient: vertical;
+			}
+		}
+		.subscribe {
+			padding-left: 25px;
+			font-size: 18px;
+			font-weight: 500;
+			font-stretch: normal;
+			font-style: normal;
+			letter-spacing: normal;
+			text-align: left;
+			background: url(../img/ic_info_subscribe.svg) left center/16px no-repeat;
+		}
+		.btn {
+			height: 44px;
+			font-size: 21px;
+			font-weight: bold;
+		}
+	}
 
 }
 
@@ -4938,7 +5035,7 @@ h4 {
 			padding: 0 11.5px;
 			box-sizing: border-box;
 			.cate {
-				font-family: Montserrat;
+				font-family: 'Montserrat';
 				font-weight: bold;
 				font-stretch: normal;
 				font-style: normal;
@@ -4948,7 +5045,7 @@ h4 {
 				margin-bottom: 12px;
 			}
 			.count {
-				font-family: Montserrat;
+				font-family: 'Montserrat';
 				font-size: 38px;
 				font-weight: 600;
 				font-stretch: normal;
@@ -4964,9 +5061,28 @@ h4 {
 	}
 }
 
-.mainMyValue {
+.mainLine {
 	margin-bottom: 150px;
 	overflow: hidden;
+	&.mainLinePick {
+		margin-bottom: 0;
+		.inner {
+			padding-left: 235px;
+		}
+		h1 {
+			top: -13px;
+		}
+		em {
+			font-size: 20px;
+			font-weight: normal;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.5;
+			letter-spacing: normal;
+			text-align: left;
+			color: #000;
+		}
+	}
 	.inner {
 		max-width: 100%;
 		display: flex;
@@ -4974,7 +5090,7 @@ h4 {
 		align-items: center;
 		flex-wrap: wrap;
 		padding-left: 357px;
-		gap: 20px
+		gap: 20px;
 	}
 	@include dividerLine;
 	.dividerLine {
@@ -4987,7 +5103,7 @@ h4 {
 			position: absolute;
 			left: 81.5px;
 			top: -30px;
-			font-family: Montserrat;
+			font-family: 'Montserrat';
 			font-size: 48px;
 			font-weight: 800;
 			font-stretch: normal;
@@ -5014,6 +5130,8 @@ h4 {
 			color: #81b29a;
 		}
 	}
+	
+
 	.badgeWrap {
 		display: flex;
 		gap: 20px;
@@ -5071,13 +5189,13 @@ h4 {
 	.mainOverView .flex .item .count {
 		font-size: 28px;
 	}
-	.mainMyValue {
+	.mainLine {
 		margin-bottom: 60px;
 	}
-	.mainMyValue .badgeWrap {
+	.mainLine .badgeWrap {
 		gap: 12px;
 	}
-	.mainMyValue .dividerLine {
+	.mainLine .dividerLine {
 		margin-bottom: 31px;
 		.h1 {
 			left: 20px;
@@ -5093,17 +5211,83 @@ h4 {
 			top: -8px;
 		}
 	}
-	.mainMyValue .inner {
+	.mainLine .inner {
 		padding: 0 20px;
 		flex-direction: column;
 	    align-items: flex-start;
 	}
-	.mainMyValue p {
+	.mainLine p {
 		font-size: 18px;
 	}
-	.mainMyValue .badgeWrap .badge {
+	.mainLine .badgeWrap .badge {
 		font-size: 16px;
 		padding: 8px 12px;
 	}
+
+	.pick.newPick {
+		margin-top: 0;
+		padding-top: 20px;
+		padding-bottom: 0;
+		overflow: hidden;
+		margin-bottom: 60px;
+		.slick-slide {
+			&:nth-last-of-type(1) {
+				
+			}
+		}
+	}
+	.pick.newPick .inner {
+		width: 150vw;;
+	}
+	.pick.newPick .pickSlide {
+		padding-top: 0;
+		.slick-list {
+
+		}
+	}
+	.pick.newPick .pickSlide .slick-slide {
+		padding: 0 8px;
+	}
+	.pick.newPick .text {
+		padding: 4px 0;
+		margin-bottom: 4px;
+	}
+	.pick.newPick .text .category {
+		font-size: 10px;
+		margin-bottom: 2px;
+	}
+	.pick.newPick .text .name {
+		font-size: 12px;
+	}
+	.pick.newPick .subscribe {
+		font-size: 10px;
+		background-size: 12px;
+		padding-left: 16px;
+		margin-bottom: 12px;
+	}
+	.pick.newPick .btn {
+		height: 28px;
+		font-size: 12px;
+	}
+
+	.mainLine.mainLinePick {
+		.inner {
+			padding-left: 20px;
+		}
+		.dividerLine {
+			margin-bottom: 20px;
+		}
+	}
+	.mainLine.mainLinePick em {
+		font-size: 16px;
+		font-weight: normal;
+		font-stretch: normal;
+		font-style: normal;
+		line-height: 1.75;
+		letter-spacing: normal;
+		text-align: left;
+		color: #000;
+	}
+	
 	
 }

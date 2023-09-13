@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(./reset.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
 :root {
   --duck-egg-blue: #d0f0ec;
   --dodger-blue: #39f;
@@ -423,7 +423,7 @@ body {
 
 .mainSlide {
   margin: 0 auto;
-  margin-top: 65px;
+  margin-top: 53px;
   margin-bottom: 56px;
   padding: 0 20px;
   max-width: 1756px;
@@ -434,6 +434,12 @@ body {
 .mainSlide .itemWrap {
   display: flex;
   gap: 20px;
+  padding-top: 12px;
+}
+.mainSlide .itemWrap::after {
+  content: "";
+  display: block;
+  padding-right: 1px;
 }
 .mainSlide .itemWrap .item {
   max-width: 500px;
@@ -449,6 +455,11 @@ body {
   position: relative;
   z-index: 0;
   overflow: hidden;
+  transition: 0.3s cubic-bezier(0.6, 0.1, 0.2, 1);
+  cursor: pointer;
+}
+.mainSlide .itemWrap .item:hover {
+  transform: translateY(-12px);
 }
 .mainSlide .itemWrap .item .tit {
   font-size: 32px;
@@ -604,6 +615,81 @@ h4 {
   background-color: #f63;
   color: var(--white);
   border: 1px solid var(--black);
+}
+.pick.newPick {
+  padding-top: 50px;
+  padding-bottom: 140px;
+}
+.pick.newPick .inner {
+  max-width: 1756px;
+  padding: 0 10px;
+}
+.pick.newPick .pickSlide {
+  padding-top: 42px;
+  overflow: hidden;
+}
+.pick.newPick .pickSlide .slick-slide {
+  padding: 0 10px;
+}
+.pick.newPick .pickSlide .slick-arrow {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: transparent url(../img/ic_pickSlideArr.svg) center no-repeat;
+  text-indent: -9999px;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+.pick.newPick .pickSlide .slick-arrow.slick-prev {
+  transform: rotate(180deg);
+  right: 40px;
+}
+.pick.newPick .thumbImg {
+  aspect-ratio: 1/1;
+}
+.pick.newPick .text {
+  padding: 16px 0;
+}
+.pick.newPick .text .category {
+  font-size: 21px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--black);
+}
+.pick.newPick .text .name {
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.92;
+  letter-spacing: normal;
+  text-align: left;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.pick.newPick .subscribe {
+  padding-left: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-align: left;
+  background: url(../img/ic_info_subscribe.svg) left center/16px no-repeat;
+}
+.pick.newPick .btn {
+  height: 44px;
+  font-size: 21px;
+  font-weight: bold;
 }
 
 .pickPage {
@@ -6204,7 +6290,7 @@ h4 {
   box-sizing: border-box;
 }
 .mainOverView .flex .item .cate {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -6214,7 +6300,7 @@ h4 {
   margin-bottom: 12px;
 }
 .mainOverView .flex .item .count {
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 38px;
   font-weight: 600;
   font-stretch: normal;
@@ -6227,11 +6313,30 @@ h4 {
   border-left: 1px solid #a5a5a5;
 }
 
-.mainMyValue {
+.mainLine {
   margin-bottom: 150px;
   overflow: hidden;
 }
-.mainMyValue .inner {
+.mainLine.mainLinePick {
+  margin-bottom: 0;
+}
+.mainLine.mainLinePick .inner {
+  padding-left: 235px;
+}
+.mainLine.mainLinePick h1 {
+  top: -13px;
+}
+.mainLine.mainLinePick em {
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+}
+.mainLine .inner {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
@@ -6240,25 +6345,25 @@ h4 {
   padding-left: 357px;
   gap: 20px;
 }
-.mainMyValue .dividerLine {
+.mainLine .dividerLine {
   height: 7px;
   background-color: var(--black);
   width: 1920px;
   margin-bottom: 16px;
   margin-left: 30px;
 }
-.mainMyValue .dividerLine {
+.mainLine .dividerLine {
   margin-left: 0;
   margin-top: 20px;
   margin-bottom: 14.5px;
   position: relative;
   width: 2560px;
 }
-.mainMyValue .dividerLine .h1 {
+.mainLine .dividerLine .h1 {
   position: absolute;
   left: 81.5px;
   top: -30px;
-  font-family: Montserrat;
+  font-family: "Montserrat";
   font-size: 48px;
   font-weight: 800;
   font-stretch: normal;
@@ -6270,7 +6375,7 @@ h4 {
   padding: 0 20px;
   background-color: #f4f4f4;
 }
-.mainMyValue p {
+.mainLine p {
   font-size: 28px;
   font-weight: 600;
   font-stretch: normal;
@@ -6280,15 +6385,15 @@ h4 {
   text-align: left;
   color: #000;
 }
-.mainMyValue p span {
+.mainLine p span {
   font-weight: 800;
   color: #81b29a;
 }
-.mainMyValue .badgeWrap {
+.mainLine .badgeWrap {
   display: flex;
   gap: 20px;
 }
-.mainMyValue .badgeWrap .badge {
+.mainLine .badgeWrap .badge {
   padding: 12px 20px;
   border-radius: 40px;
   border: 1px solid var(--black);
@@ -6340,16 +6445,16 @@ h4 {
   .mainOverView .flex .item .count {
     font-size: 28px;
   }
-  .mainMyValue {
+  .mainLine {
     margin-bottom: 60px;
   }
-  .mainMyValue .badgeWrap {
+  .mainLine .badgeWrap {
     gap: 12px;
   }
-  .mainMyValue .dividerLine {
+  .mainLine .dividerLine {
     margin-bottom: 31px;
   }
-  .mainMyValue .dividerLine .h1 {
+  .mainLine .dividerLine .h1 {
     left: 20px;
     padding: 0 10px;
     font-size: 24px;
@@ -6362,16 +6467,69 @@ h4 {
     color: #000;
     top: -8px;
   }
-  .mainMyValue .inner {
+  .mainLine .inner {
     padding: 0 20px;
     flex-direction: column;
     align-items: flex-start;
   }
-  .mainMyValue p {
+  .mainLine p {
     font-size: 18px;
   }
-  .mainMyValue .badgeWrap .badge {
+  .mainLine .badgeWrap .badge {
     font-size: 16px;
     padding: 8px 12px;
+  }
+  .pick.newPick {
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+  .pick.newPick .inner {
+    width: 150vw;
+  }
+  .pick.newPick .pickSlide {
+    padding-top: 0;
+  }
+  .pick.newPick .pickSlide .slick-slide {
+    padding: 0 8px;
+  }
+  .pick.newPick .text {
+    padding: 4px 0;
+    margin-bottom: 4px;
+  }
+  .pick.newPick .text .category {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  .pick.newPick .text .name {
+    font-size: 12px;
+  }
+  .pick.newPick .subscribe {
+    font-size: 10px;
+    background-size: 12px;
+    padding-left: 16px;
+    margin-bottom: 12px;
+  }
+  .pick.newPick .btn {
+    height: 28px;
+    font-size: 12px;
+  }
+  .mainLine.mainLinePick .inner {
+    padding-left: 20px;
+  }
+  .mainLine.mainLinePick .dividerLine {
+    margin-bottom: 20px;
+  }
+  .mainLine.mainLinePick em {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #000;
   }
 }/*# sourceMappingURL=style.css.map */
