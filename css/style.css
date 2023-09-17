@@ -2936,19 +2936,33 @@ h4 {
 }
 
 .loginForm {
-  margin-top: 90px;
+  margin-top: 165px;
   min-height: 500px;
   text-align: center;
 }
+.loginForm .tit {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 16px;
+}
 .loginForm .inner {
-  max-width: 540px;
+  max-width: 580px;
   margin: 0 auto;
 }
 .loginForm h2 {
-  font-size: 27px;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 90px;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .loginForm h2 {
+    display: none;
+  }
+}
+.loginForm .logo {
+  height: 34px;
+  margin-bottom: 105px;
 }
 .loginForm .inputLabel {
   text-align: left;
@@ -2967,12 +2981,34 @@ h4 {
   padding: 0 15px;
   font-size: 18px;
   box-sizing: border-box;
+  color: var(--black);
 }
 .loginForm input::-moz-placeholder {
   color: #656565;
 }
 .loginForm input::placeholder {
   color: #656565;
+}
+.loginForm input:focus {
+  outline: 1px solid var(--black);
+}
+.loginForm .insert {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #656565;
+}
+.loginForm input {
+  border: 1px solid #959595;
+  height: 55px;
+  font-size: 16px;
+}
+.loginForm input::-moz-placeholder {
+  color: #959595;
+}
+.loginForm input::placeholder {
+  color: #959595;
 }
 .loginForm input + input {
   margin-top: 10px;
@@ -2999,9 +3035,9 @@ h4 {
 .loginForm .btn {
   font-size: 18px;
   font-weight: bold;
-  height: 50px;
-  margin-top: 23px;
-  margin-bottom: 6px;
+  height: 55px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .loginForm .flexBx {
   display: flex;
@@ -3030,10 +3066,20 @@ h4 {
 .loginForm .btn-kakao {
   background-color: #FDEA4F;
   color: #151515;
+  border-radius: 40px;
 }
 .loginForm .btn-naver {
   background-color: #66CF5D;
   color: var(--white);
+  border-radius: 40px;
+}
+.loginForm .guide {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  color: #000;
+  margin-top: 12px;
+  display: none;
 }
 .loginForm .select {
   flex: 1 0 auto;
@@ -3050,7 +3096,6 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 60px;
 }
 .loginForm .inputWrap .radioWrap {
   display: inline-block;
@@ -3083,19 +3128,51 @@ h4 {
 .loginForm .inputWrap .radioWrap + .radioWrap {
   margin-left: 30px;
 }
+.loginForm .inputWrap .radioWrap.radioTab {
+  flex: 1 0 0;
+  height: 55px;
+  border: 1px solid #959595;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginForm .inputWrap .radioWrap.radioTab input {
+  display: none;
+}
+.loginForm .inputWrap .radioWrap.radioTab + .radioTab {
+  margin-left: -1px;
+}
+.loginForm .inputWrap .radioWrap.radioTab:has(input:checked) {
+  background: var(--dusty-orange);
+  border: 1px solid var(--black);
+  color: var(--black);
+  z-index: 1;
+}
 .loginForm .inputWrap.mt-10 {
   margin-top: 10px !important;
 }
 .loginForm .inputWrap .label {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   flex: 0 0 110px;
   text-align: left;
+  color: var(--black);
 }
 .loginForm .inputWrap .flex-left {
   display: flex;
   justify-content: flex-start;
   flex: 1 0 auto;
+}
+@media screen and (max-width: 520px) {
+  .loginForm .inputWrap .flex-left {
+    width: 100%;
+  }
+  .loginForm .inputWrap.pwVeri {
+    margin-top: 16px !important;
+  }
+  .loginForm .inputWrap.pwVeri .label {
+    display: none;
+  }
 }
 .loginForm .inputWrap + .inputWrap {
   margin-top: 16px;
@@ -3129,6 +3206,14 @@ h4 {
   font-size: 14px;
   font-weight: 500;
 }
+@media screen and (max-width: 768px) {
+  .loginForm .privacy {
+    height: 225px;
+  }
+}
+.loginForm.signupForm {
+  margin-top: 65px;
+}
 .loginForm.signupForm .btn {
   margin-top: 10px;
   margin-bottom: 140px;
@@ -3140,6 +3225,11 @@ h4 {
   font-weight: 500;
   color: #656565;
 }
+@media screen and (max-width: 768px) {
+  .loginForm.signupForm {
+    margin-top: 25px;
+  }
+}
 .loginForm .findResult {
   font-size: 17px;
   font-weight: 500;
@@ -3148,6 +3238,20 @@ h4 {
   margin-bottom: 70px;
 }
 
+@media screen and (max-width: 768px) {
+  .loginForm {
+    margin-top: 25px;
+  }
+  .loginForm .inner {
+    padding: 0 20px;
+  }
+  .loginForm .logo {
+    display: none;
+  }
+  .loginForm .guide {
+    display: block;
+  }
+}
 .modalOn {
   overflow: hidden;
 }
@@ -3246,12 +3350,16 @@ h4 {
   padding: 0 15px;
   font-size: 18px;
   box-sizing: border-box;
+  color: var(--black);
 }
 .purchase .inner input::-moz-placeholder {
   color: #656565;
 }
 .purchase .inner input::placeholder {
   color: #656565;
+}
+.purchase .inner input:focus {
+  outline: 1px solid var(--black);
 }
 .purchase .inner .select {
   flex: 1 0 auto;
@@ -3827,12 +3935,16 @@ h4 {
   padding: 0 15px;
   font-size: 18px;
   box-sizing: border-box;
+  color: var(--black);
 }
 .talksWrite input::-moz-placeholder {
   color: #656565;
 }
 .talksWrite input::placeholder {
   color: #656565;
+}
+.talksWrite input:focus {
+  outline: 1px solid var(--black);
 }
 .talksWrite .textarea {
   background-color: transparent;
@@ -5088,12 +5200,16 @@ h4 {
   padding: 0 15px;
   font-size: 18px;
   box-sizing: border-box;
+  color: var(--black);
 }
 .PageEdit input::-moz-placeholder {
   color: #656565;
 }
 .PageEdit input::placeholder {
   color: #656565;
+}
+.PageEdit input:focus {
+  outline: 1px solid var(--black);
 }
 .PageEdit .radioWrap {
   display: inline-block;
@@ -5126,6 +5242,26 @@ h4 {
 .PageEdit .radioWrap + .radioWrap {
   margin-left: 30px;
 }
+.PageEdit .radioWrap.radioTab {
+  flex: 1 0 0;
+  height: 55px;
+  border: 1px solid #959595;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PageEdit .radioWrap.radioTab input {
+  display: none;
+}
+.PageEdit .radioWrap.radioTab + .radioTab {
+  margin-left: -1px;
+}
+.PageEdit .radioWrap.radioTab:has(input:checked) {
+  background: var(--dusty-orange);
+  border: 1px solid var(--black);
+  color: var(--black);
+  z-index: 1;
+}
 .PageEdit .select {
   flex: 1 0 auto;
   height: 60px;
@@ -5141,7 +5277,6 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 60px;
 }
 .PageEdit .inputWrap .radioWrap {
   display: inline-block;
@@ -5174,19 +5309,51 @@ h4 {
 .PageEdit .inputWrap .radioWrap + .radioWrap {
   margin-left: 30px;
 }
+.PageEdit .inputWrap .radioWrap.radioTab {
+  flex: 1 0 0;
+  height: 55px;
+  border: 1px solid #959595;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.PageEdit .inputWrap .radioWrap.radioTab input {
+  display: none;
+}
+.PageEdit .inputWrap .radioWrap.radioTab + .radioTab {
+  margin-left: -1px;
+}
+.PageEdit .inputWrap .radioWrap.radioTab:has(input:checked) {
+  background: var(--dusty-orange);
+  border: 1px solid var(--black);
+  color: var(--black);
+  z-index: 1;
+}
 .PageEdit .inputWrap.mt-10 {
   margin-top: 10px !important;
 }
 .PageEdit .inputWrap .label {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   flex: 0 0 110px;
   text-align: left;
+  color: var(--black);
 }
 .PageEdit .inputWrap .flex-left {
   display: flex;
   justify-content: flex-start;
   flex: 1 0 auto;
+}
+@media screen and (max-width: 520px) {
+  .PageEdit .inputWrap .flex-left {
+    width: 100%;
+  }
+  .PageEdit .inputWrap.pwVeri {
+    margin-top: 16px !important;
+  }
+  .PageEdit .inputWrap.pwVeri .label {
+    display: none;
+  }
 }
 .PageEdit .inputWrap + .inputWrap {
   margin-top: 16px;
@@ -5330,6 +5497,7 @@ h4 {
     box-sizing: border-box;
     color: #f4f4f4;
     line-height: 1.13;
+    min-height: 133px;
   }
   .header.mo .mobileMenu .panel .top .backArr {
     position: absolute;
@@ -6923,5 +7091,37 @@ h4 {
   }
   .newMainStories .slide .storiesSlide .text {
     font-size: 16px;
+  }
+}
+.pageNav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 45px;
+  border-bottom: 1px solid var(--black);
+  padding: 0 20px;
+}
+.pageNav .arr {
+  position: absolute;
+  display: inline-block;
+  left: 10px;
+  top: 50%;
+  padding: 10px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background: url(../img/ic_pageNavArr.svg) center/20px no-repeat;
+}
+.pageNav .tit {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: var(--black);
+}
+
+@media screen and (max-width: 768px) {
+  .pageNav {
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */

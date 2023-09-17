@@ -458,20 +458,32 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		min-height: 60px;
+		// min-height: 60px;
 		&.mt-10 {
 			margin-top: 10px !important;
 		}
 		.label {
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: bold;
 			flex: 0 0 110px;
 			text-align: left;
+			color: var(--black);
 		}
 		.flex-left {
 			display: flex;
 			justify-content: flex-start;
 			flex: 1 0 auto;
+		}
+		@media screen and (max-width:520px) {
+			.flex-left {
+				width: 100%;
+			}
+			&.pwVeri {
+				margin-top: 16px !important;
+				.label {
+					display: none;
+				}
+			}
 		}
 		& + .inputWrap {
 			margin-top: 16px;
@@ -485,8 +497,10 @@ body {
 			justify-content: flex-end;
 			flex: 0 0 156px;
 		}
+		
 	}
 }
+
 
 @mixin radioWrap {
 	.radioWrap {
@@ -517,6 +531,27 @@ body {
 		}
 		& + .radioWrap {
 			margin-left: 30px;
+		}
+
+		&.radioTab {
+			flex: 1 0 0;
+			height: 55px;
+			border: 1px solid #959595;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			input {
+				display: none;
+			}
+			& + .radioTab {
+				margin-left: -1px;
+			}
+			&:has(input:checked) {
+				background: var(--dusty-orange);
+				border: 1px solid var(--black);
+				color: var(--black);
+				z-index: 1;
+			}
 		}
 	}
 }
@@ -1166,9 +1201,13 @@ body {
 		padding: 0 15px;
 		font-size: 18px;
 		box-sizing: border-box;
+		color: var(--black);
 
 		&::placeholder {
 			color: #656565;
+		}
+		&:focus {
+			outline:  1px solid var(--black);
 		}
 	}
 }
@@ -3184,20 +3223,37 @@ h4 {
 
 
 .loginForm {
-	margin-top: 90px;
+	margin-top: 165px;
 	min-height: 500px;
 	text-align: center;
+	.tit {
+		font-size: 16px;
+		font-weight: bold;
+		color: #000;
+		margin-bottom: 16px;
+	}
 	.inner {
-		max-width: 540px;
+		max-width: 580px;
 		margin: 0 auto;
 	}
 
 	h2 {
-		font-size: 27px;
-		font-size: 20px;
-		font-weight: bold;
-		margin-bottom: 90px;
+		font-size: 28px;
+		font-weight: 600;
+		margin-bottom: 60px;
 	}
+	@media screen and (max-width:768px) {
+		h2 {
+			display: none;
+		}
+	}
+
+	.logo {
+		height: 34px;
+		margin-bottom: 105px;
+	}
+
+	
 	.inputLabel {
 		text-align: left;
 		font-size: 14px;
@@ -3208,6 +3264,23 @@ h4 {
 	}
 	@include input;
 
+	.insert {
+		width: 100%;
+		font-size: 16px;
+		font-weight: 500;
+		text-align: left;
+		color: #656565;
+	}
+
+	input {
+		border: 1px solid #959595;	
+		height: 55px;
+		font-size: 16px;
+		&::placeholder {
+			color: #959595;
+		}
+	}
+	
 	input+input {
 		margin-top: 10px;
 	}
@@ -3217,9 +3290,9 @@ h4 {
 	.btn {
 		font-size: 18px;
 		font-weight: bold;
-		height: 50px;
-		margin-top: 23px;
-		margin-bottom: 6px;
+		height: 55px;
+		margin-top: 30px;
+		margin-bottom: 10px;
 	}
 
 	.flexBx {
@@ -3253,13 +3326,22 @@ h4 {
 	.btn-kakao {
 		background-color: #FDEA4F;
 		color: #151515;
+		border-radius: 40px;
 	}
 
 	.btn-naver {
 		background-color: #66CF5D;
 		color: var(--white);
+		border-radius: 40px;
 	}
-
+	.guide {
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 1.33;
+		color: #000;
+		margin-top: 12px;
+		display: none
+	}
 	@include select;
 	@include inputWrap;
 	
@@ -3282,9 +3364,13 @@ h4 {
 			font-size: 14px;
   			font-weight: 500;
 		}
+		@media screen and (max-width:768px) {
+			height: 225px;
+		}
 	}
 
 	&.signupForm {
+		margin-top: 65px;
 		.btn {
 			margin-top: 10px;
 			margin-bottom: 140px;
@@ -3297,6 +3383,9 @@ h4 {
 			font-weight: 500;
 			color: #656565;
 		}
+		@media screen and (max-width:768px) {
+			margin-top: 25px;
+		}
 	}
 
 	.findResult {
@@ -3305,6 +3394,20 @@ h4 {
 		line-height: 1.35;
 		color: #151515;
 		margin-bottom: 70px;
+	}
+}
+@media screen and (max-width:768px) {
+	.loginForm {
+		margin-top: 25px;
+	}
+	.loginForm .inner {
+		padding: 0 20px;
+	}
+	.loginForm .logo {
+		display: none
+	}
+	.loginForm .guide {
+		display: block
 	}
 }
 
@@ -4219,6 +4322,7 @@ h4 {
 					box-sizing: border-box;
 					color: #f4f4f4;
 					line-height: 1.13;
+					min-height: 133px;
 					.backArr {
 						position: absolute;
 						top: 11px;
@@ -5689,3 +5793,37 @@ h4 {
 }
 
 
+
+
+.pageNav {
+	display: none;
+	// display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 45px;
+	border-bottom: 1px solid var(--black);
+	padding: 0 20px;
+	.arr {
+		position: absolute;
+		display: inline-block;
+		left: 10px;
+		top: 50%;
+		padding: 10px;
+		transform: translateY(-50%);
+		width: 20px;
+		height: 20px;
+		background: url(../img/ic_pageNavArr.svg) center/20px no-repeat;
+	}
+	.tit {
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 1.5;
+		color: var(--black);
+	}
+}
+@media screen and (max-width:768px) {
+	.pageNav {
+		display: flex;
+	}
+}
