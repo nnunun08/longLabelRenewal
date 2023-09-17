@@ -46,47 +46,59 @@
             <div class="mobileMenu">
                 <div class="panel">
                     <div class="top">
-                        <div class="backArr"></div>
-                        <div class="flexBx">
-                            
-                            <div>
-                                <div class="user">
-                                    <span>로그인해 주세요</span>
-                                </div>
+                        <div class="close"></div>
+                        <div class="profile">
+                            <img src="./img/ch_blue.png" alt="">
+                        </div>
+                        <div>
+                            <div class="nickname">탐험가</div>
+                            <div class="name">
+                                <span>닉네임 님</span>
+                                <span class="arr"></span>
                             </div>
                         </div>
                     </div>
                     <div class="menuList">
                         <ul>
-                            <li>Pick</li>
-                            <li>Archive</li>
-                            <li>Talks</li>
-                            <li>Stories</li>
-                            <li>About</li>
+                            <li><a href="#">Pick</a></li>
+                            <li><a href="#">Archive</a></li>
+                            <li><a href="#">Talks</a></li>
+                            <li><a href="#">Stories</a></li>
+                            <li><a href="#">About</a></li>
                         </ul>
                     </div>
+                    <div class="copy">
+                        LONG LABEL의 모든 콘텐츠는 저작권법의 보호를 받으며,<br>
+                        무단 전재, 복사, 배포를 금합니다.<br>
+                        ⓒLONG LABEL
+                    </div>
+
+                    <a href="#" class="logOut">
+                        <img src="./img/ic_logOut.svg" alt="">
+                        <span>로그아웃</span>
+                    </a>
                 </div>
-                <div class="dim"></div>
+                <!-- <div class="dim"></div> -->
             </div>
 
             <!-- 모바일 메뉴 토글 -->
             <script>
                 const body = document.querySelector('body')
-                const menuOpen = document.querySelector('.header .menuBtn')
-                const menuClose = document.querySelector('.header .backArr')
+                const menuToggle = document.querySelector('.header .menuBtn')
+                const back = document.querySelector('.header .backArr')
+                const menuClose = document.querySelector('.header .close')
                 const target = document.querySelector('.header .mobileMenu')
-                const dim = document.querySelector('.header .dim')
-                menuOpen.addEventListener('click', function() {
-                    target.classList.add('ac')
-                    body.classList.add('modalOn')
+                // const dim = document.querySelector('.header .dim')
+                function modalToggle() {
+                    target.classList.toggle('ac')
+                    body.classList.toggle('modalOn')
+                }
+
+                menuToggle.addEventListener('click', () => {
+                    modalToggle();
                 })
-                menuClose.addEventListener('click', function() {
-                    target.classList.remove('ac')
-                    body.classList.remove('modalOn')
-                })
-                dim.addEventListener('click', function() {
-                    target.classList.remove('ac')
-                    body.classList.remove('modalOn')
+                menuClose.addEventListener('click', () => {
+                    modalToggle();
                 })
             </script>
         </div>
@@ -351,35 +363,73 @@
             <div class="archiveSlide">
                 <ul class="top">
                     <li class="item">
-                        <div class="backCover">
-                            <img src="./img/resource/resource_stories_01.jpg" alt="">
-                        </div>    
-                        <div class="frontSign">
-                            <img src="./img/resource/brand04.png" alt="">
+                        <div class="imgWrap">
+                            <div class="backCover">
+                                <img src="./img/resource/resource_stories_01.jpg" alt="">
+                            </div>
+                            <div class="frontSign">
+                                <img src="./img/resource/brand04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobileShow">
+                            <div class="nameKR">파타고니아</div>
+                            <div class="nameEN">PATAGONIA</div>
                         </div>
                     </li>
                     <li class="item">
-                        <div class="backCover">
-                            <img src="./img/resource/resource_stories_01.jpg" alt="">
-                        </div>    
-                        <div class="frontSign">
-                            <img src="./img/resource/brand04.png" alt="">
+                        <div class="imgWrap">
+                            <div class="backCover">
+                                <img src="./img/resource/resource_stories_01.jpg" alt="">
+                            </div>
+                            <div class="frontSign">
+                                <img src="./img/resource/brand04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobileShow">
+                            <div class="nameKR">파타고니아</div>
+                            <div class="nameEN">PATAGONIA</div>
                         </div>
                     </li>
                     <li class="item">
-                        <div class="backCover">
-                            <img src="./img/resource/resource_stories_01.jpg" alt="">
-                        </div>    
-                        <div class="frontSign">
-                            <img src="./img/resource/brand04.png" alt="">
+                        <div class="imgWrap">
+                            <div class="backCover">
+                                <img src="./img/resource/resource_stories_01.jpg" alt="">
+                            </div>
+                            <div class="frontSign">
+                                <img src="./img/resource/brand04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobileShow">
+                            <div class="nameKR">파타고니아</div>
+                            <div class="nameEN">PATAGONIA</div>
                         </div>
                     </li>
                     <li class="item">
-                        <div class="backCover">
-                            <img src="./img/resource/resource_stories_01.jpg" alt="">
-                        </div>    
-                        <div class="frontSign">
-                            <img src="./img/resource/brand04.png" alt="">
+                        <div class="imgWrap">
+                            <div class="backCover">
+                                <img src="./img/resource/resource_stories_01.jpg" alt="">
+                            </div>
+                            <div class="frontSign">
+                                <img src="./img/resource/brand04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobileShow">
+                            <div class="nameKR">파타고니아</div>
+                            <div class="nameEN">PATAGONIA</div>
+                        </div>
+                    </li>
+                    <li class="item">
+                        <div class="imgWrap">
+                            <div class="backCover">
+                                <img src="./img/resource/resource_stories_01.jpg" alt="">
+                            </div>
+                            <div class="frontSign">
+                                <img src="./img/resource/brand04.png" alt="">
+                            </div>
+                        </div>
+                        <div class="mobileShow">
+                            <div class="nameKR">파타고니아</div>
+                            <div class="nameEN">PATAGONIA</div>
                         </div>
                     </li>
                     
@@ -397,6 +447,8 @@
                             </div>
                         </div>
                         <div class="tag">
+                            <span>리사이클</span>
+                            <span>리사이클 폴리에스터</span>
                             <span>리사이클</span>
                             <span>리사이클 폴리에스터</span>
                             <div class="count">+2</div>
@@ -470,158 +522,72 @@
             </div>
         </div>
     </div>
+
     
-    <div class="mainStories">
+
+    <div class="mainLine mainLineStoriesPC">
+        <div class="dividerLine"></div>
         <div class="inner">
-            <div class="mainConTit">
-                <div>
-                    <h4>Stories</h4>
-                </div>
-                <span class="more">View more</span>
+            <div class="h1">Stories</div>
+            <em>롱레이블이 전해주는 이야기</em>
+        </div>
+    </div>
+
+    <div class="newMainStories">
+        <div class="inner">
+            <div class="cover">
+                <img src="./img/resource/img_mainStories.jpg" alt="">
+                <div class="cate">카테고리</div>
+                <div class="tit">환경을 위해 친환경 제품을 사는 것이<br>
+                    정말 도움이 되나요?</div>
             </div>
+            <div class="slide">
 
-            <div class="bodyWrap">
-
-                <!-- 예전 PC 버전 -->
-                <!-- <div class="left">
-                    <div class="conWrap">
-                        <div class="imgWrap anchor"><img src="./img/resource/storiesImg@2x.jpg" alt="storiesImg"></div>
-                        <div class="textWrap">
-                            <div class="cate">카테고리</div>
-                            <p class="copy">
-                                환경을 위해<br>
-                                친환경 제품을 사는 것이 정말<br>
-                                도움이 되나요?
-                            </p>
-                        </div>
+                <div class="mainLine mainLineStories">
+                    <div class="dividerLine"></div>
+                    <div class="inner">
+                        <div class="h1">Stories</div>
+                        <em>롱레이블이 전해주는 이야기</em>
                     </div>
                 </div>
-                <div class="right">
-                    <div class="conWrap">
-                        <div class="imgWrap anchor"><img src="./img/resource/storiesImg@2x.jpg" alt="storiesImg"></div>
-                        <div class="textWrap">
-                            <div class="cate">카테고리</div>
-                            <p class="copy">
-                                환경을 위해<br>
-                                친환경 제품을 사는 것이 정말<br>
-                                도움이 되나요?
-                            </p>
+            
+                <div class="storiesSlide">
+                    <div class="item">
+                        <div class="thumbImg">
+                            <img src="./img/resource/img_mainStories.jpg" alt="">
                         </div>
+                        <div class="cate">카테고리</div>
+                        <div class="text">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
                     </div>
-                    <div class="conWrap">
-                        <div class="imgWrap anchor"><img src="./img/resource/storiesImg@2x.jpg" alt="storiesImg"></div>
-                        <div class="textWrap">
-                            <div class="cate">카테고리</div>
-                            <p class="copy">
-                                환경을 위해<br>
-                                친환경 제품을 사는 것이 정말<br>
-                                도움이 되나요?
-                            </p>
+                    <div class="item">
+                        <div class="thumbImg">
+                            <img src="./img/resource/img_mainStories.jpg" alt="">
                         </div>
+                        <div class="cate">카테고리</div>
+                        <div class="text">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
                     </div>
-                </div> -->
-
-                <div class="masonryWrap">
-                    <ul class="col-4 masonry">
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_01.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_02.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_03.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_01.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_03.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_01.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_01.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_02.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_01.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                        <li class="item">
-                            <div class="imgWrap">
-                                <img src="./img/resource/resource_stories_03.jpg" alt="img">
-                            </div>
-                            <div class="textBx">
-                                <div class="cate">카테고리</div>
-                                <div class="name">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="masoryMore">
-                        <div class="btn moreBtn">
-                            더 많은 이야기 보러 가기
+                    <div class="item">
+                        <div class="thumbImg">
+                            <img src="./img/resource/img_mainStories.jpg" alt="">
                         </div>
+                        <div class="cate">카테고리</div>
+                        <div class="text">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
+                    </div>
+                    <div class="item">
+                        <div class="thumbImg">
+                            <img src="./img/resource/img_mainStories.jpg" alt="">
+                        </div>
+                        <div class="cate">카테고리</div>
+                        <div class="text">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
+                    </div>
+                    <div class="item">
+                        <div class="thumbImg">
+                            <img src="./img/resource/img_mainStories.jpg" alt="">
+                        </div>
+                        <div class="cate">카테고리</div>
+                        <div class="text">환경을 위해 친환경 제품을 사는 것이 정말 도움이 되나요?</div>
                     </div>
                 </div>
-                <script src="./js/masonry.js"></script>
             </div>
         </div>
     </div>
@@ -676,6 +642,7 @@
                     }
                 ]
           });
+          
           $('.archiveSlide .top').slick({
                 infinite: false,
                 slidesToShow: 3,
@@ -696,6 +663,23 @@
                 infinite: false,
                 slidesToShow: 4,
                 slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            infinite: true,
+                            arrows: false,
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+          });
+
+          $('.storiesSlide').slick({
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 3,
                 responsive: [
                     {
                         breakpoint: 768,
