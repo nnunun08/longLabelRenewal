@@ -1899,12 +1899,17 @@ h4 {
   margin-top: 60px;
 }
 .pageDetail .backPage {
-  background: url(../img/ic_back_arr.svg) left center no-repeat;
-  padding-left: 12px;
+  background: url(../img/ic_back_arr.svg) left 4px center/16px no-repeat;
+  padding-left: 25px;
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .pageDetail:has(.styleCheck) .backPage {
+    display: none;
+  }
 }
 .pageDetail .topCon {
   display: flex;
@@ -3214,6 +3219,43 @@ h4 {
 .loginForm.signupForm {
   margin-top: 65px;
 }
+.loginForm.signupForm .p {
+  margin-top: -40px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--black);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.loginForm.signupForm:has(.p) .inner {
+  max-width: 764px;
+}
+.loginForm.signupForm .noHidden {
+  display: block !important;
+}
+.loginForm.signupForm .profileList {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 35px;
+}
+.loginForm.signupForm .profileList .item {
+  flex: 1 0 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.loginForm.signupForm .profileList .item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.loginForm.signupForm .nextTime {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
 .loginForm.signupForm .btn {
   margin-top: 10px;
   margin-bottom: 140px;
@@ -3228,6 +3270,29 @@ h4 {
 @media screen and (max-width: 768px) {
   .loginForm.signupForm {
     margin-top: 25px;
+  }
+  .loginForm.signupForm .noHidden {
+    font-size: 24px;
+  }
+  .loginForm.signupForm .p {
+    padding-bottom: 36px;
+    margin-bottom: 36px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .loginForm.signupForm .profileList {
+    flex-wrap: wrap;
+    gap: 22px;
+    width: 85%;
+    max-width: 360px;
+    margin: 0 auto;
+    margin-bottom: 52px;
+  }
+  .loginForm.signupForm .profileList .item {
+    flex: 1 0 40%;
+  }
+  .loginForm.signupForm .nextTime {
+    margin-top: 5px;
   }
 }
 .loginForm .findResult {
@@ -6468,9 +6533,6 @@ h4 {
   .tabList .tab .count {
     font-size: 15px;
   }
-  body {
-    background-color: var(--white);
-  }
   body:has(.mainSlide) {
     background-color: #F4F4F4;
   }
@@ -7123,5 +7185,135 @@ h4 {
 @media screen and (max-width: 768px) {
   .pageNav {
     display: flex;
+  }
+}
+.styleCheck {
+  color: var(--black);
+}
+.styleCheck .inner {
+  max-width: 764px;
+  text-align: center;
+}
+.styleCheck h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 45px;
+}
+.styleCheck .progress {
+  width: 100%;
+  border: 1px solid var(--black);
+  border-left: 0;
+  border-right: 0;
+  height: 17px;
+  position: relative;
+  margin-bottom: 35px;
+}
+.styleCheck .progress .bar {
+  transition: 1s;
+  width: 0;
+  height: 100%;
+  background-color: var(--dusty-orange);
+}
+.styleCheck .progress .number {
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  right: 0;
+  top: 3px;
+}
+.styleCheck .question {
+  text-align: left;
+}
+.styleCheck .question h3 {
+  font-size: 44px;
+  font-weight: 100;
+  color: var(--dusty-orange);
+  margin-bottom: 12px;
+}
+.styleCheck .question p {
+  font-size: 23px;
+  font-weight: 800;
+  line-height: 1.43;
+  margin-bottom: 60px;
+}
+.styleCheck .checkList li {
+  border-top: 1px solid var(--black);
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+}
+.styleCheck .checkList li:last-child {
+  border-bottom: 1px solid var(--black);
+}
+.styleCheck .checkList li label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.styleCheck .checkList li label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  margin: 0;
+}
+.styleCheck .checkList li label:has(:checked) {
+  font-weight: bold;
+}
+.styleCheck .checkList li label:has(:checked)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  width: 17px;
+  height: 18px;
+  background: url(../img/ic_checkList_check.svg) center no-repeat;
+}
+.styleCheck .backQuestion {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .styleCheck .inner {
+    padding: 0;
+    margin-top: -31px;
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
+  }
+  .styleCheck h2 {
+    display: none;
+  }
+  .styleCheck .progress {
+    margin-bottom: 56px;
+  }
+  .styleCheck .progress .number {
+    right: 10px;
+  }
+  .styleCheck .question {
+    padding: 0 20px;
+  }
+  .styleCheck .question p {
+    margin-bottom: 50px;
+  }
+  .styleCheck .backQuestion {
+    display: inline-block;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.93;
+    color: var(--black);
+    margin: 0 auto;
+    margin-top: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
