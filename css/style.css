@@ -3226,6 +3226,7 @@ h4 {
   border-bottom: 1px solid var(--black);
   padding-left: 40px;
   padding-right: 40px;
+  line-height: 1.67;
 }
 .loginForm.signupForm:has(.p) .inner {
   max-width: 764px;
@@ -5579,7 +5580,7 @@ h4 {
     right: 6px;
     width: 34px;
     height: 34px;
-    background: url(../img/ic_menu_backArr.svg) center/cover no-repeat;
+    background: url(../img/ic_sidemenu_close.svg) center/20px no-repeat;
     cursor: pointer;
   }
   .header.mo .mobileMenu .panel .top .flexBx {
