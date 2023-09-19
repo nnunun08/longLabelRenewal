@@ -86,14 +86,13 @@
                     <h2>환경에 진심인 나의 스타일 체크</h2>
                     <div class="progress">
                         <div class="bar" style="width: 0%;"></div>
-                        <span class="number">1/6</span>
+                        <span class="number">4/6</span>
                     </div>
                     <div class="question">
-                        <h3>Q1</h3>
+                        <h3>Q4</h3>
                         <p>
-                            나에게 패션 트렌드는 중요해.<br>
-                            요즘 유행하는 스타일 놓치고 싶지 않아.<br>
-                            그래서 옷을 자주 사는 편이지.
+                            친환경, 지속가능 패션이라는 단어 익숙해.<br>
+                            이제는 진짜 친환경이 맞는지 제대로 알고 싶어.
                         </p>
                     </div>
 
@@ -102,26 +101,26 @@
                             <label>
                                 <input type="radio" name="question" checked>
                                 <span class="radio"></span>
-                                맞아, 나에게 유행은 제일 중요해.
+                                맞아, 요즘 그린워싱도 많아서 진짜가 맞는지 알고 싶어.
                             </label>
                         </li>
                         <li>
                             <label>
                                 <input type="radio" name="question">
                                 <span class="radio"></span>
-                                아니야, 난 유행이라고 옷을 사진 않아.
+                                아니야, 아직 어려워서 나는 이런 정보들까지 살펴보는 것은 무리야.
                             </label>
                         </li>
                     </ul>
 
-                    <!-- <a class="backQuestion" href="#">이전 문항 다시가기</a> -->
+                    <a class="backQuestion" href="#">이전 문항 다시가기</a>
                 </div>
             </div>
 
             <script>
                 // progress Bar 색상 채우기
                 window.onload = () => {
-                    let step = 1
+                    let step = 4
                     let level = 100 / 6 * step
                     const bar = document.querySelector('.progress .bar')
                     bar.style.width = `${level}%`

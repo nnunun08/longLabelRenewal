@@ -86,42 +86,104 @@
                     <h2>환경에 진심인 나의 스타일 체크</h2>
                     <div class="progress">
                         <div class="bar" style="width: 0%;"></div>
-                        <span class="number">1/6</span>
+                        <span class="number">6/6</span>
                     </div>
                     <div class="question">
-                        <h3>Q1</h3>
+                        <h3>Q6</h3>
                         <p>
-                            나에게 패션 트렌드는 중요해.<br>
-                            요즘 유행하는 스타일 놓치고 싶지 않아.<br>
-                            그래서 옷을 자주 사는 편이지.
+                            친환경 패션과 관련해서 관심 가지고 있는 것을 모두 골라주세요. (최대 3개 선택)
                         </p>
                     </div>
 
                     <ul class="checkList">
                         <li>
                             <label>
-                                <input type="radio" name="question" checked>
-                                <span class="radio"></span>
-                                맞아, 나에게 유행은 제일 중요해.
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                업사이클링
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question">
-                                <span class="radio"></span>
-                                아니야, 난 유행이라고 옷을 사진 않아.
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                비건
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                탄소 절감
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                오염물질 관리
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                물 사용 절감
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                폐기물 제로
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                공정무역
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                친환경 패키징
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                수선/재사용
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                리세일(중고판매)
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                새로운 기술
                             </label>
                         </li>
                     </ul>
+                    <div class="btn">결과보기</div>
 
-                    <!-- <a class="backQuestion" href="#">이전 문항 다시가기</a> -->
+                    <a class="backQuestion" href="#">이전 문항 다시가기</a>
                 </div>
             </div>
 
             <script>
                 // progress Bar 색상 채우기
                 window.onload = () => {
-                    let step = 1
+                    let step = 6
                     let level = 100 / 6 * step
                     const bar = document.querySelector('.progress .bar')
                     bar.style.width = `${level}%`

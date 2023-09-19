@@ -86,42 +86,70 @@
                     <h2>환경에 진심인 나의 스타일 체크</h2>
                     <div class="progress">
                         <div class="bar" style="width: 0%;"></div>
-                        <span class="number">1/6</span>
+                        <span class="number">5/6</span>
                     </div>
                     <div class="question">
-                        <h3>Q1</h3>
+                        <h3>Q5</h3>
                         <p>
-                            나에게 패션 트렌드는 중요해.<br>
-                            요즘 유행하는 스타일 놓치고 싶지 않아.<br>
-                            그래서 옷을 자주 사는 편이지.
+                            친환경, 지속가능 패션의 옷을 선택할 때<br>
+                            가격과 디자인을 제외하고 나는 이런 것들을 우선적으로 살펴봐 (2개 선택)
                         </p>
+                        <div class="sub">아직 친환경 제품 구매 경험이 없어도 그 경우를 생해서 선택해 주세요 :)</div>
                     </div>
 
                     <ul class="checkList">
                         <li>
                             <label>
-                                <input type="radio" name="question" checked>
-                                <span class="radio"></span>
-                                맞아, 나에게 유행은 제일 중요해.
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span><b>소재</b> (어떤 소재와 혼용율로 이루어졌는지)</span>
                             </label>
                         </li>
                         <li>
                             <label>
-                                <input type="radio" name="question">
-                                <span class="radio"></span>
-                                아니야, 난 유행이라고 옷을 사진 않아.
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span><b>브랜드</b> (좋아하는, 유명한 브랜드인지)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span><b>제품 스토리</b> (제품별 유니크한 스토리)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span><b>광고</b> (많이 봤던 혹은 좋아하는 모델인지)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span><b>내구성</b> (내가 오래 입을 수 있는 옷인지)</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                <span><b>인증마크</b> (친환경이나 기술 등 외부 인증이 있는지)</span>
                             </label>
                         </li>
                     </ul>
 
-                    <!-- <a class="backQuestion" href="#">이전 문항 다시가기</a> -->
+                    <a class="backQuestion" href="#">이전 문항 다시가기</a>
                 </div>
             </div>
 
             <script>
                 // progress Bar 색상 채우기
                 window.onload = () => {
-                    let step = 1
+                    let step = 5
                     let level = 100 / 6 * step
                     const bar = document.querySelector('.progress .bar')
                     bar.style.width = `${level}%`

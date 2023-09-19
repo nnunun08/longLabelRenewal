@@ -7238,6 +7238,17 @@ h4 {
   line-height: 1.43;
   margin-bottom: 60px;
 }
+.styleCheck .question .sub {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.39;
+  text-align: left;
+  margin-top: 12px;
+  margin-bottom: 48px;
+}
+.styleCheck .question:has(.sub) p {
+  margin-bottom: 0;
+}
 .styleCheck .checkList li {
   border-top: 1px solid var(--black);
   padding: 16px 20px;
@@ -7245,7 +7256,7 @@ h4 {
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.67;
+  line-height: 1.27;
 }
 .styleCheck .checkList li:last-child {
   border-bottom: 1px solid var(--black);
@@ -7253,35 +7264,84 @@ h4 {
 .styleCheck .checkList li label {
   display: flex;
   align-items: center;
-  position: relative;
-  padding-left: 30px;
+  gap: 10px;
+  text-align: left;
   cursor: pointer;
 }
-.styleCheck .checkList li label::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  display: inline-block;
+.styleCheck .checkList li label input {
+  display: none;
+}
+.styleCheck .checkList li label .radio {
+  flex: 0 0 auto;
+  display: block;
   width: 20px;
   height: 20px;
   border: 1px solid var(--black);
   border-radius: 50%;
   margin: 0;
+  overflow: visible;
+  position: relative;
 }
-.styleCheck .checkList li label:has(:checked) {
+.styleCheck .checkList li label .checkbox {
+  flex: 0 0 auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--black);
+  margin: 0;
+  overflow: visible;
+  position: relative;
+}
+.styleCheck .checkList li label:has([type=radio]:checked) {
   font-weight: bold;
 }
-.styleCheck .checkList li label:has(:checked)::after {
+.styleCheck .checkList li label:has([type=radio]:checked) .radio::after {
   content: "";
   position: absolute;
-  left: 4px;
-  top: 3px;
+  left: 3px;
+  top: 0;
   width: 17px;
   height: 18px;
   background: url(../img/ic_checkList_check.svg) center no-repeat;
 }
+.styleCheck .checkList li label:has([type=checkbox]:checked) .checkbox::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  width: 17px;
+  height: 18px;
+  background: url(../img/ic_checkList_check.svg) center no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .styleCheck .checkList li label span {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.styleCheck .btn {
+  height: 55px;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .styleCheck .btn {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: calc(100% - 40px);
+  }
+}
 .styleCheck .backQuestion {
-  display: none;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.93;
+  color: var(--black);
+  margin: 0 auto;
+  margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
   .styleCheck .inner {
@@ -7305,15 +7365,5 @@ h4 {
   }
   .styleCheck .question p {
     margin-bottom: 50px;
-  }
-  .styleCheck .backQuestion {
-    display: inline-block;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 1.93;
-    color: var(--black);
-    margin: 0 auto;
-    margin-top: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
