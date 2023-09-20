@@ -70,26 +70,7 @@
                 <div class="dim"></div>
             </div>
 
-            <!-- 모바일 메뉴 토글 -->
-            <script>
-                const body = document.querySelector('body')
-                const menuOpen = document.querySelector('.header .menuBtn')
-                const menuClose = document.querySelector('.header .backArr')
-                const target = document.querySelector('.header .mobileMenu')
-                const dim = document.querySelector('.header .dim')
-                menuOpen.addEventListener('click', function() {
-                    target.classList.add('ac')
-                    body.classList.add('modalOn')
-                })
-                menuClose.addEventListener('click', function() {
-                    target.classList.remove('ac')
-                    body.classList.remove('modalOn')
-                })
-                dim.addEventListener('click', function() {
-                    target.classList.remove('ac')
-                    body.classList.remove('modalOn')
-                })
-            </script>
+            <script src="./js/mobileToggle.js"></script>
         </div>
         <div class="headerBack"></div>
     </div>

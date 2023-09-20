@@ -43,6 +43,24 @@ body {
 	}
 }
 
+@mixin profileCh {
+	.profileCh {
+		flex: 1 0 0;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		border: 1px solid #000;
+		&.chGreen {background-color: #E5F8ED;}
+		&.chOran {background-color: #FFE8E2;}
+		&.chYellow {background-color: #FFF5E5;}
+		&.chBlue {background-color: #EAEAFF;}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
 @mixin slick-arrow {
 		.slick-arrow {
 			cursor: pointer;
@@ -2477,40 +2495,79 @@ h4 {
 	}
 
 	.leftNav {
-		width: 330px;
-		flex: 0 0 330px;
+		width: 260px;
+		flex: 0 0 260px;
+		margin-right: 20px;
+		color: var(--black);
+		.breadcrumb {
+			font-size: 14px;
+			font-weight: bold;
+			margin-bottom: 25px;
+		}
+		.top {
+			text-align: center;
+			@include profileCh;
+			.profileCh {
+				max-width: 120px;
+				width: 120px;
+				margin: 0 auto;
+			}
+		}
 
 		h1 {
-			font-size: 36px;
-			font-weight: bold;
 			color: #000;
-			margin-bottom: 24px;
+			margin-bottom: 10px;
+			margin-top: 20px;
+			font-size: 24px;
+			font-weight: bold;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.25;
+			letter-spacing: 0.24px;
+
 		}
 
 		.modify {
 			display: block;
-			font-size: 18px;
-			font-weight: bold;
-			margin-bottom: 95px;
+			font-size: 14px;
+			font-weight: 500;
+			margin-bottom: 45px;
+			text-decoration: underline;
 			cursor: pointer;
 		}
 
 		ul {
 			li {
-				&.ac {
-					color: #f63;
-				}
+				position: relative;
+				padding: 20px 0;
+				border-top: 1px solid #656565;
 
+				
 				span {
 					@include hoverColor;
 					font-size: 20px;
-					font-weight: 500;
+					font-weight: bold;
+					color: var(--black);
+				}
+				&.ac {
+					span {
+						color: #f63;
+					}
+				}
+				.count {
+					font-size: 21px;
+  					font-weight: 300;
+					position: absolute;
+					right: 0;
+					color: var(--dusty-orange);
 				}
 			}
-
-			li+li {
-				margin-top: 50px;
+			li:last-child {
+				border-bottom: 1px solid #656565;
 			}
+			// li+li {
+			// 	border-bottom: 1px solid #656565;
+			// }
 		}
 	}
 
@@ -3398,17 +3455,7 @@ h4 {
 			display: flex;
 			gap: 22px;
 			margin-bottom: 35px;
-			.item {
-				flex: 1 0 0;
-				aspect-ratio: 1/1;
-				border-radius: 50%;
-				border: 1px solid #000;
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
+			@include profileCh;
 		}
 		.nextTime {
 			display: inline-block;

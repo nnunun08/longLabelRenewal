@@ -1442,35 +1442,93 @@ h4 {
   display: flex;
 }
 .section-detail .leftNav {
-  width: 330px;
-  flex: 0 0 330px;
+  width: 260px;
+  flex: 0 0 260px;
+  margin-right: 20px;
+  color: var(--black);
+}
+.section-detail .leftNav .breadcrumb {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.section-detail .leftNav .top {
+  text-align: center;
+}
+.section-detail .leftNav .top .profileCh {
+  flex: 1 0 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+.section-detail .leftNav .top .profileCh.chGreen {
+  background-color: #E5F8ED;
+}
+.section-detail .leftNav .top .profileCh.chOran {
+  background-color: #FFE8E2;
+}
+.section-detail .leftNav .top .profileCh.chYellow {
+  background-color: #FFF5E5;
+}
+.section-detail .leftNav .top .profileCh.chBlue {
+  background-color: #EAEAFF;
+}
+.section-detail .leftNav .top .profileCh img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-detail .leftNav .top .profileCh {
+  max-width: 120px;
+  width: 120px;
+  margin: 0 auto;
 }
 .section-detail .leftNav h1 {
-  font-size: 36px;
-  font-weight: bold;
   color: #000;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: 0.24px;
 }
 .section-detail .leftNav .modify {
   display: block;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 95px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 45px;
+  text-decoration: underline;
   cursor: pointer;
 }
-.section-detail .leftNav ul li.ac {
-  color: #f63;
+.section-detail .leftNav ul li {
+  position: relative;
+  padding: 20px 0;
+  border-top: 1px solid #656565;
 }
 .section-detail .leftNav ul li span {
   cursor: pointer;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: bold;
+  color: var(--black);
 }
 .section-detail .leftNav ul li span:hover {
   color: #f63;
 }
-.section-detail .leftNav ul li + li {
-  margin-top: 50px;
+.section-detail .leftNav ul li.ac span {
+  color: #f63;
+}
+.section-detail .leftNav ul li .count {
+  font-size: 21px;
+  font-weight: 300;
+  position: absolute;
+  right: 0;
+  color: var(--dusty-orange);
+}
+.section-detail .leftNav ul li:last-child {
+  border-bottom: 1px solid #656565;
 }
 .section-detail .container {
   min-height: 920px;
@@ -3239,13 +3297,25 @@ h4 {
   gap: 22px;
   margin-bottom: 35px;
 }
-.loginForm.signupForm .profileList .item {
+.loginForm.signupForm .profileList .profileCh {
   flex: 1 0 0;
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #000;
 }
-.loginForm.signupForm .profileList .item img {
+.loginForm.signupForm .profileList .profileCh.chGreen {
+  background-color: #E5F8ED;
+}
+.loginForm.signupForm .profileList .profileCh.chOran {
+  background-color: #FFE8E2;
+}
+.loginForm.signupForm .profileList .profileCh.chYellow {
+  background-color: #FFF5E5;
+}
+.loginForm.signupForm .profileList .profileCh.chBlue {
+  background-color: #EAEAFF;
+}
+.loginForm.signupForm .profileList .profileCh img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
