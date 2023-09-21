@@ -1414,17 +1414,18 @@ h4 {
 }
 
 .pagination {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .pagination ul {
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 }
 .pagination ul li {
   font-size: 13px;
+  font-size: 20px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -1437,6 +1438,17 @@ h4 {
 
 .section-detail {
   padding-top: 90px;
+}
+.section-detail:has(.myValue, .pick, .archive) {
+  padding-top: 24px;
+}
+@media screen and (max-width: 768px) {
+  .section-detail:has(.myValue, .pick, .archive) {
+    padding-top: 0;
+  }
+  .section-detail:has(.myValue, .pick, .archive) .inner {
+    padding: 0 20px;
+  }
 }
 .section-detail .inner {
   display: flex;
@@ -1534,14 +1546,300 @@ h4 {
   min-height: 920px;
   width: 100%;
 }
+.section-detail .container:has(.myValue) {
+  min-height: auto;
+}
+.section-detail .container .archive .col-3 {
+  gap: 30px 20px;
+}
+.section-detail .container .archive .col-3 .item {
+  text-align: center;
+  color: var(--black);
+}
+.section-detail .container .archive .col-3 .imgWrap {
+  width: 100%;
+  position: relative;
+}
+.section-detail .container .archive .col-3 .imgWrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section-detail .container .archive .col-3 .imgWrap .backCover {
+  width: 100%;
+  aspect-ratio: 1/1;
+  margin-bottom: 53px;
+}
+.section-detail .container .archive .col-3 .imgWrap .frontSign {
+  aspect-ratio: 1/1;
+  width: 100px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -36px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #fff;
+}
+.section-detail .container .archive .col-3 .text .nameKR {
+  font-size: 16px;
+  font-weight: bold;
+}
+.section-detail .container .archive .col-3 .text .nameEN {
+  font-size: 14px;
+  font-weight: 500;
+  color: #656565;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .section-detail .container .archive .col-3 {
+    gap: 30px 10px;
+  }
+  .section-detail .container .archive .col-3 .item {
+    width: calc((100% - 10px) / 2);
+  }
+}
+.section-detail .container .pageTab {
+  padding: 0;
+}
+.section-detail .container .pageTab .inner {
+  padding: 0;
+}
+.section-detail .container .pageTab .ulWrap {
+  width: 100%;
+}
+.section-detail .container .pageTab ul li {
+  font-size: 18px;
+  font-weight: bold;
+}
+.section-detail .container .pageTab ul li + li {
+  margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+  .section-detail .container .pageTab .ulWrap {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 10px);
+  }
+  .section-detail .container .pageTab .ulWrap ul {
+    padding: 0;
+    margin: 0;
+  }
+  .section-detail .container .pageTab li {
+    margin-top: 16px;
+  }
+}
+.section-detail .container .h2 {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.07;
+  color: var(--black);
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--black);
+  margin-top: 40px;
+}
+.section-detail .container .myValue {
+  color: var(--black);
+}
+.section-detail .container .myValue h3 {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.42;
+  margin-bottom: 16px;
+}
+.section-detail .container .myValue p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.67;
+  margin-bottom: 24px;
+}
+.section-detail .container .myValue .col-2 {
+  gap: 37px;
+}
+.section-detail .container .myValue .checkList li {
+  border-top: 1px solid var(--black);
+  padding: 16px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+}
+.section-detail .container .myValue .checkList li:last-child {
+  border-bottom: 1px solid var(--black);
+}
+.section-detail .container .myValue .checkList li label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+.section-detail .container .myValue .checkList li label input {
+  display: none;
+}
+.section-detail .container .myValue .checkList li label .radio {
+  flex: 0 0 auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  margin: 0;
+  overflow: visible;
+  position: relative;
+}
+.section-detail .container .myValue .checkList li label .checkbox {
+  flex: 0 0 auto;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--black);
+  margin: 0;
+  overflow: visible;
+  position: relative;
+}
+.section-detail .container .myValue .checkList li label:has([type=radio]:checked) {
+  font-weight: bold;
+}
+.section-detail .container .myValue .checkList li label:has([type=radio]:checked) .radio::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0;
+  width: 17px;
+  height: 18px;
+  background: url(../img/ic_checkList_check.svg) center no-repeat;
+}
+.section-detail .container .myValue .checkList li label:has([type=checkbox]:checked) .checkbox::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  width: 17px;
+  height: 18px;
+  background: url(../img/ic_checkList_check.svg) center no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .section-detail .container .myValue .checkList li label span {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+.section-detail .container .myValue .checkList {
+  flex: 1 0 0;
+}
+.section-detail .container .myValue .btn {
+  height: 36px;
+  width: 100%;
+  border: 1px solid #f63;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #f63;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.section-detail .container .myValue .btn.ac, .section-detail .container .myValue .btn:hover {
+  background-color: #f63;
+  color: var(--white);
+  border: 1px solid var(--black);
+}
+.section-detail .container .myValue .btn {
+  margin-top: 28px;
+  height: 50px;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .section-detail .container .h2 {
+    display: none;
+  }
+  .section-detail .container .myValue h3 {
+    margin-top: 24px;
+  }
+  .section-detail .container .myValue p {
+    font-size: 16px;
+  }
+  .section-detail .container .myValue .col-2 {
+    margin-left: -20px;
+    margin-right: -20px;
+    flex-direction: column;
+    gap: 0;
+  }
+  .section-detail .container .myValue .col-2 .checkList {
+    margin-top: -1px;
+  }
+  .section-detail .container .myValue .btn {
+    margin-top: 20px;
+  }
+}
 .section-detail .container .count {
   font-size: 14px;
   font-weight: 500;
-  margin-bottom: 45px;
+  margin-bottom: 33px;
+  margin-top: 30px;
 }
 .section-detail .container .pick {
   padding-top: 0;
   padding-bottom: 0;
+}
+.section-detail .container .pick .col-3 {
+  gap: 40px 20px;
+}
+.section-detail .container .pick .thumbImg {
+  aspect-ratio: 1/1;
+  margin-bottom: 10px;
+}
+.section-detail .container .pick .text {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 769px) {
+  .section-detail .container .pick .subscribe {
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 30px;
+    background: url(../img/ic_pickAlram.svg) left center no-repeat;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-detail .container .pick .col-3 {
+    gap: 40px 10px;
+  }
+  .section-detail .container .pick .thumbImg {
+    margin-bottom: 8px;
+  }
+  .section-detail .container .pick .text {
+    padding: 4px 0;
+    margin-bottom: 4px;
+  }
+  .section-detail .container .pick .text .category {
+    font-size: 10px;
+    margin-bottom: 2px;
+  }
+  .section-detail .container .pick .text .name {
+    font-size: 12px;
+    -webkit-line-clamp: 1 !important;
+  }
+  .section-detail .container .pick .subscribe {
+    margin-bottom: 12px;
+  }
+  .section-detail .container .pick .btn {
+    height: 28px;
+    font-size: 12px;
+  }
+  .section-detail .container .pagination {
+    display: none;
+  }
 }
 .section-detail .container .pick .text .name {
   line-height: 1.67;
@@ -6353,6 +6651,7 @@ h4 {
   .section-detail .leftNav {
     width: 100%;
     flex-basis: 160px;
+    display: none;
   }
   .section-detail .leftNav .modify {
     margin-bottom: 20px;

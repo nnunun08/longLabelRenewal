@@ -43,6 +43,89 @@ body {
 	}
 }
 
+@mixin checkList {
+	.checkList {
+		li {
+			border-top: 1px solid var(--black);
+			padding: 16px 20px;
+			font-size: 18px;
+			font-weight: 500;
+			font-stretch: normal;
+			font-style: normal;
+			line-height: 1.27;
+			&:last-child {
+				border-bottom: 1px solid var(--black);
+			}
+			label {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				// padding-left: 30px;
+				text-align: left;
+				cursor: pointer;
+				input {
+					display: none;
+				}
+				.radio {
+					flex: 0 0 auto;
+					display: block;
+					width: 20px;
+					height: 20px;
+					border: 1px solid var(--black);
+					border-radius: 50%;
+					margin: 0;
+					overflow: visible;
+					position: relative;
+				}
+				.checkbox {
+					flex: 0 0 auto;
+					display: block;
+					width: 20px;
+					height: 20px;
+					border: 1px solid var(--black);
+					margin: 0;
+					overflow: visible;
+					position: relative;
+				}
+				&:has([type="radio"]:checked) {
+					font-weight: bold;
+					.radio {
+						&::after {
+							content: '';
+							position: absolute;				
+							left: 3px;
+							top: 0;
+							width: 17px;
+							height: 18px;
+							background: url(../img/ic_checkList_check.svg) center no-repeat;
+						}
+					}
+				}
+				&:has([type="checkbox"]:checked) {
+					.checkbox {
+						&::after {
+							content: '';
+							position: absolute;				
+							left: 2px;
+							top: 1px;
+							width: 17px;
+							height: 18px;
+							background: url(../img/ic_checkList_check.svg) center no-repeat;
+						}
+					}
+				}
+				@media screen and (max-width:768px) {
+					span {
+						display: flex;
+						flex-direction: column;
+						gap: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
 @mixin profileCh {
 	.profileCh {
 		flex: 1 0 0;
@@ -2466,17 +2549,18 @@ h4 {
 }
 
 .pagination {
-	margin-top: 60px;
+	margin-top: 40px;
 
 	ul {
 		margin: 0 auto;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 20px;
+		gap: 40px;
 
 		li {
 			font-size: 13px;
+			font-size: 20px;
 			font-weight: bold;
 			@include hoverColor;
 		}
@@ -2489,6 +2573,16 @@ h4 {
 
 .section-detail {
 	padding-top: 90px;
+
+	&:has(.myValue, .pick, .archive) {
+		padding-top: 24px;
+		@media screen and (max-width:768px) {
+			padding-top: 0;
+			.inner {
+				padding: 0 20px;
+			}
+		}
+	}
 
 	.inner {
 		display: flex;
@@ -2575,15 +2669,228 @@ h4 {
 		min-height: 920px;
 		width: 100%;
 
+		&:has(.myValue) {
+			min-height: auto;
+		}
+
+		.archive {
+			.col-3 {
+				gap: 30px 20px;
+				.item {
+					text-align: center;
+					color: var(--black);
+				}
+				.imgWrap {
+					width: 100%;
+					position: relative;
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					.backCover {
+						width: 100%;
+						aspect-ratio: 1/1;
+						margin-bottom: 53px;
+					}
+					.frontSign {
+						aspect-ratio: 1/1;
+						width: 100px;
+						border: 1px solid var(--black);
+						border-radius: 50%;
+						margin: 0 auto;
+						position: absolute;
+						bottom: -36px;
+						left: 0;
+						right: 0;
+						z-index: 1;
+						background-color: #fff;
+					}
+				}
+				.text {
+					.nameKR {
+						font-size: 16px;
+  						font-weight: bold;
+					}
+					.nameEN {
+						font-size: 14px;
+						font-weight: 500;
+						color: #656565;
+						margin-top: 5px;
+						margin-bottom: 10px;
+					}
+				}
+			}
+			@media screen and (max-width:768px) {
+				.col-3 {
+					gap: 30px 10px;
+					.item {
+						width: calc((100% - 10px)/2);
+					}
+				}
+			}
+		}
+
+		.pageTab {
+			padding: 0;
+			.inner {
+				padding: 0;
+			}
+			.ulWrap {
+				width: 100%;
+			}
+			ul li {
+				font-size: 18px;
+  				font-weight: bold;
+				& + li {
+					margin-left: 20px;
+				}
+			}
+			@media screen and (max-width:768px) {
+				.ulWrap {
+					margin-left: -20px;
+					margin-right: -20px;
+					width: calc(100% + 10px);
+					ul {
+						padding: 0;
+						margin: 0;
+					}
+				}
+				li {
+					margin-top: 16px;
+				}
+			}
+		}
+
+		.h2 {
+			font-size: 28px;
+			font-weight: bold;
+			line-height: 1.07;
+			color: var(--black);
+			padding-bottom: 30px;
+			margin-bottom: 20px;
+			border-bottom: 1px solid var(--black);
+			margin-top: 40px;
+
+		}
+		// 나의value
+		.myValue {
+			color: var(--black);
+			h3 {
+				font-size: 19px;
+				font-weight: bold;
+				line-height: 1.42;
+				margin-bottom: 16px;
+			}
+			p {
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 1.67;
+			  	margin-bottom: 24px;
+			}
+			.col-2 {
+				gap: 37px;
+			}
+			@include checkList;
+			.checkList {
+				flex: 1 0 0;
+			}
+			@include btn;
+			.btn {
+				margin-top: 28px;
+				height: 50px;
+				font-size: 18px;
+			}
+		}
+		@media screen and (max-width:768px) {
+			.h2 {
+				display: none;
+			}
+			.myValue {
+				h3 {
+					margin-top: 24px;
+				}
+				p {
+					font-size: 16px;
+				}
+				.col-2 {
+					margin-left: -20px;
+					margin-right: -20px;
+					flex-direction: column;
+					gap: 0;
+					.checkList {
+						margin-top: -1px;
+					}
+				}
+				.btn {
+					margin-top: 20px;
+				}
+			}
+		}
+
 		.count {
 			font-size: 14px;
 			font-weight: 500;
-			margin-bottom: 45px;
+			margin-bottom: 33px;
+			margin-top: 30px;
 		}
 
 		.pick {
 			padding-top: 0;
 			padding-bottom: 0;
+			
+			.col-3 {
+				gap: 40px 20px;
+			}
+			.thumbImg {
+				aspect-ratio: 1/1;
+				margin-bottom: 10px;
+			}
+
+			.text {
+				margin-bottom: 10px;
+			}
+			@media screen and (min-width: 769px) {
+				.subscribe {
+					font-size: 15px;
+					font-weight: 500;
+					padding-left: 30px;
+					background: url(../img/ic_pickAlram.svg) left center no-repeat;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		@media screen and (max-width: 768px) {
+			.pick {
+				.col-3 {
+					gap: 40px 10px;
+				}
+				.thumbImg {
+					margin-bottom: 8px;
+				}
+				.text {
+					padding: 4px 0;
+					margin-bottom: 4px;
+					.category {
+						font-size: 10px;
+						margin-bottom: 2px;
+					}
+					.name {
+						font-size: 12px;
+						-webkit-line-clamp: 1 !important;
+					}
+				}
+				.subscribe {
+					margin-bottom: 12px;
+				}
+				.btn {
+					height: 28px;
+					font-size: 12px;
+				}
+			}
+			.pagination {
+				display: none;
+			}
 		}
 
 		.pick .text .name {
@@ -5007,6 +5314,7 @@ h4 {
 		.leftNav {
 			width: 100%;
 			flex-basis: 160px;
+			display: none;
 			.modify {
 				margin-bottom: 20px;
 			}
@@ -6004,86 +6312,7 @@ h4 {
 			margin-bottom: 0;
 		}
 	}
-	.checkList {
-		li {
-			border-top: 1px solid var(--black);
-			padding: 16px 20px;
-			font-size: 18px;
-			font-weight: 500;
-			font-stretch: normal;
-			font-style: normal;
-			line-height: 1.27;
-			&:last-child {
-				border-bottom: 1px solid var(--black);
-			}
-			label {
-				display: flex;
-				align-items: center;
-				gap: 10px;
-				// padding-left: 30px;
-				text-align: left;
-				cursor: pointer;
-				input {
-					display: none;
-				}
-				.radio {
-					flex: 0 0 auto;
-					display: block;
-					width: 20px;
-					height: 20px;
-					border: 1px solid var(--black);
-					border-radius: 50%;
-					margin: 0;
-					overflow: visible;
-					position: relative;
-				}
-				.checkbox {
-					flex: 0 0 auto;
-					display: block;
-					width: 20px;
-					height: 20px;
-					border: 1px solid var(--black);
-					margin: 0;
-					overflow: visible;
-					position: relative;
-				}
-				&:has([type="radio"]:checked) {
-					font-weight: bold;
-					.radio {
-						&::after {
-							content: '';
-							position: absolute;				
-							left: 3px;
-							top: 0;
-							width: 17px;
-							height: 18px;
-							background: url(../img/ic_checkList_check.svg) center no-repeat;
-						}
-					}
-				}
-				&:has([type="checkbox"]:checked) {
-					.checkbox {
-						&::after {
-							content: '';
-							position: absolute;				
-							left: 2px;
-							top: 1px;
-							width: 17px;
-							height: 18px;
-							background: url(../img/ic_checkList_check.svg) center no-repeat;
-						}
-					}
-				}
-				@media screen and (max-width:768px) {
-					span {
-						display: flex;
-						flex-direction: column;
-						gap: 0;
-					}
-				}
-			}
-		}
-	}
+	@include checkList;
 	.btn {
 		height: 55px;
 		font-size: 18px;
