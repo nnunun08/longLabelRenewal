@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="headerWrap">
+        <div class="header pc">
+            <div class="inner">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li>Pick</li>
+                    <li>Archive</li>
+                    <li>Talks</li>
+                    <li>Stories</li>
+                    <li>About</li>
+                </ul>
+                <div class="rightBtn">
+                    
+                    <div class="user ac">
+                        <span>닉네임</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mo">
+            <div class="inner">
+                <div class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+            </div>
+
+            <!-- .menuBtn 클릭이벤트 시 mobileMenu요소에 .ac 토글(숨김/노출) -->
+            <div class="mobileMenu">
+                <div class="panel">
+                    <div class="top">
+                        <div class="backArr"></div>
+                        <div class="flexBx">
+                            
+                            <div>
+                                <div class="user">
+                                    <span>로그인해 주세요</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menuList">
+                        <ul>
+                            <li>Pick</li>
+                            <li>Archive</li>
+                            <li>Talks</li>
+                            <li>Stories</li>
+                            <li>About</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dim"></div>
+            </div>
+
+            <script src="./js/mobileToggle.js"></script>
+
+            
+        </div>
+        <div class="headerBack"></div>
+    </div>
+
+
+    <div class="section-detail">
+        <div class="pageNav">
+            <a href="#" class="arr"></a>
+            <div class="tit">내가 작성한 글</div>
+        </div>
+        <div class="inner">
+            <div class="leftNav">
+                <div class="breadcrumb">
+                    홈 > 마이페이지
+                </div>
+                
+                <div class="top">
+                    <div class="profileCh chYellow">
+                        <img src="./img/ch_yellow.png" alt="">
+                    </div>
+                    <h1>
+                        탐정<br>
+                        닉네임
+                    </h1>
+                    
+                    
+                    <span class="modify">내 정보 수정하기</span>
+                </div>
+
+
+                <div class="ulWrap">
+                    <ul>
+                        <li><span>나의 Value</span></li>
+                        <li><span>나의 Pick</span><span class="count">2</span></li>
+                        <li><span>나의 Archive</span><span class="count">4</span></li>
+                        <li class="ac"><span>내가 작성한 글</span><span class="count">17</span></li>
+                    
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="container">
+                <h2 class="h2">내가 작성한 글</h2>
+                <div class="pageTab">
+                    <div class="inner">
+                        <div class="ulWrap">
+                            <ul>
+                                <li class="ac">Archive</li>
+                                <li>Talks</li>
+                                <li>댓글</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="newAccodion">
+                    <div class="item">
+                        <div class="titleWrap">
+                            <div class="tit">리얼리뷰</div>
+                            <div class="count">13</div>
+                        </div>
+                        <ul class="contents">
+                            <li>
+                                <div class="realCon">
+                                    <div class="thumb">
+                                        <div class="imgWrap"><img src="./img/resource/thumbSample.png" alt=""></div>
+                                        <div class="text">
+                                            <div class="en">KANEITEI</div>
+                                            <div class="ko">콘크리트 카키</div>
+                                        </div>
+                                    </div>
+                                    <ul class="review">
+                                        <li>
+                                            <div class="badge">좋아요</div>
+                                            <p>저지 원단이라 정말 편해요</p>
+                                        </li>
+                                        <li>
+                                            <div class="badge">아쉬워요</div>
+                                            <p>컬러가 다양하지 않아요</p>
+                                        </li>
+                                        <li>
+                                            <div class="badge">더 알고 싶어요</div>
+                                            <p>인도의 로컬 장인이 만든 것으로 알고 있어요. 만든 사람들의 이야기도 알고 싶어요</p>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="flexBx">
+                                        <div class="date">2022.11.04</div>
+                                        <div class="data">
+                                            <div class="like">225</div>
+                                            <div class="reply">1,498</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="realCon">
+                                    <div class="thumb">
+                                        <div class="imgWrap"><img src="./img/resource/thumbSample.png" alt=""></div>
+                                        <div class="text">
+                                            <div class="en">KANEITEI</div>
+                                            <div class="ko">콘크리트 카키</div>
+                                        </div>
+                                    </div>
+                                    <ul class="review">
+                                        <li>
+                                            <div class="badge">좋아요</div>
+                                            <p>저지 원단이라 정말 편해요</p>
+                                        </li>
+                                        <li>
+                                            <div class="badge">아쉬워요</div>
+                                            <p>컬러가 다양하지 않아요</p>
+                                        </li>
+                                        <li>
+                                            <div class="badge">더 알고 싶어요</div>
+                                            <p>인도의 로컬 장인이 만든 것으로 알고 있어요. 만든 사람들의 이야기도 알고 싶어요</p>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="flexBx">
+                                        <div class="date">2022.11.04</div>
+                                        <div class="data">
+                                            <div class="like">225</div>
+                                            <div class="reply">1,498</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="item ac">
+                        <div class="titleWrap">
+                            <div class="tit">리얼질문</div>
+                            <div class="count">2</div>
+                        </div>
+                        <ul class="contents">
+                            <li>
+                                <div class="realCon">
+                                    <div class="thumb">
+                                        <div class="imgWrap"><img src="./img/resource/thumbSample.png" alt=""></div>
+                                        <div class="text">
+                                            <div class="en">KANEITEI</div>
+                                            <div class="ko">콘크리트 카키</div>
+                                        </div>
+                                    </div>
+                                    <p class="realQuestionWord">
+                                        이 브랜드에서 탄소 상쇄 프로그램을 하고 있던데 탄소 상쇄<br>
+                                        프로그램이 환경에 도움이 되는건가요?
+                                    </p>
+                                    
+                                    <div class="flexBx">
+                                        <div class="date">2022.11.04</div>
+                                        <div class="data">
+                                            <div class="like">225</div>
+                                            <div class="reply">1,498</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="realCon">
+                                    <div class="thumb">
+                                        <div class="imgWrap"><img src="./img/resource/thumbSample.png" alt=""></div>
+                                        <div class="text">
+                                            <div class="en">KANEITEI</div>
+                                            <div class="ko">콘크리트 카키</div>
+                                        </div>
+                                    </div>
+                                    <p class="realQuestionWord">
+                                        이 브랜드에서 탄소 상쇄 프로그램을 하고 있던데 탄소 상쇄<br>
+                                        프로그램이 환경에 도움이 되는건가요?
+                                    </p>
+                                    
+                                    <div class="flexBx">
+                                        <div class="date">2022.11.04</div>
+                                        <div class="data">
+                                            <div class="like">225</div>
+                                            <div class="reply">1,498</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="realCon">
+                                    <div class="thumb">
+                                        <div class="imgWrap"><img src="./img/resource/thumbSample.png" alt=""></div>
+                                        <div class="text">
+                                            <div class="en">KANEITEI</div>
+                                            <div class="ko">콘크리트 카키</div>
+                                        </div>
+                                    </div>
+                                    <p class="realQuestionWord">
+                                        이 브랜드에서 탄소 상쇄 프로그램을 하고 있던데 탄소 상쇄<br>
+                                        프로그램이 환경에 도움이 되는건가요?
+                                    </p>
+                                    
+                                    <div class="flexBx">
+                                        <div class="date">2022.11.04</div>
+                                        <div class="data">
+                                            <div class="like">225</div>
+                                            <div class="reply">1,498</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="realCon">
+                                    <div class="thumb">
+                                        <div class="imgWrap"><img src="./img/resource/thumbSample.png" alt=""></div>
+                                        <div class="text">
+                                            <div class="en">KANEITEI</div>
+                                            <div class="ko">콘크리트 카키</div>
+                                        </div>
+                                    </div>
+                                    <p class="realQuestionWord">
+                                        이 브랜드에서 탄소 상쇄 프로그램을 하고 있던데 탄소 상쇄<br>
+                                        프로그램이 환경에 도움이 되는건가요?
+                                    </p>
+                                    
+                                    <div class="flexBx">
+                                        <div class="date">2022.11.04</div>
+                                        <div class="data">
+                                            <div class="like">225</div>
+                                            <div class="reply">1,498</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="realCon">
+                                    <div class="thumb">
+                                        <div class="imgWrap"><img src="./img/resource/thumbSample.png" alt=""></div>
+                                        <div class="text">
+                                            <div class="en">KANEITEI</div>
+                                            <div class="ko">콘크리트 카키</div>
+                                        </div>
+                                    </div>
+                                    <p class="realQuestionWord">
+                                        이 브랜드에서 탄소 상쇄 프로그램을 하고 있던데 탄소 상쇄<br>
+                                        프로그램이 환경에 도움이 되는건가요?
+                                    </p>
+                                    
+                                    <div class="flexBx">
+                                        <div class="date">2022.11.04</div>
+                                        <div class="data">
+                                            <div class="like">225</div>
+                                            <div class="reply">1,498</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- newAccodion JS -->
+                <script>
+                    const accToggle = document.querySelectorAll('.newAccodion .titleWrap')
+                    accToggle.forEach(element => {
+                        element.addEventListener('click', () => {
+                            if(element.parentNode.className === 'item') {
+                                accToggle.forEach(item => {
+                                item.parentNode.classList.remove('ac')
+                            })
+                            element.parentNode.classList.toggle('ac')
+                            } else if(element.parentNode.className = 'item ac') {
+                                element.parentNode.classList.remove('ac')
+                            }
+                        })
+                    });
+                </script>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="inner">
+            <div class="topCon">
+                <img class="footerLogo" src="./img/footerLogo.svg" alt="footerLogo">
+                <ul>
+                    <li>이용약관</li>
+                    <li>개인정보처리방침</li>
+                </ul>
+            </div>
+            <div class="bodyCon">
+                <p>
+                    <span>상호명&nbsp;:&nbsp;리마인드얼스</span>  |  <span>대표자&nbsp;:&nbsp;김혜림</span>  |   <span>사업자번호&nbsp;:&nbsp;645-06-01901</span>  |  <span>주소&nbsp;:&nbsp;서울특별시&nbsp;종로구&nbsp;종로&nbsp;34&nbsp;2층&nbsp;101호</span><br>
+                    <span>통신판매업신고번호&nbsp;:&nbsp;2022-지역명-1234</span>  |  <span>입금계좌&nbsp;:&nbsp;국민은행&nbsp;123456678</span>  |  <span>문의&nbsp;:&nbsp;02-123-1234</span>  |  <span>메일&nbsp;:&nbsp;hello@emindearth.com</span><br>
+                    롱레이블은 리마인드얼스가 운영하는 친환경 제품 임팩트 분석 플랫폼입니다.
+                </p>
+                <img class="insta" src="./img/ic_instagram.svg" alt="ic_instagram">
+            </div>
+            <span class="copyright">COPYRIGHT ⓒ LONG LABEL. All Rights Reserved.</span>
+        </div>
+    </div>
+</body>
+</html>

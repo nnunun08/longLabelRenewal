@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="108" viewBox="0 0 108 108">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="타원_184" data-name="타원 184" cx="53" cy="53" r="53" transform="translate(285 142)" fill="#f4f4f4" stroke="#151515" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="ic_profile_df" transform="translate(-51 -407)">
+    <path id="패스_825" data-name="패스 825" d="M54,0A54,54,0,1,1,0,54,54,54,0,0,1,54,0Z" transform="translate(51 407)" fill="#f4f4f4"/>
+    <g id="마스크_그룹_161" data-name="마스크 그룹 161" transform="translate(-233 266)" clip-path="url(#clip-path)">
+      <g id="그룹_2893" data-name="그룹 2893" transform="translate(295.105 159.229)">
+        <path id="패스_826" data-name="패스 826" d="M256.348,768.665c.523-15.33,6.714-27.65,19.629-35.807,15.519-9.8,31.588-9.706,46.991.3,12.624,8.2,18.644,20.413,19.17,35.508Z" transform="translate(-256.348 -675.452)" fill="#bcbcbc"/>
+        <path id="패스_827" data-name="패스 827" d="M323.241,612a24.031,24.031,0,1,1-24.124,23.581C299.167,622.687,310.147,611.953,323.241,612Z" transform="translate(-280.242 -611.997)" fill="#bcbcbc"/>
+      </g>
+    </g>
+  </g>
+</svg>

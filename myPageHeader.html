@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="modalOn">
+    <div class="headerWrap">
+        <div class="header pc">
+            <div class="inner">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li>Pick</li>
+                    <li>Archive</li>
+                    <li>Talks</li>
+                    <li>Stories</li>
+                    <li>About</li>
+                </ul>
+                <div class="rightBtn">
+                    
+                    <div class="user ac">
+                        <span>닉네임</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header mo">
+            <div class="inner">
+                <div class="menuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo">
+                </div>
+            </div>
+
+            <!-- .menuBtn 클릭이벤트 시 mobileMenu요소에 .ac 토글(숨김/노출) -->
+            <div class="mobileMenu ac">
+                <div class="panel">
+                    <div class="pageNav">
+                        <a href="#" class="arr"></a>
+                        <div class="tit">마이페이지</div>
+                    </div>
+                    <div class="top">
+                        <!-- 프로필 기본 -->
+                        <div class="profile">
+                            <img src="./img/ic_profile_df.svg" alt="">
+                        </div>
+                        <div>
+                            <div class="nicknameGuide">
+                                지속가능 패션 유형과<br>
+                                닉네임을 설정해주세요
+                            </div>
+                            <div class="edit">내 정보 수정하기</div>
+                        </div>
+
+                        <!-- 프로필 설정한 경우 -->
+                        <!-- <div class="profile">
+                            <img src="./img/ch_blue.png" alt="">
+                        </div>
+                        <div>
+                            <div class="nickname">탐험가</div>
+                            <div class="name">닉네임 님</div>
+                            <div class="edit">내 정보 수정하기</div>
+                        </div> -->
+                    </div>
+                    <div class="menuList">
+                        <ul>
+                            <li><a href="#">나의 Value</a></li>
+                            <li><a href="#">나의 Pick <span class="count">2</span></a></li>
+                            <li><a href="#">나의 Archive <span class="count">4</span></a></li>
+                            <li><a href="#">내가 작성한 글 <span class="count">17</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        LONG LABEL의 모든 콘텐츠는 저작권법의 보호를 받으며,<br>
+                        무단 전재, 복사, 배포를 금합니다.<br>
+                        ⓒLONG LABEL
+                    </div>
+
+                </div>
+                <!-- <div class="dim"></div> -->
+            </div>
+        </div>
+
+        <div class="headerBack"></div>
+    </div>
+    <script src="./js/mobileToggle.js"></script>
+
+</body>
+</html>
