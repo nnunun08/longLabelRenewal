@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(./reset.css);
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap");
@@ -730,6 +729,7 @@ h4 {
 .pickPage .item.req .btn:hover {
   background-color: transparent;
   color: #f63;
+  border-color: var(--dusty-orange);
 }
 .pickPage .item.comple .btn::before,
 .pickPage .item.conf .btn::before,
@@ -1406,7 +1406,7 @@ h4 {
   background-color: #f63;
 }
 .pageTab ul li + li {
-  margin-left: 20px;
+  margin-left: 36px;
 }
 
 .countSearch.alignTop .inner {
@@ -1787,7 +1787,7 @@ h4 {
 .section-detail .styleCheck.result input::placeholder {
   color: #656565;
 }
-.section-detail .styleCheck.result input:focus {
+.section-detail .styleCheck.result input.value, .section-detail .styleCheck.result input:focus {
   outline: 1px solid var(--black);
 }
 .section-detail .styleCheck.result input {
@@ -1894,6 +1894,7 @@ h4 {
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #000;
+  overflow: hidden;
 }
 .section-detail .leftNav .top .profileCh.chGreen {
   background-color: #E5F8ED;
@@ -2367,7 +2368,7 @@ h4 {
 .section-detail .container .pageTab ul li {
   font-family: Montserrat;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 600;
 }
 .section-detail .container .pageTab ul li + li {
   margin-left: 20px;
@@ -2998,14 +2999,8 @@ h4 {
 
 .pickPerson {
   font-weight: 500;
-  color: #FF6633;
+  color: var(--black);
   font-size: 22px;
-}
-.pickPerson span {
-  display: block;
-}
-.pickPerson span::after {
-  content: "명";
 }
 
 .pageDetail {
@@ -3864,7 +3859,6 @@ h4 {
   max-width: 352px;
   width: 100%;
   height: 40px;
-  margin-bottom: 10px;
   max-width: 538px;
 }
 .pageDetail .reason {
@@ -4148,7 +4142,7 @@ h4 {
 .loginForm input::placeholder {
   color: #656565;
 }
-.loginForm input:focus {
+.loginForm input.value, .loginForm input:focus {
   outline: 1px solid var(--black);
 }
 .loginForm .insert {
@@ -4401,6 +4395,7 @@ h4 {
   aspect-ratio: 1/1;
   border-radius: 50%;
   border: 1px solid #000;
+  overflow: hidden;
 }
 .loginForm.signupForm .profileList .profileCh.chGreen {
   background-color: #E5F8ED;
@@ -4458,7 +4453,7 @@ h4 {
     margin: 0 auto;
     margin-bottom: 52px;
   }
-  .loginForm.signupForm .profileList .item {
+  .loginForm.signupForm .profileList .profileCh {
     flex: 1 0 40%;
   }
   .loginForm.signupForm .nextTime {
@@ -4593,7 +4588,7 @@ h4 {
 .purchase .inner input::placeholder {
   color: #656565;
 }
-.purchase .inner input:focus {
+.purchase .inner input.value, .purchase .inner input:focus {
   outline: 1px solid var(--black);
 }
 .purchase .inner .select {
@@ -5169,7 +5164,7 @@ h4 {
 .talksWrite input::placeholder {
   color: #656565;
 }
-.talksWrite input:focus {
+.talksWrite input.value, .talksWrite input:focus {
   outline: 1px solid var(--black);
 }
 .talksWrite .textarea {
@@ -6441,7 +6436,7 @@ h4 {
 .PageEdit input::placeholder {
   color: #656565;
 }
-.PageEdit input:focus {
+.PageEdit input.value, .PageEdit input:focus {
   outline: 1px solid var(--black);
 }
 .PageEdit .radioWrap {
@@ -6872,18 +6867,19 @@ h4 {
     text-decoration: none;
   }
 }
-.materialsSlide {
-  overflow: auto;
-  width: 100%;
-  padding: 62px 0 30px;
-  box-sizing: border-box;
-}
-.materialsSlide .mesg {
+.materialsSlideMesg {
   display: block;
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 26px;
+  margin-top: 62px;
+}
+
+.materialsSlide {
+  overflow: auto;
+  width: 100%;
+  padding: 26px 0 30px;
+  box-sizing: border-box;
 }
 .materialsSlide > ul {
   display: flex;
@@ -7838,25 +7834,128 @@ h4 {
   }
 }
 .chart {
+  text-align: center;
+  padding-top: 57px;
+}
+.chart .profileCh {
+  flex: 1 0 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+.chart .profileCh.chGreen {
+  background-color: #E5F8ED;
+}
+.chart .profileCh.chOran {
+  background-color: #FFE8E2;
+}
+.chart .profileCh.chYellow {
+  background-color: #FFF5E5;
+}
+.chart .profileCh.chBlue {
+  background-color: #EAEAFF;
+}
+.chart .profileCh img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.chart .rowBarGraph {
   display: flex;
-  padding-top: 130px;
+  flex-direction: column;
+  gap: 20px;
+}
+.chart .rowBarGraph .item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.chart .rowBarGraph .item:has(.chGreen) .bar {
+  background-color: #81b29a;
+}
+.chart .rowBarGraph .item:has(.chGreen) h5, .chart .rowBarGraph .item:has(.chGreen) .value {
+  color: #81b29a;
+}
+.chart .rowBarGraph .item:has(.chOran) .bar {
+  background-color: #E07A5F;
+}
+.chart .rowBarGraph .item:has(.chOran) h5, .chart .rowBarGraph .item:has(.chOran) .value {
+  color: #E07A5F;
+}
+.chart .rowBarGraph .item:has(.chYellow) .bar {
+  background-color: #EDC077;
+}
+.chart .rowBarGraph .item:has(.chYellow) h5, .chart .rowBarGraph .item:has(.chYellow) .value {
+  color: #EDC077;
+}
+.chart .rowBarGraph .item:has(.chBlue) .bar {
+  background-color: #6464A0;
+}
+.chart .rowBarGraph .item:has(.chBlue) h5, .chart .rowBarGraph .item:has(.chBlue) .value {
+  color: #6464A0;
+}
+.chart .rowBarGraph .profileCh {
+  width: 64px;
+  flex: 0 0 auto;
+  margin-right: 12px;
+}
+.chart .rowBarGraph .progressBar {
+  position: relative;
+  flex: 1 0 0;
+}
+.chart .rowBarGraph .progressBar h5 {
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 6px;
+}
+.chart .rowBarGraph .progressBar .progress {
+  height: 20px;
+  background-color: #d6d6d6;
+}
+.chart .rowBarGraph .progressBar .progress .bar {
+  height: 100%;
+  max-width: 100%;
+  width: 1%;
+}
+.chart .rowBarGraph .valueWrap {
+  flex: 0 0 50px;
+  text-align: right;
+}
+.chart .flexWrap {
+  display: flex;
+  gap: 17px;
 }
 .chart .pickPerson {
+  display: inline-block;
   width: 250px;
   flex: 25 0 auto;
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+.chart .pickPerson span {
+  display: inline;
+  color: var(--dusty-orange);
 }
 .chart .ctr {
-  margin-top: 40px;
+  border: 1px solid var(--black);
+  padding: 27px 20px;
+  max-width: 50%;
+  box-sizing: border-box;
+  flex: 1 0 0;
 }
 .chart .tit {
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 50px;
-}
-.chart .ctr:has(#pickBar) {
-  flex: 53 0 auto;
+  margin-bottom: 15px;
+  text-align: left;
 }
 .chart .ctr:has(#pickBar) .canvasContainer {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
   max-width: 530px;
   max-height: 300px;
   aspect-ratio: 530/300;
@@ -7878,6 +7977,12 @@ h4 {
   .chart .pickPerson {
     width: 100%;
     text-align: center;
+  }
+  .chart .flexWrap {
+    flex-direction: column;
+  }
+  .chart .ctr {
+    max-width: 100%;
   }
 }
 
@@ -8618,7 +8723,7 @@ h4 {
 .styleCheck.result input::placeholder {
   color: #656565;
 }
-.styleCheck.result input:focus {
+.styleCheck.result input.value, .styleCheck.result input:focus {
   outline: 1px solid var(--black);
 }
 .styleCheck.result input {
