@@ -392,20 +392,6 @@
                   </div>
                 </div>
 
-                <script>
-                    // 모달 오픈
-                    const meteItem = document.querySelectorAll('.meteItem');
-                    const materModal = document.querySelector('.materModal')
-                    const materClose = document.querySelector('.materModal .pop .close')
-                    meteItem.forEach(element => {
-                        element.addEventListener('click', () => {
-                            materModal.classList.toggle('on')
-                        })
-                    });
-                    materClose.addEventListener('click', () => {
-                        materModal.classList.remove('on')
-                    });
-                </script>
               </div>
             </div>
 
@@ -433,6 +419,7 @@
         </div>
     </div>
 
+    <script src="./js/mobileToggle.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./js/slick.min.js"></script>
