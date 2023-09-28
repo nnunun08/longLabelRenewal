@@ -880,6 +880,7 @@ body {
 
 @mixin ulWrap {
 	.ulWrap {
+		$innerPadding : 20px;
 		border-bottom: 1px solid #151515;
 		margin-left: -($innerPadding);
 		margin-right: -($innerPadding);
@@ -2972,6 +2973,11 @@ h4 {
 			width: 320px;
 		}
 		@include searchWrap;
+	}
+	@media screen and (max-width:768px) {
+		.inner {
+			margin-bottom: 20px;
+		}
 	}
 }
 
@@ -5714,7 +5720,7 @@ h4 {
 		line-height: 19px;
 	}
 	
-	$innerPadding:30px;
+	$innerPadding:20px;
 	@mixin fullInner {
 		width: calc(100vw + $innerPadding);
 		width: 100vw;
@@ -5763,8 +5769,12 @@ h4 {
 		.thumbImg {
 			margin-bottom: 10px;
 		}
+		.text .category {
+			font-size: 10px;
+			margin-bottom: 2px;
+		}
 		.text .name {
-			font-size: 13px;
+			font-size: 12px;
 			line-height: 1.31;
 		}
 		.col-3 {
@@ -5885,7 +5895,7 @@ h4 {
 		ul {
 			overflow-y: visible;
 			overflow-x: auto;
-			border-bottom: 0;
+			// border-bottom: 0;
 			width: 100%;
 			margin-left: -($innerPadding);
 			margin-right: -($innerPadding);
@@ -7223,8 +7233,8 @@ h4 {
 		padding-left: 20px;
 		padding-right: 20px;
 		@media screen and (max-width:768px) {
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 	.tagWrap {
@@ -7235,8 +7245,8 @@ h4 {
 		padding-left: 20px;
 		padding-right: 20px;
 		@media screen and (max-width:768px) {
-			padding-left: 30px;
-			padding-right: 30px;
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 		span {
 			flex: 0 0 auto;
