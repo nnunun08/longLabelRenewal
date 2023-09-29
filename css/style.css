@@ -517,6 +517,11 @@ body {
   overflow: auto;
   box-sizing: border-box;
 }
+@media screen and (max-width: 768px) {
+  .mainSlide {
+    margin-top: 8px;
+  }
+}
 .mainSlide .itemWrap {
   display: flex;
   gap: 20px;
@@ -635,6 +640,7 @@ h4 {
   border: solid 1px #151515;
   width: 100%;
   aspect-ratio: 260/340;
+  aspect-ratio: 1/1;
   position: relative;
   margin-bottom: 20px;
 }
@@ -673,12 +679,13 @@ h4 {
   right: 0;
   top: 100%;
   transform: translateY(-50%);
+  overflow: hidden;
 }
 .pick .newBrand .imgWrap .frontSign img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .pick .newBrand .text {
   margin-top: 121px;
@@ -711,6 +718,12 @@ h4 {
     font-size: 12px;
   }
 }
+.pick .newBrand.slick-slider {
+  width: 109%;
+}
+.pick .newBrand.slick-slider .item {
+  margin-right: 20px;
+}
 .pick .newBrand .imgWrap .frontSign {
   max-width: 108px;
   margin-top: -20px;
@@ -734,6 +747,7 @@ h4 {
   border: solid 1px #151515;
   width: 100%;
   aspect-ratio: 260/340;
+  aspect-ratio: 1/1;
   position: relative;
   margin-bottom: 20px;
 }
@@ -761,6 +775,7 @@ h4 {
   font-size: 20px;
   font-size: 12px;
   font-weight: 500;
+  margin-bottom: 8px;
 }
 .pick .newProduct .text .name {
   font-size: 24px;
@@ -827,15 +842,15 @@ h4 {
     gap: 4px 7px;
   }
   .pick .newProduct .text .category {
-    font-size: 10px;
-    margin-bottom: 2px;
+    font-size: 10px !important;
+    margin-bottom: 2px !important;
   }
   .pick .newProduct .tag span {
-    font-size: 9px;
-    height: 21px;
+    font-size: 9px !important;
+    height: 21px !important;
   }
   .pick .newProduct .text .name {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   .pick .newProduct .count {
     position: static;
@@ -925,6 +940,7 @@ h4 {
 .pick.newPick .text .category {
   font-size: 21px;
   font-weight: 500;
+  margin-bottom: 8px;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -960,9 +976,6 @@ h4 {
 
 .pickPage {
   padding: 0;
-}
-.pickPage .thumbImg {
-  padding-top: 126%;
 }
 .pickPage .item.comple .btn,
 .pickPage .item.conf .btn,
@@ -1027,6 +1040,21 @@ h4 {
   padding-left: 25px;
   background-size: 16px;
 }
+@media screen and (max-width: 768px) {
+  .pickPage .subscribe {
+    font-size: 12px;
+    background-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pickPage .text {
+    margin-bottom: 4px;
+    padding: 4px 0;
+  }
+  .pickPage .subscribe {
+    margin-bottom: 4px;
+  }
+}
 .pickPage .btn {
   height: 43.5px;
 }
@@ -1036,9 +1064,6 @@ h4 {
 }
 .archivePage .col-4 {
   row-gap: 80px;
-}
-.archivePage .thumbImg {
-  padding-top: 126%;
 }
 .archivePage.pick .text {
   margin-bottom: 0;
@@ -1166,12 +1191,13 @@ h4 {
   right: 0;
   top: 100%;
   transform: translateY(-50%);
+  overflow: hidden;
 }
 .mainArchive.newMainArchive .archiveSlide .newBrand .imgWrap .frontSign img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .mainArchive.newMainArchive .archiveSlide .newBrand .text {
   margin-top: 121px;
@@ -1204,6 +1230,12 @@ h4 {
     font-size: 12px;
   }
 }
+.mainArchive.newMainArchive .archiveSlide .newBrand.slick-slider {
+  width: 109%;
+}
+.mainArchive.newMainArchive .archiveSlide .newBrand.slick-slider .item {
+  margin-right: 20px;
+}
 .mainArchive.newMainArchive .archiveSlide .newBrand .item {
   padding: 14px;
   margin: 0;
@@ -1222,6 +1254,7 @@ h4 {
   border: solid 1px #151515;
   width: 100%;
   aspect-ratio: 260/340;
+  aspect-ratio: 1/1;
   position: relative;
   margin-bottom: 20px;
 }
@@ -1249,6 +1282,7 @@ h4 {
   font-size: 20px;
   font-size: 12px;
   font-weight: 500;
+  margin-bottom: 8px;
 }
 .mainArchive.newMainArchive .archiveSlide .newProduct .text .name {
   font-size: 24px;
@@ -1315,15 +1349,15 @@ h4 {
     gap: 4px 7px;
   }
   .mainArchive.newMainArchive .archiveSlide .newProduct .text .category {
-    font-size: 10px;
-    margin-bottom: 2px;
+    font-size: 10px !important;
+    margin-bottom: 2px !important;
   }
   .mainArchive.newMainArchive .archiveSlide .newProduct .tag span {
-    font-size: 9px;
-    height: 21px;
+    font-size: 9px !important;
+    height: 21px !important;
   }
   .mainArchive.newMainArchive .archiveSlide .newProduct .text .name {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   .mainArchive.newMainArchive .archiveSlide .newProduct .count {
     position: static;
@@ -1341,6 +1375,15 @@ h4 {
 .mainArchive.newMainArchive .archiveSlide .newProduct .item:hover {
   transform: translateY(-12px);
 }
+.mainArchive.newMainArchive .archiveSlide .newProduct .text .category {
+  font-size: 20px;
+}
+.mainArchive.newMainArchive .archiveSlide .newProduct .text .name {
+  font-size: 24px;
+}
+.mainArchive.newMainArchive .archiveSlide .newProduct .tag span {
+  font-size: 15px;
+}
 .mainArchive .mainConTit {
   margin-bottom: 30px;
 }
@@ -1349,6 +1392,7 @@ h4 {
   border: solid 1px #151515;
   width: 100%;
   aspect-ratio: 260/340;
+  aspect-ratio: 1/1;
   position: relative;
   margin-bottom: 20px;
 }
@@ -1697,8 +1741,13 @@ h4 {
   border-bottom: 1px solid #151515;
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .pageTab ul {
+    border-bottom: 0;
+  }
+}
 .pageTab ul li {
-  font-family: Montserrat;
+  font-family: Montserrat, "Pretendard Variable", Pretendard;
   font-size: 18px;
   font-weight: 500;
   color: #151515;
@@ -2387,6 +2436,7 @@ h4 {
   border: solid 1px #151515;
   width: 100%;
   aspect-ratio: 260/340;
+  aspect-ratio: 1/1;
   position: relative;
   margin-bottom: 20px;
 }
@@ -2414,6 +2464,7 @@ h4 {
   font-size: 20px;
   font-size: 12px;
   font-weight: 500;
+  margin-bottom: 8px;
 }
 .section-detail .container .newProduct .text .name {
   font-size: 24px;
@@ -2480,15 +2531,15 @@ h4 {
     gap: 4px 7px;
   }
   .section-detail .container .newProduct .text .category {
-    font-size: 10px;
-    margin-bottom: 2px;
+    font-size: 10px !important;
+    margin-bottom: 2px !important;
   }
   .section-detail .container .newProduct .tag span {
-    font-size: 9px;
-    height: 21px;
+    font-size: 9px !important;
+    height: 21px !important;
   }
   .section-detail .container .newProduct .text .name {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   .section-detail .container .newProduct .count {
     position: static;
@@ -2561,12 +2612,13 @@ h4 {
   right: 0;
   top: 100%;
   transform: translateY(-50%);
+  overflow: hidden;
 }
 .section-detail .container .newBrand .imgWrap .frontSign img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .section-detail .container .newBrand .text {
   margin-top: 121px;
@@ -2598,6 +2650,12 @@ h4 {
     margin-top: 4px;
     font-size: 12px;
   }
+}
+.section-detail .container .newBrand.slick-slider {
+  width: 109%;
+}
+.section-detail .container .newBrand.slick-slider .item {
+  margin-right: 20px;
 }
 .section-detail .container .newBrand .item {
   text-align: center;
@@ -2631,6 +2689,7 @@ h4 {
   z-index: 1;
   background-color: #fff;
   transform: translateY(-68%);
+  overflow: hidden;
 }
 .section-detail .container .newBrand .text {
   margin-top: 53px;
@@ -2774,8 +2833,8 @@ h4 {
   font-weight: bold;
   line-height: 1.07;
   color: var(--black);
-  padding-bottom: 30px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 12px;
   border-bottom: 1px solid var(--black);
   margin-top: 40px;
 }
@@ -2992,6 +3051,7 @@ h4 {
   display: -webkit-box;
   white-space: normal;
   word-break: break-all;
+  -webkit-line-clamp: 1;
 }
 .section-detail .container .article + .article {
   margin-top: 50px;
@@ -7829,7 +7889,8 @@ h4 {
     width: calc((100% - 10px) / 2);
   }
   .pageTab .inner .ulWrap {
-    border-bottom: 1px solid #151515;
+    border-bottom: 1px solid var(--black);
+    overflow: auto;
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
@@ -7838,12 +7899,8 @@ h4 {
   }
   .pageTab .inner ul {
     overflow-y: visible;
-    overflow-x: auto;
+    overflow-x: visible;
     width: 100%;
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
@@ -7870,6 +7927,8 @@ h4 {
   }
   .pageDetail .col-2 > .item {
     width: 100%;
+    overflow: hidden;
+    aspect-ratio: unset;
   }
   .purchase {
     margin-top: 0;
@@ -7987,7 +8046,8 @@ h4 {
     margin-bottom: 20px;
   }
   .section-detail .leftNav .ulWrap {
-    border-bottom: 1px solid #151515;
+    border-bottom: 1px solid var(--black);
+    overflow: auto;
     margin-left: -20px;
     margin-right: -20px;
     padding-left: 20px;
@@ -8219,14 +8279,9 @@ h4 {
   }
 }
 @media screen and (max-width: 520px) {
-  .pageDetail .imgSlide {
-    margin-left: -30px;
-    margin-right: -30px;
-    width: calc(100% + 60px);
-  }
   .pageDetail .topCon {
     margin-top: -80px;
-    margin-top: -30px;
+    margin-top: 0;
   }
   .tabList {
     margin-top: 50px;
@@ -8964,7 +9019,7 @@ h4 {
   }
   .newMainStories .inner {
     padding: 0 11.5px;
-    width: 140vw;
+    width: 150vw;
   }
   .newMainStories .cover {
     display: none;
@@ -9791,6 +9846,10 @@ h4 {
 }
 .detailPage .visual {
   background-color: #dedede;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
   padding-top: 65px;
   padding-bottom: 28px;
   height: 400px;
@@ -9853,6 +9912,9 @@ h4 {
   background-position: right top;
   background-size: 20px;
   text-align: right;
+}
+.detailPage .visual .inner .data .like.ac, .detailPage .visual .inner .data .like:hover {
+  background-image: url(../img/ic_like_ac.svg);
 }
 .detailPage .note {
   margin-top: 20px;
@@ -9942,6 +10004,14 @@ h4 {
   right: 10px;
   transform: rotate(180deg);
 }
+@media screen and (max-width: 768px) {
+  .detailPage .slickSlide .slick-arrow.slick-prev {
+    left: 0;
+  }
+  .detailPage .slickSlide .slick-arrow.slick-next {
+    right: 0;
+  }
+}
 .detailPage img {
   width: 100%;
   height: auto;
@@ -9977,6 +10047,18 @@ h4 {
 .detailPage .centerSlide .slick-arrow.slick-next {
   right: 20%;
   transform: rotate(180deg);
+}
+@media screen and (max-width: 768px) {
+  .detailPage .centerSlide .item {
+    padding: 0;
+    opacity: 1;
+  }
+  .detailPage .centerSlide .slick-arrow.slick-prev {
+    left: 0;
+  }
+  .detailPage .centerSlide .slick-arrow.slick-next {
+    right: 0;
+  }
 }
 .detailPage .type1 {
   margin-top: 80px;
@@ -10031,6 +10113,7 @@ h4 {
   min-height: 0;
 }
 .detailPage .listSection .listGroup {
+  z-index: 1;
   position: sticky;
   top: 75px;
   margin-bottom: 36px;
@@ -10080,6 +10163,11 @@ h4 {
 }
 .detailPage .listSection .listGroup ul li.focus.beige {
   background-color: #cfc1b4;
+}
+@media screen and (max-width: 768px) {
+  .detailPage .listSection .listGroup {
+    top: 55px;
+  }
 }
 .detailPage .listSection .listCon {
   display: flex;
@@ -10188,6 +10276,17 @@ h4 {
 }
 .detailPage .ref .item + .item {
   margin-top: 19px;
+}
+@media screen and (max-width: 768px) {
+  .detailPage .type2 {
+    flex-direction: column;
+  }
+  .detailPage .type2 .leftCon {
+    flex-basis: auto;
+  }
+  .detailPage .type2 .conWrap {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {

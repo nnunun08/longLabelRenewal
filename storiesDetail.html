@@ -73,7 +73,7 @@
     </div>
 
     <div class="detailPage">
-        <div class="visual">
+        <div class="visual" style="background: url(./img/resource/resource_stories_01.jpg);">
             <div class="inner">
                 <div class="flexBx">
                     <div class="cate">카테고리</div>
@@ -247,6 +247,7 @@
     </div>
 
     <script src="./js/mobileToggle.js"></script>
+    <script src="./js/likeToggle.js"></script>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -258,6 +259,15 @@
             centerPadding: '25.5%',
             slidesToShow: 1,
             infinite: true,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        centerMode: false,
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
         $('.oneSlide').slick({
             slidesToShow: 1,
