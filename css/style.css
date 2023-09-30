@@ -718,12 +718,6 @@ h4 {
     font-size: 12px;
   }
 }
-.pick .newBrand.slick-slider {
-  width: 109%;
-}
-.pick .newBrand.slick-slider .item {
-  margin-right: 20px;
-}
 .pick .newBrand .imgWrap .frontSign {
   max-width: 108px;
   margin-top: -20px;
@@ -1052,11 +1046,12 @@ h4 {
     padding: 4px 0;
   }
   .pickPage .subscribe {
-    margin-bottom: 4px;
+    margin-bottom: 12px;
   }
 }
 .pickPage .btn {
-  height: 43.5px;
+  font-size: 12px;
+  height: 28px;
 }
 
 .archivePage {
@@ -1103,6 +1098,12 @@ h4 {
 }
 .archivePage.slideType .inner ul[class*=col] > .item {
   flex: 0 0 280px;
+}
+.archivePage.slideType .slick-slider {
+  width: 109%;
+}
+.archivePage.slideType .slick-slider .item {
+  margin-right: 20px;
 }
 
 .mainArchive {
@@ -1229,12 +1230,6 @@ h4 {
     margin-top: 4px;
     font-size: 12px;
   }
-}
-.mainArchive.newMainArchive .archiveSlide .newBrand.slick-slider {
-  width: 109%;
-}
-.mainArchive.newMainArchive .archiveSlide .newBrand.slick-slider .item {
-  margin-right: 20px;
 }
 .mainArchive.newMainArchive .archiveSlide .newBrand .item {
   padding: 14px;
@@ -1777,6 +1772,20 @@ h4 {
 }
 .pageTab ul li + li {
   margin-left: 36px;
+}
+@media screen and (max-width: 768px) {
+  .pageTab .ulWrap {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 10px);
+  }
+  .pageTab .ulWrap ul {
+    padding: 0;
+    margin: 0;
+  }
+  .pageTab li {
+    margin-top: 16px;
+  }
 }
 
 .countSearch.alignTop .inner {
@@ -2650,12 +2659,6 @@ h4 {
     margin-top: 4px;
     font-size: 12px;
   }
-}
-.section-detail .container .newBrand.slick-slider {
-  width: 109%;
-}
-.section-detail .container .newBrand.slick-slider .item {
-  margin-right: 20px;
 }
 .section-detail .container .newBrand .item {
   text-align: center;
@@ -3546,6 +3549,7 @@ h4 {
   background-color: var(--white);
   box-sizing: border-box;
   border-radius: 50%;
+  text-indent: -9999px;
 }
 .pageDetail .imgSlide .slick-dots li.slick-active {
   background-color: #f63;
@@ -3700,6 +3704,10 @@ h4 {
   border: 1px solid #707070;
   border-radius: 50%;
   box-sizing: border-box;
+}
+.pageDetail .accodion li .flexBx .left .imgWrap img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .pageDetail .accodion li .flexBx .left .tit {
   font-size: 16px;
@@ -6169,6 +6177,10 @@ h4 {
   border: 1px solid #707070;
   border-radius: 50%;
   box-sizing: border-box;
+}
+.about .accodion li .flexBx .left .imgWrap img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .about .accodion li .flexBx .left .tit {
   font-size: 16px;
@@ -8869,7 +8881,6 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .mainSlide .itemWrap .item {
-    max-width: 300px;
     width: 80vw;
     padding: 30px 20px;
   }
@@ -10031,6 +10042,9 @@ h4 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.detailPage .centerSlide {
+  position: relative;
+}
 .detailPage .centerSlide .item {
   padding: 0 10px;
   opacity: 0.5;
@@ -10059,6 +10073,41 @@ h4 {
   .detailPage .centerSlide .slick-arrow.slick-next {
     right: 0;
   }
+}
+.detailPage .slick-dots {
+  bottom: 13px;
+}
+.detailPage .slick-dots li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #151515;
+  background-color: var(--white);
+  box-sizing: border-box;
+  border-radius: 50%;
+  text-indent: -9999px;
+}
+.detailPage .slick-dots li.slick-active {
+  background-color: #f63;
+}
+.detailPage .slick-dots li button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+}
+.detailPage .slick-dots li button::before {
+  display: none;
+}
+.detailPage .slick-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  gap: 10px;
+  text-align: center;
+}
+.detailPage .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
 }
 .detailPage .type1 {
   margin-top: 80px;
@@ -10141,6 +10190,7 @@ h4 {
   flex: 1 0 0;
   background-color: #f4f4f4;
   border: 1px solid var(--black);
+  border-right: 0;
   padding: 10px;
   text-align: center;
   font-size: 20px;
@@ -10163,6 +10213,9 @@ h4 {
 }
 .detailPage .listSection .listGroup ul li.focus.beige {
   background-color: #cfc1b4;
+}
+.detailPage .listSection .listGroup ul li:last-child {
+  border-right: 1px solid var(--black);
 }
 @media screen and (max-width: 768px) {
   .detailPage .listSection .listGroup {
@@ -10222,6 +10275,14 @@ h4 {
 .detailPage .listSection .listCon .textWrap .beige {
   color: #cfc1b4;
 }
+@media screen and (max-width: 768px) {
+  .detailPage .listSection .listCon {
+    flex-direction: column;
+  }
+  .detailPage .listSection .listCon .imgWrap {
+    flex: 1 0 auto;
+  }
+}
 .detailPage .article {
   margin: 80px 0;
 }
@@ -10280,6 +10341,7 @@ h4 {
 @media screen and (max-width: 768px) {
   .detailPage .type2 {
     flex-direction: column;
+    margin: 80px 0;
   }
   .detailPage .type2 .leftCon {
     flex-basis: auto;
