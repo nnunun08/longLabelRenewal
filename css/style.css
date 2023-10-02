@@ -7908,6 +7908,11 @@ h4 {
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .pageTab .inner .ulWrap::-webkit-scrollbar {
+    display: none !important;
   }
   .pageTab .inner ul {
     overflow-y: visible;
@@ -8065,6 +8070,11 @@ h4 {
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .section-detail .leftNav .ulWrap::-webkit-scrollbar {
+    display: none !important;
   }
   .section-detail .leftNav .ulWrap {
     margin-bottom: 40px;
@@ -9657,6 +9667,11 @@ h4 {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.tagGruop .tagWrap::-webkit-scrollbar {
+  display: none !important;
 }
 @media screen and (max-width: 768px) {
   .tagGruop .tagWrap {
@@ -10355,4 +10370,9 @@ h4 {
   .mobileNone {
     display: none;
   }
+}
+.newPickHome.pick.newPick .text {
+  border-top: 1px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
