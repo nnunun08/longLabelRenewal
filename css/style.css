@@ -1362,7 +1362,7 @@ h4 {
 }
 .mainArchive.newMainArchive .archiveSlide .newProduct .item {
   padding: 10px;
-  margin-top: 32px;
+  margin-top: 22px;
   margin-bottom: 72px;
   transition: 0.3s cubic-bezier(0.6, 0.1, 0.2, 1);
   cursor: pointer;
@@ -9003,6 +9003,9 @@ h4 {
     height: 28px;
     font-size: 12px;
   }
+  .pick.newPick.newPickHome {
+    margin-bottom: 60px;
+  }
   .mainLine.mainLinePick em {
     font-size: 16px;
     font-weight: normal;
@@ -9014,7 +9017,8 @@ h4 {
     color: #000;
   }
   .newMainArchive {
-    margin-top: -20px;
+    margin-top: -25px;
+    margin-bottom: 0;
     overflow: hidden;
   }
   .newMainArchive .inner {
@@ -9022,7 +9026,7 @@ h4 {
   }
   .mainArchive.newMainArchive .archiveSlide .newBrand .item {
     padding: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
   .mainArchive.newMainArchive .archiveSlide .newProduct .item {
     padding: 8px;
@@ -10375,4 +10379,13 @@ h4 {
   border-top: 1px solid var(--black);
   border-bottom: 1px solid var(--black);
   margin-bottom: 20px;
+}
+@media screen and (max-width: 768px) {
+  .newPickHome.pick.newPick .text {
+    margin-bottom: 4px;
+  }
+}
+
+.mainArchive.newMainArchive .archiveSlide .newBrand {
+  padding-top: 0;
 }/*# sourceMappingURL=style.css.map */
