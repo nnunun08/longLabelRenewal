@@ -9989,7 +9989,6 @@ h4 {
   background-position: center !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-attachment: fixed !important;
   padding-top: 65px;
   padding-bottom: 28px;
   height: 400px;
@@ -10034,7 +10033,7 @@ h4 {
 }
 .detailPage .visual .inner .date {
   font-size: 14px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .detailPage .visual .inner h2 {
   font-size: 28px;
