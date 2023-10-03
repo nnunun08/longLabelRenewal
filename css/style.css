@@ -1087,7 +1087,7 @@ h4 {
   color: var(--white);
 }
 .archivePage.slideType {
-  margin-bottom: 60px;
+  margin-bottom: 25px;
 }
 .archivePage.slideType .inner > div {
   overflow: auto;
@@ -1104,6 +1104,11 @@ h4 {
 }
 .archivePage.slideType .slick-slider .item {
   margin-right: 20px;
+}
+@media screen and (max-width: 768px) {
+  .archivePage.slideType .inner {
+    padding-right: 0;
+  }
 }
 
 .mainArchive {
@@ -1795,7 +1800,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -3449,7 +3454,7 @@ h4 {
 }
 
 .pageDetail {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .pageDetail .backPage {
   background: url(../img/ic_back_arr.svg) left 4px center/16px no-repeat;
@@ -3485,6 +3490,25 @@ h4 {
 }
 .pageDetail .topCon .item.accodion {
   border-bottom: 1px solid var(--black);
+}
+.pageDetail .topCon .item.accodion .flexBx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.pageDetail .topCon .item.accodion .flexBx h2 {
+  margin-bottom: 0;
+}
+.pageDetail .topCon .item.accodion .flexBx .follow {
+  flex: 0 0 20px;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: url(../img/ic_follow_df.svg) center no-repeat;
+}
+.pageDetail .topCon .item.accodion .flexBx .follow.ac {
+  background-image: url(../img/ic_follow_ac.svg);
 }
 .pageDetail .topCon h2 {
   font-size: 20px;
@@ -7824,6 +7848,13 @@ h4 {
   .pick .col-3 > .item {
     width: calc((100% - 10px) / 2);
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .pick.archivePage .col-4 > .item {
+    width: calc((100% - 10px) / 2);
+  }
+}
+@media screen and (max-width: 768px) {
   .mainArchive .col-4 {
     gap: 10px;
     flex-wrap: nowrap;
@@ -7901,7 +7932,6 @@ h4 {
     width: calc((100% - 10px) / 2);
   }
   .pageTab .inner .ulWrap {
-    border-bottom: 1px solid var(--black);
     overflow: auto;
     margin-left: -20px;
     margin-right: -20px;
@@ -7913,6 +7943,33 @@ h4 {
   }
   .pageTab .inner .ulWrap::-webkit-scrollbar {
     display: none !important;
+  }
+  .pageTab .inner .ulWrap.type2 {
+    border-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .pageTab .inner .ulWrap.type2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+  }
+  .pageTab .inner .ulWrap.type2 ul {
+    overflow: auto;
+  }
+  .pageTab .inner .ulWrap.type2 ul li {
+    font-size: 17px;
+  }
+  .pageTab .inner .ulWrap.type2 ul li + li {
+    margin-left: 40px;
   }
   .pageTab .inner ul {
     overflow-y: visible;
@@ -7929,6 +7986,7 @@ h4 {
   }
   .pageTab .inner ul li + li {
     margin-left: 30px;
+    margin-left: 40px;
   }
   .pageTab .inner ul li:last-child {
     margin-right: 20px;
@@ -8063,7 +8121,6 @@ h4 {
     margin-bottom: 20px;
   }
   .section-detail .leftNav .ulWrap {
-    border-bottom: 1px solid var(--black);
     overflow: auto;
     margin-left: -20px;
     margin-right: -20px;
@@ -8075,6 +8132,33 @@ h4 {
   }
   .section-detail .leftNav .ulWrap::-webkit-scrollbar {
     display: none !important;
+  }
+  .section-detail .leftNav .ulWrap.type2 {
+    border-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .section-detail .leftNav .ulWrap.type2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+  }
+  .section-detail .leftNav .ulWrap.type2 ul {
+    overflow: auto;
+  }
+  .section-detail .leftNav .ulWrap.type2 ul li {
+    font-size: 17px;
+  }
+  .section-detail .leftNav .ulWrap.type2 ul li + li {
+    margin-left: 40px;
   }
   .section-detail .leftNav .ulWrap {
     margin-bottom: 40px;
@@ -8194,9 +8278,11 @@ h4 {
   }
   .pageTab ul li {
     font-size: 14px;
+    font-size: 17px;
   }
   .tagGruop + .pageTab {
-    padding-top: 20px;
+    padding-top: 0;
+    padding-bottom: 20px;
   }
   .storiesDetail {
     margin-top: 30px;
@@ -8327,7 +8413,6 @@ h4 {
     left: 30px;
     right: 30px;
     width: calc(100% - 60px);
-    background-color: var(--white);
     z-index: 10;
   }
   .archiveDesc {
@@ -9629,7 +9714,7 @@ h4 {
 }
 
 .tagGruop {
-  margin-top: 64px;
+  margin-top: 40px;
 }
 .tagGruop .green {
   color: #81B29A;
@@ -9646,23 +9731,29 @@ h4 {
 .tagGruop .beige {
   color: #cfc1b4;
 }
+.tagGruop .flexBx {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.tagGruop .arr {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background: url(../img/ic_tagArr.svg) center no-repeat;
+}
 .tagGruop h2 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 11px;
-}
-.tagGruop .inner {
-  padding: 0;
-}
-.tagGruop h2 {
   padding-left: 20px;
   padding-right: 20px;
 }
-@media screen and (max-width: 768px) {
-  .tagGruop h2 {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.tagGruop h2 span {
+  font-weight: 800;
+}
+.tagGruop .inner {
+  padding: 0;
 }
 .tagGruop .tagWrap {
   display: flex;
@@ -9706,11 +9797,25 @@ h4 {
 }
 @media screen and (max-width: 768px) {
   .tagGruop {
-    margin-top: 40px;
+    margin-top: 30px;
+  }
+  .tagGruop .flexBx {
+    margin-bottom: 16px;
+  }
+  .tagGruop h2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+  .tagGruop .arr {
+    width: 16px;
+    height: 16px;
+    margin-right: 20px;
   }
 }
 
 .sectionTit {
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 .sectionTit .inner {
@@ -9732,6 +9837,11 @@ h4 {
   font-size: 13px;
   font-weight: bold;
   color: #000;
+}
+@media screen and (max-width: 768px) {
+  .sectionTit {
+    margin-top: 0;
+  }
 }
 
 .materModal {
@@ -10388,4 +10498,17 @@ h4 {
 
 .mainArchive.newMainArchive .archiveSlide .newBrand {
   padding-top: 0;
+}
+
+.h2-pc {
+  font-family: Montserrat;
+  margin-top: 65px;
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--black);
+}
+@media screen and (max-width: 768px) {
+  .h2-pc {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
