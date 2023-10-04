@@ -7676,11 +7676,13 @@ h4 {
 			.date {
 				font-size: 14px;
 				font-weight: 400;
+				color: #fff;
 			}
 			h2 {
 				font-size: 28px;
 				font-weight: bold;
 				line-height: 1.29;
+				color:#fff;
 			}
 			.flexBx {
 				display: flex;
@@ -7693,9 +7695,11 @@ h4 {
 				background-position: right top;
 				background-size: 20px;
 				text-align: right;
+				color: #fff;
+				background-image: url(../img/ic_like_w.svg);
 				&.ac,
 				&:hover {
-					background-image: url(../img/ic_like_ac.svg);
+					background-image: url(../img/ic_like_w_ac.svg);
 				}
 			}
 		}
@@ -8063,6 +8067,48 @@ h4 {
 				margin-top: 19px;
 			}
 		}
+	}
+
+	.writing {
+		h5 {
+			font-size: 15px;
+  			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		ul {
+			overflow: auto;
+			flex-wrap: nowrap;
+			margin-left: -20px;
+			margin-right: -20px;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.item {
+			padding-bottom: 25px;
+			min-width: 200px;
+		}
+		.imgWrap {
+			aspect-ratio: 1/1;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		} 
+		.cate {
+			font-size: 12px;
+  			font-weight: bold;
+			margin-top: 10px;
+			color: var(--dusty-orange);
+		}
+		p {
+			font-size: 17px;
+			font-weight: bold;
+			line-height: 1.41;
+			margin-top: 4px;
+			margin-bottom: 0;
+		}
+
 	}
 	@media screen and (max-width:768px) {
 		.type2 {

@@ -10083,11 +10083,13 @@ h4 {
 .detailPage .visual .inner .date {
   font-size: 14px;
   font-weight: 400;
+  color: #fff;
 }
 .detailPage .visual .inner h2 {
   font-size: 28px;
   font-weight: bold;
   line-height: 1.29;
+  color: #fff;
 }
 .detailPage .visual .inner .flexBx {
   display: flex;
@@ -10100,9 +10102,11 @@ h4 {
   background-position: right top;
   background-size: 20px;
   text-align: right;
+  color: #fff;
+  background-image: url(../img/ic_like_w.svg);
 }
 .detailPage .visual .inner .data .like.ac, .detailPage .visual .inner .data .like:hover {
-  background-image: url(../img/ic_like_ac.svg);
+  background-image: url(../img/ic_like_w_ac.svg);
 }
 .detailPage .note {
   margin-top: 20px;
@@ -10515,6 +10519,45 @@ h4 {
 }
 .detailPage .ref .item + .item {
   margin-top: 19px;
+}
+.detailPage .writing h5 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.detailPage .writing ul {
+  overflow: auto;
+  flex-wrap: nowrap;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.detailPage .writing .item {
+  padding-bottom: 25px;
+  min-width: 200px;
+}
+.detailPage .writing .imgWrap {
+  aspect-ratio: 1/1;
+}
+.detailPage .writing .imgWrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.detailPage .writing .cate {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: var(--dusty-orange);
+}
+.detailPage .writing p {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.41;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 768px) {
   .detailPage .type2 {
