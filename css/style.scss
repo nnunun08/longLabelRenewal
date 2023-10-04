@@ -926,37 +926,37 @@ body {
 	.ulWrap {
 		$innerPadding : 20px;
 		// border-bottom: 1px solid var(--black);
-		overflow: auto;
+		// overflow: auto;
 		margin-left: -($innerPadding);
 		margin-right: -($innerPadding);
 		padding-left: $innerPadding;
 		padding-right: $innerPadding;
 		width: 100%;
+		position: relative;
+		overflow: hidden;
 		@include scrollHidden();
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 1px;
+			width: 100%;
+			height: 1px;
+			background-color: var(--black);
+		}
 		&.type2 {
 			border-bottom: 0;
 			margin-left: 0;
 			margin-right: 0;
 			padding-left: 0;
 			padding-right: 0;
-			position: relative;
-			overflow: hidden;
-			&::before {
-				content: '';
-				position: absolute;
-				left: 0;
-				bottom: 1px;
-				width: 100%;
-				height: 1px;
-				background-color: var(--black);
-			}
 			ul {
 				overflow: auto;
 				li {
-					font-size: 17px;
+					font-size: 14px;
 				}
 				li + li {
-					margin-left: 40px;
+					margin-left: 28.5px;
 				}
 			}
 		}
@@ -2644,6 +2644,12 @@ h4 {
 			background-size: 12px;
 		}
 	}
+	.btn {
+		// height: 43.5px;
+		font-size: 21px;
+		height: 44px;
+		
+	}
 	@media screen and (max-width:768px) {
 		.text {
 			margin-bottom: 4px;
@@ -2652,11 +2658,10 @@ h4 {
 		.subscribe {
 			margin-bottom: 12px;
 		}
-	}
-	.btn {
-		// height: 43.5px;
-		font-size: 12px;
-		height: 28px;
+		.btn {
+			font-size: 12px;
+			height: 28px;
+		}
 	}
 }
 
@@ -3487,16 +3492,24 @@ h4 {
 			ul li {
 				font-family: Montserrat;
 				font-size: 18px;
-  				font-weight: 600;
+  				font-weight: bold;
 				& + li {
 					margin-left: 20px;
 				}
 			}
 			@media screen and (max-width:768px) {
+				ul li {
+					font-size: 16px;
+					margin-top: 15px;
+					margin-bottom: 15px;
+					&.ac::after {
+						bottom: -15px;
+					}
+				}
 				.ulWrap {
-					margin-left: -20px;
-					margin-right: -20px;
-					width: calc(100% + 10px);
+					// margin-left: -20px;
+					// margin-right: -20px;
+					// width: calc(100% + 10px);
 					ul {
 						padding: 0;
 						margin: 0;
@@ -7498,9 +7511,9 @@ h4 {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	-webkit-backdrop-filter: blur(30px);
-	backdrop-filter: blur(30px);
-	background-color: rgba(255,255,255,0.6);
+	// -webkit-backdrop-filter: blur(30px);
+	// backdrop-filter: blur(30px);
+	background-color: hsla(0,0%,90%,.75);
 	z-index: 10;
 	overflow: auto;
 	&.on {
@@ -8140,7 +8153,10 @@ h4 {
 }
 
 .mainArchive.newMainArchive .archiveSlide .newBrand {
-	padding-top: 0;
+	padding-top: 31px;
+	@media screen and (max-width:768px) {
+		padding-top: 0;
+	}
 }
 
 .h2-pc {
@@ -8153,3 +8169,4 @@ h4 {
 		display: none;
 	}	
 }
+
