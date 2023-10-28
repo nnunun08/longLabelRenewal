@@ -8188,13 +8188,15 @@ h4 {
 
 
 
+
+// 10.28 제한된 컨텐츠 추가
 .noEntry {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.74) 75%, var(--white));
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 70%);
 	z-index: 1;
 	.tray {
 		padding: 72px;

@@ -10635,7 +10635,7 @@ h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.74) 75%, var(--white));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255) 70%);
   z-index: 1;
 }
 .noEntry .tray {
