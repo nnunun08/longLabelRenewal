@@ -75,8 +75,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .newStories .cate {
   font-size: 10px;
@@ -284,7 +283,7 @@ body {
     font-weight: 600;
   }
   .popup .popupCon .bad,
-  .popup .popupCon .good {
+.popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -451,8 +450,7 @@ body {
 .mainBanner .inner img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .mainBanner .inner .pcImg {
   display: block;
@@ -566,8 +564,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -1;
 }
 
@@ -647,8 +644,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .pick .newBrand .imgWrap {
   position: relative;
@@ -659,8 +655,7 @@ h4 {
 .pick .newBrand .imgWrap .backCover img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .pick .newBrand .imgWrap .frontSign {
   width: 38%;
@@ -681,8 +676,7 @@ h4 {
 .pick .newBrand .imgWrap .frontSign img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .pick .newBrand .text {
   margin-top: 121px;
@@ -748,8 +742,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .pick .newProduct .thumbImg {
   aspect-ratio: 1/1;
@@ -1181,8 +1174,7 @@ h4 {
 .mainArchive.newMainArchive .archiveSlide .newBrand .imgWrap .backCover img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .mainArchive.newMainArchive .archiveSlide .newBrand .imgWrap .frontSign {
   width: 38%;
@@ -1203,8 +1195,7 @@ h4 {
 .mainArchive.newMainArchive .archiveSlide .newBrand .imgWrap .frontSign img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .mainArchive.newMainArchive .archiveSlide .newBrand .text {
   margin-top: 121px;
@@ -1265,8 +1256,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .mainArchive.newMainArchive .archiveSlide .newProduct .thumbImg {
   aspect-ratio: 1/1;
@@ -1403,8 +1393,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .mainArchive .thumbImg {
   margin-bottom: 20px;
@@ -1466,8 +1455,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 
@@ -1507,8 +1495,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .mainStories .bodyWrap {
@@ -1875,9 +1862,6 @@ h4 {
   outline: 0;
   padding-left: 0;
 }
-.countSearch .inner .search::-moz-placeholder {
-  color: #9a9a9a;
-}
 .countSearch .inner .search::placeholder {
   color: #9a9a9a;
 }
@@ -2172,9 +2156,6 @@ h4 {
   box-sizing: border-box;
   color: var(--black);
 }
-.section-detail .styleCheck.result input::-moz-placeholder {
-  color: #656565;
-}
 .section-detail .styleCheck.result input::placeholder {
   color: #656565;
 }
@@ -2308,8 +2289,7 @@ h4 {
 .section-detail .leftNav .top .profileCh img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-detail .leftNav .top .profileCh {
   max-width: 120px;
@@ -2460,8 +2440,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-detail .container .newProduct .thumbImg {
   aspect-ratio: 1/1;
@@ -2609,8 +2588,7 @@ h4 {
 .section-detail .container .newBrand .imgWrap .backCover img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-detail .container .newBrand .imgWrap .frontSign {
   width: 38%;
@@ -2631,8 +2609,7 @@ h4 {
 .section-detail .container .newBrand .imgWrap .frontSign img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .section-detail .container .newBrand .text {
   margin-top: 121px;
@@ -2676,8 +2653,7 @@ h4 {
 .section-detail .container .newBrand .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-detail .container .newBrand .imgWrap .backCover {
   width: 100%;
@@ -2760,8 +2736,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-detail .container .newStories .cate {
   font-size: 12px;
@@ -3096,8 +3071,7 @@ h4 {
 .section-detail .container .article .conWrap .thumb img {
   height: 50px;
   width: 50px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .section-detail .container .article .conWrap .thumb .category {
   font-size: 11px;
@@ -3164,8 +3138,7 @@ h4 {
 .section-detail .container .followBrand .brand img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .section-detail .container .followBrand .cate {
   font-size: 16px;
@@ -3362,8 +3335,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .storyCon .imgWrap {
@@ -3537,8 +3509,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .pageDetail .imgWrap {
@@ -3720,8 +3691,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .pageDetail .accodion li .flexBx .left .imgWrap {
@@ -3733,8 +3703,7 @@ h4 {
   box-sizing: border-box;
 }
 .pageDetail .accodion li .flexBx .left .imgWrap img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .pageDetail .accodion li .flexBx .left .tit {
   font-size: 16px;
@@ -3908,9 +3877,6 @@ h4 {
   display: block;
   outline: none;
 }
-.pageDetail .accodion .question .inputText .textarea::-moz-placeholder {
-  color: inherit;
-}
 .pageDetail .accodion .question .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -4015,9 +3981,6 @@ h4 {
   display: block;
   outline: none;
 }
-.pageDetail .accodion .review .inputText .textarea::-moz-placeholder {
-  color: inherit;
-}
 .pageDetail .accodion .review .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -4067,9 +4030,6 @@ h4 {
   resize: none;
   display: block;
   outline: none;
-}
-.pageDetail .accodion .review .textarea::-moz-placeholder {
-  color: inherit;
 }
 .pageDetail .accodion .review .textarea::placeholder {
   color: inherit;
@@ -4639,9 +4599,6 @@ h4 {
   box-sizing: border-box;
   color: var(--black);
 }
-.loginForm input::-moz-placeholder {
-  color: #656565;
-}
 .loginForm input::placeholder {
   color: #656565;
 }
@@ -4661,9 +4618,6 @@ h4 {
   border: 1px solid #959595;
   height: 55px;
   font-size: 16px;
-}
-.loginForm input::-moz-placeholder {
-  color: #959595;
 }
 .loginForm input::placeholder {
   color: #959595;
@@ -4768,9 +4722,7 @@ h4 {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .loginForm .inputWrap .radioWrap [type=radio]:checked {
   border: 8px solid #f63;
@@ -4913,8 +4865,7 @@ h4 {
 .loginForm.signupForm .profileList .profileCh img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .loginForm.signupForm .nextTime {
   display: inline-block;
@@ -5081,9 +5032,6 @@ h4 {
   font-size: 18px;
   box-sizing: border-box;
   color: var(--black);
-}
-.purchase .inner input::-moz-placeholder {
-  color: #656565;
 }
 .purchase .inner input::placeholder {
   color: #656565;
@@ -5374,9 +5322,6 @@ h4 {
   display: block;
   outline: none;
 }
-.talksDetail .question .inputText .textarea::-moz-placeholder {
-  color: inherit;
-}
 .talksDetail .question .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -5505,9 +5450,6 @@ h4 {
   display: block;
   outline: none;
 }
-.talksDetail .reply .inputText .textarea::-moz-placeholder {
-  color: inherit;
-}
 .talksDetail .reply .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -5571,9 +5513,6 @@ h4 {
 }
 .talksDetail .reply .inputText .textarea {
   height: 85px;
-}
-.talksDetail .reply .inputText .textarea::-moz-placeholder {
-  color: #151515;
 }
 .talksDetail .reply .inputText .textarea::placeholder {
   color: #151515;
@@ -5657,9 +5596,6 @@ h4 {
   box-sizing: border-box;
   color: var(--black);
 }
-.talksWrite input::-moz-placeholder {
-  color: #656565;
-}
 .talksWrite input::placeholder {
   color: #656565;
 }
@@ -5681,9 +5617,6 @@ h4 {
   resize: none;
   display: block;
   outline: none;
-}
-.talksWrite .textarea::-moz-placeholder {
-  color: inherit;
 }
 .talksWrite .textarea::placeholder {
   color: inherit;
@@ -5780,8 +5713,7 @@ h4 {
 .talksWrite .imgBx .img img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .talksWrite .imgBx .img .remove {
@@ -5808,8 +5740,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .storiesList .data {
@@ -5925,8 +5856,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .storiesDetail .top {
@@ -6193,8 +6123,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .about .accodion li .flexBx .left .imgWrap {
@@ -6206,8 +6135,7 @@ h4 {
   box-sizing: border-box;
 }
 .about .accodion li .flexBx .left .imgWrap img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .about .accodion li .flexBx .left .tit {
   font-size: 16px;
@@ -6381,9 +6309,6 @@ h4 {
   display: block;
   outline: none;
 }
-.about .accodion .question .inputText .textarea::-moz-placeholder {
-  color: inherit;
-}
 .about .accodion .question .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -6488,9 +6413,6 @@ h4 {
   display: block;
   outline: none;
 }
-.about .accodion .review .inputText .textarea::-moz-placeholder {
-  color: inherit;
-}
 .about .accodion .review .inputText .textarea::placeholder {
   color: inherit;
 }
@@ -6540,9 +6462,6 @@ h4 {
   resize: none;
   display: block;
   outline: none;
-}
-.about .accodion .review .textarea::-moz-placeholder {
-  color: inherit;
 }
 .about .accodion .review .textarea::placeholder {
   color: inherit;
@@ -6935,9 +6854,6 @@ h4 {
   box-sizing: border-box;
   color: var(--black);
 }
-.PageEdit input::-moz-placeholder {
-  color: #656565;
-}
 .PageEdit input::placeholder {
   color: #656565;
 }
@@ -6958,9 +6874,7 @@ h4 {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .PageEdit .radioWrap [type=radio]:checked {
   border: 8px solid #f63;
@@ -7025,9 +6939,7 @@ h4 {
   padding: 0;
   box-sizing: border-box;
   margin: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .PageEdit .inputWrap .radioWrap [type=radio]:checked {
   border: 8px solid #f63;
@@ -7268,8 +7180,7 @@ h4 {
   .header.mo .mobileMenu .panel .top .profile img {
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .header.mo .mobileMenu .panel .top .nickname {
     font-size: 24px;
@@ -7676,7 +7587,7 @@ h4 {
     font-weight: 600;
   }
   .materialsSlide .meteItem .popup .popupCon .bad,
-  .materialsSlide .meteItem .popup .popupCon .good {
+.materialsSlide .meteItem .popup .popupCon .good {
     border-top: 0;
     margin-top: 0;
     padding-top: 32px;
@@ -7802,33 +7713,33 @@ h4 {
     padding: 0 20px;
   }
   .pick,
-  .mainArchive,
-  .mainStories {
+.mainArchive,
+.mainStories {
     padding: 0;
     margin: 75px 0;
   }
   .pick .mainConTit h4,
-  .mainArchive .mainConTit h4,
-  .mainStories .mainConTit h4 {
+.mainArchive .mainConTit h4,
+.mainStories .mainConTit h4 {
     display: block;
     font-size: 17px;
   }
   .pick .mainConTit p,
-  .mainArchive .mainConTit p,
-  .mainStories .mainConTit p {
+.mainArchive .mainConTit p,
+.mainStories .mainConTit p {
     display: block;
     font-size: 12px;
     margin-top: 4px;
     margin-left: 0;
   }
   .pick .mainConTit .more,
-  .mainArchive .mainConTit .more,
-  .mainStories .mainConTit .more {
+.mainArchive .mainConTit .more,
+.mainStories .mainConTit .more {
     display: none;
   }
   .pick .mainConTit,
-  .mainArchive .mainConTit,
-  .mainStories .mainConTit {
+.mainArchive .mainConTit,
+.mainStories .mainConTit {
     margin-bottom: 20px;
   }
   .pick {
@@ -7895,6 +7806,8 @@ h4 {
     line-height: 1.31;
     -webkit-line-clamp: 1;
   }
+}
+@media screen and (max-width: 768px) {
   .mainStories .bodyWrap .masonryWrap .masonry {
     grid-template-columns: repeat(2, 1fr);
     gap: 0 10px;
@@ -7902,6 +7815,8 @@ h4 {
   .mainStories .bodyWrap .masonryWrap .masonry > .item {
     width: calc((100% - 10px) / 2);
   }
+}
+@media screen and (max-width: 768px) {
   .footer {
     position: relative;
     padding-top: 20px;
@@ -7934,6 +7849,8 @@ h4 {
   .footer .copyright {
     font-size: 11px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesList .masonry {
     grid-template-columns: repeat(2, 1fr);
     gap: 0 10px;
@@ -7941,6 +7858,8 @@ h4 {
   .storiesList .masonry > .item {
     width: calc((100% - 10px) / 2);
   }
+}
+@media screen and (max-width: 768px) {
   .pageTab .inner .ulWrap {
     margin-left: -20px;
     margin-right: -20px;
@@ -8010,26 +7929,38 @@ h4 {
   .pageTab .inner ul li.ac::after {
     bottom: -16px;
   }
+}
+@media screen and (max-width: 768px) {
   .col-4 {
     gap: 20px 10px;
   }
+}
+@media screen and (max-width: 768px) {
   .col-4 > .item {
     width: calc((100% - 20px) / 2);
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .col-2 > .item {
     width: 100%;
     overflow: hidden;
     aspect-ratio: unset;
   }
+}
+@media screen and (max-width: 768px) {
   .purchase {
     margin-top: 0;
   }
+}
+@media screen and (max-width: 768px) {
   .tableWrap {
     overflow: auto;
   }
   .tableWrap table {
     min-width: 560px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesDetail .top {
     flex-wrap: wrap;
   }
@@ -8053,6 +7984,8 @@ h4 {
   .storiesDetail .bottom .col-3 > .item {
     min-width: 200px;
   }
+}
+@media screen and (max-width: 768px) {
   .countSearch.alignTop .inner {
     align-items: flex-end;
     flex-direction: column-reverse;
@@ -8061,6 +7994,8 @@ h4 {
     width: 100%;
     flex: 1 0 auto;
   }
+}
+@media screen and (max-width: 768px) {
   .talksDetail .flexBx {
     gap: 20px;
   }
@@ -8072,17 +8007,23 @@ h4 {
     margin-left: 0;
     height: 52px;
   }
+}
+@media screen and (max-width: 768px) {
   .talksWrite label,
-  .talksWrite .imgBx .img {
+.talksWrite .imgBx .img {
     width: 40px;
     height: 40px;
   }
+}
+@media screen and (max-width: 768px) {
   .talksWrite label {
     background: var(--white) url(../img/ic_file_add.svg) center/20px no-repeat;
   }
   .talksWrite .btn {
     flex: 1 0 auto;
   }
+}
+@media screen and (max-width: 768px) {
   .about .inner {
     flex-direction: column;
   }
@@ -8098,6 +8039,8 @@ h4 {
   .about .contents .accodion li .conWrap .mission .mark p {
     flex: 1 0 auto;
   }
+}
+@media screen and (max-width: 768px) {
   .section-detail .inner {
     flex-direction: column;
   }
@@ -8240,18 +8183,26 @@ h4 {
   .section-detail .storyCon.col-3 > .item {
     width: calc((100% - 20px) / 2);
   }
+}
+@media screen and (max-width: 768px) {
   .section-detail .container .followBrand {
     gap: 45px 30px;
   }
   .section-detail .container .followBrand > .item {
     width: calc((100% - 60px) / 3);
   }
+}
+@media screen and (max-width: 768px) {
   .section-detail .container .voc {
     text-align: left;
   }
+}
+@media screen and (max-width: 768px) {
   .inputWrapDual {
     flex-wrap: wrap;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .accodion li .flexBx {
     flex-wrap: wrap;
   }
@@ -8261,8 +8212,8 @@ h4 {
     flex-direction: column;
   }
   .pageDetail .accodion li .flexBx:has(.textarea) .inputText,
-  .pageDetail .accodion li .flexBx:has(.textarea) .textarea,
-  .pageDetail .accodion li .flexBx:has(.textarea) .btn {
+.pageDetail .accodion li .flexBx:has(.textarea) .textarea,
+.pageDetail .accodion li .flexBx:has(.textarea) .btn {
     width: 100%;
     max-width: 100%;
   }
@@ -8278,23 +8229,35 @@ h4 {
   .pageDetail .accodion .question .flexBx .inputText .textarea {
     height: 140px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .accodion .question .flexBx .btn {
     flex: 1 0 100%;
     height: 36px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .accodion .question.coment .flexBx .btn {
     margin: 10px 0;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .topCon p {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .control {
     flex-direction: column;
     gap: 20px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .reason {
     text-align: center;
   }
+}
+@media screen and (max-width: 768px) {
   .pageTab {
     padding-top: 30px;
   }
@@ -8302,30 +8265,46 @@ h4 {
     font-size: 14px;
     font-size: 17px;
   }
+}
+@media screen and (max-width: 768px) {
   .tagGruop + .pageTab {
     padding-top: 0;
     padding-bottom: 20px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesDetail {
     margin-top: 30px;
   }
+}
+@media screen and (max-width: 768px) {
   .about {
     margin-top: 80px;
   }
+}
+@media screen and (max-width: 768px) {
   .about .contents .accodion li .item {
     width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .container {
     max-width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.label,
-  .PageEdit .inputWrap .label {
+.PageEdit .inputWrap .label {
     flex-basis: 30px;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .rightCon {
     flex: 0 0 30px;
     flex-direction: column;
@@ -8333,50 +8312,72 @@ h4 {
     align-items: flex-start;
     margin-top: 16px;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .account.readonly,
-  .PageEdit .inputWrap .alignLeft {
+.PageEdit .inputWrap .alignLeft {
     flex: 1 0 38px;
     display: flex;
     padding: 0;
     align-items: center;
     text-align: left;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap.mt-10 .label {
     display: none;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .inputWrap .radioWrap {
     height: 60px;
     display: flex;
     align-items: center;
   }
+}
+@media screen and (max-width: 768px) {
   .PageEdit .select {
     width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesList .item .data {
     right: auto;
     left: 12px;
     bottom: 12px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesList .item .name {
     font-size: 16px;
   }
+}
+@media screen and (max-width: 768px) {
   .storiesList .item .textBx {
     padding: 12px;
     padding-bottom: 40px;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail {
     margin-top: 30px;
   }
   .pageDetail .imgSlide {
     border: 0;
   }
+}
+@media screen and (max-width: 768px) {
   .pageDetail .control .btn {
     width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
   .page404 .search-bg {
     transform: scale(0.85);
     margin-top: 20px;
   }
+}
+@media screen and (max-width: 768px) {
   .materialsSlide > ul {
     gap: 30px;
     flex-direction: column;
@@ -8394,6 +8395,8 @@ h4 {
     padding: 22px 25px;
     aspect-ratio: auto;
   }
+}
+@media screen and (max-width: 768px) {
   .backPage {
     text-indent: -9999px;
     width: 24px;
@@ -8541,8 +8544,7 @@ h4 {
 .chart .profileCh img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .chart .rowBarGraph {
   display: flex;
@@ -8851,8 +8853,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   z-index: -1;
 }
 .newMainStories .cover .cate {
@@ -8955,8 +8956,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .newMainStories .slide .newStories .cate {
   font-size: 10px;
@@ -9457,9 +9457,6 @@ h4 {
   box-sizing: border-box;
   color: var(--black);
 }
-.styleCheck.result input::-moz-placeholder {
-  color: #656565;
-}
 .styleCheck.result input::placeholder {
   color: #656565;
 }
@@ -9598,8 +9595,7 @@ h4 {
 .newAccodion .realCon .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
 }
 .newAccodion .realCon .text .en {
@@ -9877,7 +9873,7 @@ h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: hsla(0, 0%, 90%, 0.75);
+  background-color: hsla(0deg, 0%, 90%, 0.75);
   z-index: 10;
   overflow: auto;
 }
@@ -10026,7 +10022,7 @@ h4 {
     font-size: 22px;
   }
   .materModal .pop .label .rightArr,
-  .materModal .pop .label .leftArr {
+.materModal .pop .label .leftArr {
     height: 25px;
     background-size: contain;
   }
@@ -10034,14 +10030,14 @@ h4 {
     padding: 38px 13px 0;
   }
   .materModal .pop .popupBody .bad,
-  .materModal .pop .popupBody .good {
+.materModal .pop .popupBody .good {
     padding: 20px 13px;
   }
   .materModal .pop .popupBody h3 {
     margin-bottom: 20px;
   }
   .materModal .pop .popupBody b,
-  .materModal .pop .popupBody p {
+.materModal .pop .popupBody p {
     font-size: 18px;
   }
 }
@@ -10237,8 +10233,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .detailPage .centerSlide {
   position: relative;
@@ -10352,8 +10347,7 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .detailPage .listSection {
   margin: 80px 0;
@@ -10434,8 +10428,7 @@ h4 {
 .detailPage .listSection .listCon .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .detailPage .listSection .listCon .textWrap {
   flex: 1 0 0;
@@ -10562,8 +10555,7 @@ h4 {
 .detailPage .writing .imgWrap img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .detailPage .writing .cate {
   font-size: 12px;
@@ -10630,13 +10622,13 @@ h4 {
 }
 
 .noEntry {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255) 70%);
   z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 668px;
+  margin-top: -280px;
+  margin-bottom: -93px;
 }
 .noEntry .tray {
   padding: 72px;
@@ -10646,7 +10638,7 @@ h4 {
   color: var(--black);
   background-color: #fff;
   position: absolute;
-  bottom: 5%;
+  bottom: 118px;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -10661,6 +10653,8 @@ h4 {
 .noEntry p {
   font-size: 24px;
   font-weight: 500;
+  line-height: 1.38em;
+  margin-bottom: 0;
 }
 .noEntry .btn {
   height: 62px;
@@ -10676,11 +10670,16 @@ h4 {
   color: #f4f4f4;
 }
 @media screen and (max-width: 768px) {
+  .noEntry {
+    height: 550px;
+    margin-top: -400px;
+  }
   .noEntry .tray {
     padding: 32px 13px;
     width: 90vw;
     max-width: 420px;
     gap: 24px;
+    bottom: 38px;
   }
   .noEntry p {
     font-size: 14px;
